@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<ion-tabs>\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"tabs\">\n      <ion-icon name=\"search-sharp\"></ion-icon>\n      <ion-label>Search</ion-label>\n    </ion-tab-button>\n    <ion-tab-button tab=\"tabs2\">\n      <ion-icon name=\"chatbubble-sharp\"></ion-icon>\n      <ion-label>Chat</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"notificationchat\" routerLink=\"/notificationchat\">\n      <ion-icon name=\"notifications-sharp\"></ion-icon>\n      <ion-label>Notification</ion-label>\n    </ion-tab-button>\n  </ion-tab-bar>\n\n  \n\n</ion-tabs>");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<ion-tabs>\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"searchTab\">\n      <ion-icon name=\"search-sharp\"></ion-icon>\n      <ion-label>Search</ion-label>\n    </ion-tab-button>\n    <ion-tab-button tab=\"tabs2\">\n      <ion-icon name=\"chatbubble-sharp\"></ion-icon>\n      <ion-label>Chat</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button tab=\"notificationchat\" routerLink=\"/notificationchat\">\n      <ion-icon name=\"notifications-sharp\"></ion-icon>\n      <ion-label>Notification</ion-label>\n    </ion-tab-button>\n  </ion-tab-bar>\n\n  \n\n</ion-tabs>");
 
 /***/ }),
 
@@ -35,10 +35,10 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     {
-        path: 'tabs',
+        path: '',
         component: _chat_page__WEBPACK_IMPORTED_MODULE_4__["ChatPage"],
         children: [
-            { path: 'tabs', loadChildren: '../tabs/tabs.module#TabsPageModule' },
+            { path: 'searchTab', loadChildren: '../searchTab/searchTab.module#SearchTabPageModule' },
             { path: 'tabs2', loadChildren: '../tabs2/tabs2.module#Tabs2PageModule' },
             { path: 'tabs3', loadChildren: '../tabs3/tabs3.module#Tabs3PageModule' }
         ]
