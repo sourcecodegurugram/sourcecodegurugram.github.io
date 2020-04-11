@@ -38,9 +38,9 @@ const routes = [
         path: '',
         component: _chat_page__WEBPACK_IMPORTED_MODULE_4__["ChatPage"],
         children: [
-            { path: 'searchTab', loadChildren: '../searchTab/searchTab.module#SearchTabPageModule' },
-            { path: 'tabs2', loadChildren: '../tabs2/tabs2.module#Tabs2PageModule' },
-            { path: 'tabs3', loadChildren: '../tabs3/tabs3.module#Tabs3PageModule' }
+            { path: 'searchTab', loadChildren: './searchTab/searchTab.module#SearchTabPageModule' },
+            { path: 'tabs2', loadChildren: './tabs2/tabs2.module#Tabs2PageModule' },
+            { path: 'tabs3', loadChildren: './tabs3/tabs3.module#Tabs3PageModule' }
         ]
     },
     {
