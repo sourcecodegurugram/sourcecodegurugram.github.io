@@ -80,16 +80,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       component: _chat_page__WEBPACK_IMPORTED_MODULE_4__["ChatPage"],
       children: [{
         path: 'searchTab',
-        loadChildren: '../../app/searchTab/searchTab.module#SearchTabPageModule'
+        loadChildren: '../searchTab/searchTab.module#SearchTabPageModule'
       }, {
         path: 'tabs2',
-        loadChildren: '../../app/tabs2/tabs2.module#Tabs2PageModule'
+        loadChildren: '../tabs2/tabs2.module#Tabs2PageModule'
       }, {
         path: 'tabs3',
-        loadChildren: '../../app/tabs3/tabs3.module#Tabs3PageModule'
+        loadChildren: '../app/tabs3/tabs3.module#Tabs3PageModule'
       }]
     }, {
       path: '',
+      redirectTo: '/searchTab',
+      pathMatch: 'full'
+    }, {
+      path: '',
+      redirectTo: '/chat/searchTab',
       component: _chat_page__WEBPACK_IMPORTED_MODULE_4__["ChatPage"]
     }];
 
