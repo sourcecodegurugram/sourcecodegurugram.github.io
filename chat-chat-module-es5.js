@@ -93,7 +93,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       redirectTo: '/searchTab',
       pathMatch: 'full'
     }, {
-      path: '',
+      path: 'chat',
       component: _chat_page__WEBPACK_IMPORTED_MODULE_4__["ChatPage"]
     }];
 
@@ -197,7 +197,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAvY2hhdC9jaGF0LnBhZ2Uuc2NzcyJ9 */";
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXQvY2hhdC5wYWdlLnNjc3MifQ== */";
     /***/
   },
 
