@@ -80,8 +80,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       component: _chat_page__WEBPACK_IMPORTED_MODULE_4__["ChatPage"],
       children: [{
         path: 'searchTab',
-        loadChildren: '../searchTab/searchTab.module#SearchTabPageModule'
-      }, {
+        loadChildren: function loadChildren() {
+          return Promise.all(
+          /*! import() | searchTab-searchTab-module */
+          [__webpack_require__.e("default~location-targetting-location-targetting-module~register-register-module~searchTab-searchTab-module"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null,
+          /*! ../searchTab/searchTab.module */
+          "./src/app/searchTab/searchTab.module.ts")).then(function (m) {
+            return m.SearchTabPageModule;
+          });
+        }
+      }, // { path: 'searchTab', loadChildren: '../searchTab/searchTab.module#SearchTabPageModule'},
+      {
         path: 'tabs2',
         loadChildren: '../tabs2/tabs2.module#Tabs2PageModule'
       }, {
