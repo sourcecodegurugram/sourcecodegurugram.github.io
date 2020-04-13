@@ -89,10 +89,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             return m.SearchTabPageModule;
           });
         }
-      }, // { path: 'searchTab', loadChildren: '../searchTab/searchTab.module#SearchTabPageModule'},
-      {
+      }, {
         path: 'tabs2',
-        loadChildren: '../tabs2/tabs2.module#Tabs2PageModule'
+        loadChildren: function loadChildren() {
+          return __webpack_require__.e(
+          /*! import() | tabs2-tabs2-module */
+          "tabs2-tabs2-module").then(__webpack_require__.bind(null,
+          /*! ../tabs2/tabs2.module */
+          "./src/app/tabs2/tabs2.module.ts")).then(function (m) {
+            return m.Tabs2PageModule;
+          });
+        }
       }, {
         path: 'tabs3',
         loadChildren: '../app/tabs3/tabs3.module#Tabs3PageModule'
