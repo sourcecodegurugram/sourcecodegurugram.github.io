@@ -451,7 +451,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <div class=\"navigation\">\n    <div class=\"main-logo\">\n    <img src=\"../../assets/Images/header-logo.png\" alt=\"\" srcset=\"\" class=\"header-logo\">\n    </div>\n    \n    <div class=\"account-status\">\n    \n      <img src=\"../../assets/Images/user-12.png\" class=\"status-check\" >\n    </div>\n    \n    <div class=\"humburger-menu\">\n      <img src=\"../../assets/Images/cross.png\" class=\"hum-burger-menu-cross\" *ngIf=\"crossSign\" (click)=\"humBurgerCross()\">\n      <img src=\"../../assets/Images/hum.png\" class=\"hum-burger-menu\" (click)=\"humburgereffect()\" *ngIf=\"humBurger\" >\n    </div>\n    \n    </div>\n    \n    <div class=\"main-menu\" *ngIf=\"mainMenu\">\n      <ul class=\"main-list\">\n        <li><a routerLink=\"/home\">Screen1</a></li>\n        <li><a routerLink=\"/location-targetting\">Screen 3</a></li>\n        <li><a routerLink=\"/register\">Screen 4</a></li>\n        <li><a routerLink=\"/chat/searchTab\">Screen 8</a></li>\n        <li><a routerLink=\"/chat/tabs2\">Screen 9</a></li>\n        <li><a routerLink=\"/search-result\">Screen 10</a></li>\n        <li><a routerLink=\"/chat/tabs2\">Screen 11</a></li>\n        <li><a routerLink=\"/personal-chat\">Screen 12</a></li>\n        <li><a routerLink=\"/notificationchat\">Screen 13</a></li>\n        <li><a href=\"#\">LogOut</a></li>\n      </ul>\n    </div>\n  </ion-header>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <div class=\"navigation\">\n    <div class=\"main-logo\">\n    <img src=\"../../assets/Images/header-logo.png\" alt=\"\" srcset=\"\" class=\"header-logo\">\n    </div>\n    \n    <div class=\"account-status\">\n    \n      <img src=\"../../assets/Images/user-12.png\" class=\"status-check\" >\n    </div>\n    \n    <div class=\"humburger-menu\">\n      <img src=\"../../assets/Images/cross.png\" class=\"hum-burger-menu-cross\" *ngIf=\"crossSign\" (click)=\"humBurgerCross()\">\n      <img src=\"../../assets/Images/hum.png\" class=\"hum-burger-menu\" (click)=\"humburgereffect()\" *ngIf=\"humBurger\" >\n    </div>\n    \n    </div>\n    \n    <div class=\"main-menu\" *ngIf=\"mainMenu\">\n      <ul class=\"main-list\" (click)=\"itemclick()\">\n        <li><a routerLink=\"/home\">Screen1</a></li>\n        <li><a routerLink=\"/location-targetting\">Screen 3</a></li>\n        <li><a routerLink=\"/register\">Screen 4</a></li>\n        <li><a routerLink=\"/chat/searchTab\">Screen 8</a></li>\n        <li><a routerLink=\"/chat/tabs2\">Screen 9</a></li>\n        <li><a routerLink=\"/search-result\">Screen 10</a></li>\n        <li><a routerLink=\"/chat/tabs2\">Screen 11</a></li>\n        <li><a routerLink=\"/personal-chat\">Screen 12</a></li>\n        <li><a routerLink=\"/notificationchat\">Screen 13</a></li>\n        <li><a href=\"#\">LogOut</a></li>\n      </ul>\n    </div>\n  </ion-header>");
 
 /***/ }),
 
@@ -929,6 +929,7 @@ let NavigationbarComponent = class NavigationbarComponent {
         this.crossSign = false;
         this.humBurger = true;
         this.mainMenu = false;
+        this.mainMenuItem = true;
     }
     ngOnInit() { }
     humburgereffect() {
@@ -940,6 +941,11 @@ let NavigationbarComponent = class NavigationbarComponent {
         this.crossSign = false;
         this.humBurger = true;
         this.mainMenu = false;
+    }
+    itemclick() {
+        this.mainMenu = false;
+        this.crossSign = false;
+        this.humBurger = true;
     }
 };
 NavigationbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
