@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n\n<ion-content>\n\n</ion-content>\n";
+    __webpack_exports__["default"] = "\n\n";
     /***/
   },
 
