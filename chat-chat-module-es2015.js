@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n<ion-tabs class=\"background-card\">\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"searchTab\">\n      <ion-icon name=\"search-sharp\"></ion-icon>\n      <ion-label>Search</ion-label>\n    </ion-tab-button>\n    <ion-tab-button tab=\"tabs2\">\n      <ion-icon name=\"chatbubble-sharp\"></ion-icon>\n      <ion-label>Chat</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button  routerLink=\"/notificationchat\">\n      <ion-icon name=\"notifications-sharp\"></ion-icon>\n      <ion-label>Notification</ion-label>\n    </ion-tab-button>\n  </ion-tab-bar>\n\n  \n\n</ion-tabs>");
+/* harmony default export */ __webpack_exports__["default"] = ("\n<ion-tabs class=\"background-card\">\n  <ion-tab-bar slot=\"bottom\"  class=\"background-card\">\n    <ion-tab-button tab=\"searchTab\">\n      <ion-icon name=\"search-sharp\"></ion-icon>\n      <ion-label>Search</ion-label>\n    </ion-tab-button>\n    <ion-tab-button tab=\"tabs2\"  class=\"background-card\">\n      <ion-icon name=\"chatbubble-sharp\"></ion-icon>\n      <ion-label>Chat</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button  routerLink=\"/notificationchat\"  class=\"background-card\">\n      <ion-icon name=\"notifications-sharp\"></ion-icon>\n      <ion-label>Notification</ion-label>\n    </ion-tab-button>\n  </ion-tab-bar>\n\n  \n\n</ion-tabs>");
 
 /***/ }),
 
