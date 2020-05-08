@@ -149,10 +149,6 @@ let DetailPage = class DetailPage {
             this.smoke = this.post.field_smoke.und[0].value;
             console.log(this.status);
         });
-        this.ConfigService.getDetail().subscribe((element) => {
-            this.postman = element;
-            console.log(this.postman.Activities);
-        });
     }
 };
 DetailPage.ctorParameters = () => [

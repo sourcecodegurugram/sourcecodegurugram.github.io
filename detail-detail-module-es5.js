@@ -255,10 +255,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this.smoke = _this.post.field_smoke.und[0].value;
             console.log(_this.status);
           });
-          this.ConfigService.getDetail().subscribe(function (element) {
-            _this.postman = element;
-            console.log(_this.postman.Activities);
-          });
         }
       }]);
 

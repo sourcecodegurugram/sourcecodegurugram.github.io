@@ -981,7 +981,6 @@ let ConfigService = class ConfigService {
         this.articleUrl = "https://gowebtutorial.com/api/json/user.json";
         this.userUrl = "https://gowebtutorial.com/api/json/user/";
         this.hobbieUrl = "https://gowebtutorial.com/api/json/hobbies-json";
-        this.DetailUrl = "http://latdating.dd:8083/api/json/detailtesting-json";
     }
     getArticle() {
         return this.http.get(this.articleUrl);
@@ -991,9 +990,6 @@ let ConfigService = class ConfigService {
     }
     getHobbies() {
         return this.http.get(this.hobbieUrl);
-    }
-    getDetail() {
-        return this.http.get(this.DetailUrl);
     }
 };
 ConfigService.ctorParameters = () => [

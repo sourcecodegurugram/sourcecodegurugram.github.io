@@ -1326,7 +1326,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.articleUrl = "https://gowebtutorial.com/api/json/user.json";
         this.userUrl = "https://gowebtutorial.com/api/json/user/";
         this.hobbieUrl = "https://gowebtutorial.com/api/json/hobbies-json";
-        this.DetailUrl = "http://latdating.dd:8083/api/json/detailtesting-json";
       }
 
       _createClass(ConfigService, [{
@@ -1343,11 +1342,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getHobbies",
         value: function getHobbies() {
           return this.http.get(this.hobbieUrl);
-        }
-      }, {
-        key: "getDetail",
-        value: function getDetail() {
-          return this.http.get(this.DetailUrl);
         }
       }]);
 
