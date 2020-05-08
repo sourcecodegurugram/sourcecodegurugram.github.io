@@ -1323,9 +1323,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, ConfigService);
 
         this.http = http;
-        this.articleUrl = "http://gowebtutorial.com/api/json/user.json";
-        this.userUrl = "http://gowebtutorial.com/api/json/user/";
-        this.hobbieUrl = "http://gowebtutorial.com/api/json/hobbies-json";
+        this.articleUrl = "https://gowebtutorial.com/api/json/user.json";
+        this.userUrl = "https://gowebtutorial.com/api/json/user/";
+        this.hobbieUrl = "https://gowebtutorial.com/api/json/hobbies-json";
         this.DetailUrl = "http://latdating.dd:8083/api/json/detailtesting-json";
       }
 
