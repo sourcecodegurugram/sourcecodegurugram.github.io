@@ -720,7 +720,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', redirectTo: 'location-targetting', pathMatch: 'full' },
     { path: 'home', loadChildren: () => __webpack_require__.e(/*! import() | home-home-module */ "home-home-module").then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomePageModule) },
     {
         path: 'location-targetting',
@@ -755,12 +755,16 @@ const routes = [
         loadChildren: () => __webpack_require__.e(/*! import() | notificationchat-notificationchat-module */ "notificationchat-notificationchat-module").then(__webpack_require__.bind(null, /*! ./notificationchat/notificationchat.module */ "./src/app/notificationchat/notificationchat.module.ts")).then(m => m.NotificationchatPageModule)
     },
     {
-        path: 'search-result',
+        path: 'search-result/:post',
         loadChildren: () => __webpack_require__.e(/*! import() | search-result-search-result-module */ "search-result-search-result-module").then(__webpack_require__.bind(null, /*! ./search-result/search-result.module */ "./src/app/search-result/search-result.module.ts")).then(m => m.SearchResultPageModule)
     },
     {
         path: 'detail/:name/:mail/:uid',
         loadChildren: () => __webpack_require__.e(/*! import() | detail-detail-module */ "detail-detail-module").then(__webpack_require__.bind(null, /*! ./detail/detail.module */ "./src/app/detail/detail.module.ts")).then(m => m.DetailPageModule)
+    },
+    {
+        path: 'elipsispipe',
+        loadChildren: () => __webpack_require__.e(/*! import() | elipsispipe-elipsispipe-module */ "elipsispipe-elipsispipe-module").then(__webpack_require__.bind(null, /*! ./elipsispipe/elipsispipe.module */ "./src/app/elipsispipe/elipsispipe.module.ts")).then(m => m.ElipsispipePageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -868,6 +872,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _livechat_angular_widget__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @livechat/angular-widget */ "./node_modules/@livechat/angular-widget/fesm2015/livechat-angular-widget.js");
 /* harmony import */ var _navigationbar_navigationbar_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./navigationbar/navigationbar.component */ "./src/app/navigationbar/navigationbar.component.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
+/* harmony import */ var _ellipsis_pipe__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../ellipsis.pipe */ "./src/ellipsis.pipe.ts");
+
+
 
 
 
@@ -885,7 +893,7 @@ let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _navigationbar_navigationbar_component__WEBPACK_IMPORTED_MODULE_11__["NavigationbarComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _navigationbar_navigationbar_component__WEBPACK_IMPORTED_MODULE_11__["NavigationbarComponent"], _ellipsis_pipe__WEBPACK_IMPORTED_MODULE_14__["EllipsisPipe"],],
         entryComponents: [],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_12__["HttpClientModule"],
@@ -898,6 +906,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
             { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
+            _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_13__["Geolocation"]
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
     })
@@ -981,6 +990,7 @@ let ConfigService = class ConfigService {
         this.articleUrl = "https://gowebtutorial.com/api/json/user.json";
         this.userUrl = "https://gowebtutorial.com/api/json/user/";
         this.hobbieUrl = "https://gowebtutorial.com/api/json/hobbies-json";
+        this.postalUrl = "http://gowebtutorial.com/api/json/post-json?postal_code=";
     }
     getArticle() {
         return this.http.get(this.articleUrl);
@@ -990,6 +1000,9 @@ let ConfigService = class ConfigService {
     }
     getHobbies() {
         return this.http.get(this.hobbieUrl);
+    }
+    getPostal(post) {
+        return this.http.get(this.postalUrl + post);
     }
 };
 ConfigService.ctorParameters = () => [
@@ -1094,6 +1107,43 @@ NavigationbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"],
         _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
 ], NavigationbarComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/ellipsis.pipe.ts":
+/*!******************************!*\
+  !*** ./src/ellipsis.pipe.ts ***!
+  \******************************/
+/*! exports provided: EllipsisPipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EllipsisPipe", function() { return EllipsisPipe; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let EllipsisPipe = class EllipsisPipe {
+    transform(value, args) {
+        if (args === undefined) {
+            return value;
+        }
+        if (value.length > args) {
+            return value.substring(0, args) + '...';
+        }
+        else {
+            return value;
+        }
+    }
+};
+EllipsisPipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({
+        name: 'ellipsis'
+    })
+], EllipsisPipe);
 
 
 

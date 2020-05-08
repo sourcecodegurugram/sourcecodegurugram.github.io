@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>navigation</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<div class=\"background\">\n\n  <ion-card class=\"card-one\">\n    <ion-card-content class=\"card-content-font\">\n      Location targeting is turned off on your device.  Please provide the following details to see members in your area.  Postal code and Country.  Search button will say find friends.\n    </ion-card-content>\n\n\n  \n    <p class=\"tittle-card\">Find Friends</p>\n    <form class=\"form-fields\">\n      <label for=\"fname\" class=\"form-label\">ZIP/Postal Code</label><br>\n      <input type=\"text\" id=\"fname\" name=\"fname\" class=\"form-field-zip-code\"><br>\n\n      <label class=\"form-label-country\">Country</label><br>\n      <select id=\"country\" class=\"country-field\">\n        <option value=\"United States\">United States</option>\n        <option value=\"USA\">USA</option>\n        <option value=\"Dubai\">Dubai</option>\n        <option value=\"India\">India</option>\n      </select>\n      <br>\n      <div class=\"button-container\">\n        <button type=\"button\" class=\"button-common\">Search</button>\n      </div>\n    </form>\n \n\n  \n    <p class=\"tittle-card\">Can’t find your \n      country ?\n      Send us a message here and we will add it\n    </p>\n\n    <form class=\"form-fields\">\n      \n      <label class=\"form-label-country form-label\">Country</label><br>\n      <select id=\"country\" class=\"country-field search-country\">\n        <option value=\"country\">Country</option>\n        <option value=\"USA\">USA</option>\n        <option value=\"Dubai\">Dubai</option>\n        <option value=\"India\">India</option>\n      </select>\n      <br>\n      <label for=\"fname\" class=\"form-label\">Postcode</label><br>\n      <input type=\"text\" id=\"fname\" name=\"fname\" class=\"form-field-zip-code search-country\"><br>\n\n      \n      <div class=\"button-container\">\n        <button type=\"button\" class=\"button-common\">Submit</button>\n      </div>\n    </form>\n  </ion-card>\n\n\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>navigation</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<div class=\"background\">\n\n  <ion-card class=\"card-one\">\n    <ion-card-content class=\"card-content-font\">\n      Location targeting is turned off on your device.  Please provide the following details to see members in your area.  Postal code and Country.  Search button will say find friends.\n    </ion-card-content>\n\n\n  \n    <p class=\"tittle-card\">Find Friends</p>\n    <form class=\"form-fields\">\n      <label for=\"fname\" class=\"form-label\"    >ZIP/Postal Code</label><br>\n      <input type=\"text\" id=\"fname\" name=\"post\" class=\"form-field-zip-code\" [(ngModel)]=\"post\"><br>\n\n      <label class=\"form-label-country\">Country</label><br>\n      <select id=\"country\" class=\"country-field\">\n        <option value=\"United States\">United States</option>\n        <option value=\"USA\">USA</option>\n        <option value=\"Dubai\">Dubai</option>\n        <option value=\"India\">India</option>\n      </select>\n      <br>\n      <div class=\"button-container\">\n        <button type=\"button\" class=\"button-common\" (click)=\"buttonClick()\" routerLink=\"/search-result/{{post}}\">Search</button>\n      </div>\n    </form>\n \n\n  \n    <p class=\"tittle-card\">Can’t find your \n      country ?\n      Send us a message here and we will add it\n    </p>\n\n    <form class=\"form-fields\">\n      \n      <label class=\"form-label-country form-label\">Country</label><br>\n      <select id=\"country\" class=\"country-field search-country\">\n        <option value=\"country\">Country</option>\n        <option value=\"USA\">USA</option>\n        <option value=\"Dubai\">Dubai</option>\n        <option value=\"India\">India</option>\n      </select>\n      <br>\n      <label for=\"fname\" class=\"form-label\">Postcode</label><br>\n      <input type=\"text\" id=\"fname\" name=\"fname\" class=\"form-field-zip-code search-country\"><br>\n\n      \n      <div class=\"button-container\">\n        <button type=\"button\" class=\"button-common\">Submit</button>\n      </div>\n    </form>\n  </ion-card>\n\n\n</div>");
 
 /***/ }),
 
@@ -120,20 +120,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LocationTargettingPage", function() { return LocationTargettingPage; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _config_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../config.service */ "./src/app/config.service.ts");
+
 
 
 let LocationTargettingPage = class LocationTargettingPage {
-    constructor() { }
+    constructor(ConfigService) {
+        this.ConfigService = ConfigService;
+    }
     ngOnInit() {
+        this.ConfigService.getPostal(this.post)
+            .subscribe(elements => {
+            console.log(elements);
+        });
+    }
+    buttonClick() {
+        this.ConfigService.getPostal(this.post)
+            .subscribe(elements => {
+            console.log(elements);
+        });
+        console.log(this.post);
     }
 };
+LocationTargettingPage.ctorParameters = () => [
+    { type: _config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"] }
+];
 LocationTargettingPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-location-targetting',
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./location-targetting.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/location-targetting/location-targetting.page.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./location-targetting.page.scss */ "./src/app/location-targetting/location-targetting.page.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"]])
 ], LocationTargettingPage);
 
 

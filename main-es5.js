@@ -823,7 +823,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var routes = [{
       path: '',
-      redirectTo: 'home',
+      redirectTo: 'location-targetting',
       pathMatch: 'full'
     }, {
       path: 'home',
@@ -925,7 +925,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
       }
     }, {
-      path: 'search-result',
+      path: 'search-result/:post',
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
         /*! import() | search-result-search-result-module */
@@ -944,6 +944,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /*! ./detail/detail.module */
         "./src/app/detail/detail.module.ts")).then(function (m) {
           return m.DetailPageModule;
+        });
+      }
+    }, {
+      path: 'elipsispipe',
+      loadChildren: function loadChildren() {
+        return __webpack_require__.e(
+        /*! import() | elipsispipe-elipsispipe-module */
+        "elipsispipe-elipsispipe-module").then(__webpack_require__.bind(null,
+        /*! ./elipsispipe/elipsispipe.module */
+        "./src/app/elipsispipe/elipsispipe.module.ts")).then(function (m) {
+          return m.ElipsispipePageModule;
         });
       }
     }];
@@ -1176,19 +1187,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_common_http__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    /*! @ionic-native/geolocation/ngx */
+    "./node_modules/@ionic-native/geolocation/ngx/index.js");
+    /* harmony import */
+
+
+    var _ellipsis_pipe__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    /*! ../ellipsis.pipe */
+    "./src/ellipsis.pipe.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _navigationbar_navigationbar_component__WEBPACK_IMPORTED_MODULE_11__["NavigationbarComponent"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _navigationbar_navigationbar_component__WEBPACK_IMPORTED_MODULE_11__["NavigationbarComponent"], _ellipsis_pipe__WEBPACK_IMPORTED_MODULE_14__["EllipsisPipe"]],
       entryComponents: [],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_12__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__["BrowserAnimationsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _livechat_angular_widget__WEBPACK_IMPORTED_MODULE_10__["LivechatWidgetModule"]],
       providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
-      }],
+      }, _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_13__["Geolocation"]],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
     })], AppModule);
     /***/
@@ -1326,6 +1349,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.articleUrl = "https://gowebtutorial.com/api/json/user.json";
         this.userUrl = "https://gowebtutorial.com/api/json/user/";
         this.hobbieUrl = "https://gowebtutorial.com/api/json/hobbies-json";
+        this.postalUrl = "http://gowebtutorial.com/api/json/post-json?postal_code=";
       }
 
       _createClass(ConfigService, [{
@@ -1342,6 +1366,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getHobbies",
         value: function getHobbies() {
           return this.http.get(this.hobbieUrl);
+        }
+      }, {
+        key: "getPostal",
+        value: function getPostal(post) {
+          return this.http.get(this.postalUrl + post);
         }
       }]);
 
@@ -1505,6 +1534,67 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /*! ./navigationbar.component.scss */
       "./src/app/navigationbar/navigationbar.component.scss"))["default"]]
     }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"], _blog_service__WEBPACK_IMPORTED_MODULE_3__["BlogService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], NavigationbarComponent);
+    /***/
+  },
+
+  /***/
+  "./src/ellipsis.pipe.ts":
+  /*!******************************!*\
+    !*** ./src/ellipsis.pipe.ts ***!
+    \******************************/
+
+  /*! exports provided: EllipsisPipe */
+
+  /***/
+  function srcEllipsisPipeTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "EllipsisPipe", function () {
+      return EllipsisPipe;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var EllipsisPipe = /*#__PURE__*/function () {
+      function EllipsisPipe() {
+        _classCallCheck(this, EllipsisPipe);
+      }
+
+      _createClass(EllipsisPipe, [{
+        key: "transform",
+        value: function transform(value, args) {
+          if (args === undefined) {
+            return value;
+          }
+
+          if (value.length > args) {
+            return value.substring(0, args) + '...';
+          } else {
+            return value;
+          }
+        }
+      }]);
+
+      return EllipsisPipe;
+    }();
+
+    EllipsisPipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({
+      name: 'ellipsis'
+    })], EllipsisPipe);
     /***/
   },
 
