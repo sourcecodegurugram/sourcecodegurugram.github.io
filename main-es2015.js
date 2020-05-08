@@ -451,7 +451,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <div class=\"navigation\">\n    <div class=\"main-logo\">\n    <img src=\"../../assets/Images/header-logo.png\" alt=\"\" srcset=\"\" class=\"header-logo\" routerLink=\"/\">\n    </div>\n    \n    <div class=\"account-status\">\n    \n      <img src=\"../../assets/Images/user-12.png\" class=\"status-check\" >\n    </div>\n    \n    <div class=\"humburger-menu\">\n      <img src=\"../../assets/Images/cross.png\" class=\"hum-burger-menu-cross\" *ngIf=\"crossSign\" (click)=\"humBurgerCross()\">\n      <img src=\"../../assets/Images/hum.png\" class=\"hum-burger-menu\" (click)=\"humburgereffect()\" *ngIf=\"humBurger\" >\n    </div>\n    \n    </div>\n    \n    <div class=\"main-menu\" *ngIf=\"mainMenu\">\n      <ul class=\"main-list\" (click)=\"itemclick()\">\n        <li><a routerLink=\"/home\">Screen1</a></li>\n        <li><a routerLink=\"/location-targetting\">Screen 3</a></li>\n        <li><a routerLink=\"/register\">Screen 4</a></li>\n        <li><a routerLink=\"/chat/searchTab\">Screen 8</a></li>\n        <li><a routerLink=\"/chat/tabs2\">Screen 9</a></li>\n        <li><a routerLink=\"/search-result\">Screen 10</a></li>\n        <li><a routerLink=\"/chat/tabs2\">Screen 11</a></li>\n        <li><a routerLink=\"/personal-chat\">Screen 12</a></li>\n        <li><a routerLink=\"/notificationchat\">Screen 13</a></li>\n        <li><a href=\"#\">LogOut</a></li>\n      </ul>\n    </div>\n  </ion-header>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <div class=\"navigation\">\n    <div class=\"main-logo\">\n    <img src=\"../../assets/Images/header-logo.png\" alt=\"\" srcset=\"\" class=\"header-logo\" routerLink=\"/\">\n    </div>\n    \n    <div class=\"account-status\">\n    \n      <img src=\"../../assets/Images/user-12.png\" class=\"status-check\" >\n    </div>\n    \n    <div class=\"humburger-menu\">\n      <img src=\"../../assets/Images/cross.png\" class=\"hum-burger-menu-cross\" *ngIf=\"crossSign\" (click)=\"humBurgerCross()\">\n      <img src=\"../../assets/Images/hum.png\" class=\"hum-burger-menu\" (click)=\"humburgereffect()\" *ngIf=\"humBurger\" >\n    </div>\n   \n    </div>\n    \n    <div class=\"main-menu\" *ngIf=\"mainMenu\">\n      <ul class=\"main-list\" (click)=\"itemclick()\">\n        <li><a routerLink=\"/home\">Screen1</a></li>\n        <li><a routerLink=\"/location-targetting\">Screen 3</a></li>\n        <li><a routerLink=\"/register\">Screen 4</a></li>\n        <li><a routerLink=\"/chat/searchTab\">Screen 8</a></li>\n        <li><a routerLink=\"/chat/tabs2\">Screen 9</a></li>\n        <li><a routerLink=\"/search-result\">Screen 10</a></li>\n        <li><a routerLink=\"/chat/tabs2\">Screen 11</a></li>\n        <li><a routerLink=\"/personal-chat\">Screen 12</a></li>\n        <li><a routerLink=\"/notificationchat\">Screen 13</a></li>\n        <li><a href=\"#\">LogOut</a></li>\n      </ul>\n    </div>\n  </ion-header>");
 
 /***/ }),
 
@@ -758,6 +758,10 @@ const routes = [
         path: 'search-result',
         loadChildren: () => __webpack_require__.e(/*! import() | search-result-search-result-module */ "search-result-search-result-module").then(__webpack_require__.bind(null, /*! ./search-result/search-result.module */ "./src/app/search-result/search-result.module.ts")).then(m => m.SearchResultPageModule)
     },
+    {
+        path: 'detail/:name/:mail/:uid',
+        loadChildren: () => __webpack_require__.e(/*! import() | detail-detail-module */ "detail-detail-module").then(__webpack_require__.bind(null, /*! ./detail/detail.module */ "./src/app/detail/detail.module.ts")).then(m => m.DetailPageModule)
+    },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -861,7 +865,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
-/* harmony import */ var _navigationbar_navigationbar_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./navigationbar/navigationbar.component */ "./src/app/navigationbar/navigationbar.component.ts");
+/* harmony import */ var _livechat_angular_widget__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @livechat/angular-widget */ "./node_modules/@livechat/angular-widget/fesm2015/livechat-angular-widget.js");
+/* harmony import */ var _navigationbar_navigationbar_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./navigationbar/navigationbar.component */ "./src/app/navigationbar/navigationbar.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
 
 
 
@@ -877,21 +885,126 @@ let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _navigationbar_navigationbar_component__WEBPACK_IMPORTED_MODULE_10__["NavigationbarComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _navigationbar_navigationbar_component__WEBPACK_IMPORTED_MODULE_11__["NavigationbarComponent"]],
         entryComponents: [],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_12__["HttpClientModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__["BrowserAnimationsModule"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(),
             _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
+            _livechat_angular_widget__WEBPACK_IMPORTED_MODULE_10__["LivechatWidgetModule"],
         ],
         providers: [
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
-            { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] }
+            { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/blog.service.ts":
+/*!*********************************!*\
+  !*** ./src/app/blog.service.ts ***!
+  \*********************************/
+/*! exports provided: BlogService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlogService", function() { return BlogService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
+
+
+
+
+const httpOptions = {
+    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+        'Content-Type': 'application/json',
+    })
+};
+let BlogService = class BlogService {
+    constructor(http) {
+        this.http = http;
+        this.API_URL = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
+    }
+    getBlogs(id) {
+        console.log(id);
+        if (id) {
+            return this.http.get(this.API_URL + '/api/json/node/article/' + id);
+        }
+        else {
+            return this.http.get(this.API_URL + '/api/json/node/article?sort=-created');
+        }
+    }
+};
+BlogService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+BlogService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+], BlogService);
+
+
+
+/***/ }),
+
+/***/ "./src/app/config.service.ts":
+/*!***********************************!*\
+  !*** ./src/app/config.service.ts ***!
+  \***********************************/
+/*! exports provided: ConfigService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfigService", function() { return ConfigService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+let ConfigService = class ConfigService {
+    constructor(http) {
+        this.http = http;
+        this.articleUrl = "http://gowebtutorial.com/api/json/user.json";
+        this.userUrl = "http://gowebtutorial.com/api/json/user/";
+        this.hobbieUrl = "http://gowebtutorial.com/api/json/hobbies-json";
+        this.DetailUrl = "http://latdating.dd:8083/api/json/detailtesting-json";
+    }
+    getArticle() {
+        return this.http.get(this.articleUrl);
+    }
+    getUser(uid) {
+        return this.http.get(this.userUrl + uid);
+    }
+    getHobbies() {
+        return this.http.get(this.hobbieUrl);
+    }
+    getDetail() {
+        return this.http.get(this.DetailUrl);
+    }
+};
+ConfigService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+ConfigService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: "root"
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+], ConfigService);
 
 
 
@@ -922,16 +1035,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavigationbarComponent", function() { return NavigationbarComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _config_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../config.service */ "./src/app/config.service.ts");
+/* harmony import */ var _blog_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../blog.service */ "./src/app/blog.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
 
 
 let NavigationbarComponent = class NavigationbarComponent {
-    constructor() {
+    constructor(Configservice, blogService, route, router) {
+        this.Configservice = Configservice;
+        this.blogService = blogService;
+        this.route = route;
+        this.router = router;
         this.crossSign = false;
         this.humBurger = true;
         this.mainMenu = false;
         this.mainMenuItem = true;
+        this.id = null;
     }
-    ngOnInit() { }
+    ngOnInit() {
+        // this.Configservice.getArticle()
+        //   .subscribe(data => {
+        //     this.post = data;
+        //    console.log(data)
+        //   });
+    }
+    ngOnDestroy() {
+        this.sub.unsubscribe();
+    }
     humburgereffect() {
         this.crossSign = true;
         this.humBurger = false;
@@ -948,13 +1081,22 @@ let NavigationbarComponent = class NavigationbarComponent {
         this.humBurger = true;
     }
 };
+NavigationbarComponent.ctorParameters = () => [
+    { type: _config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"] },
+    { type: _blog_service__WEBPACK_IMPORTED_MODULE_3__["BlogService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
 NavigationbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-navigationbar',
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./navigationbar.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/navigationbar/navigationbar.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./navigationbar.component.scss */ "./src/app/navigationbar/navigationbar.component.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"],
+        _blog_service__WEBPACK_IMPORTED_MODULE_3__["BlogService"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
 ], NavigationbarComponent);
 
 
@@ -977,7 +1119,8 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 
 const environment = {
-    production: false
+    production: false,
+    apiUrl: 'http://ritin.website/uri/'
 };
 /*
  * For easier debugging in development mode, you can import the following file

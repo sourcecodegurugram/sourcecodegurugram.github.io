@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header ></ion-header>\n\n<div class=\"background\">\n  <div class=\"tittle-home-page\">\n    <ion-card-subtitle class=\"tittle-home\">Recent members in you area</ion-card-subtitle>\n  </div>\n\n  <div class=\"member-cards\" data-toggle=\"modal\" data-target=\"#myModal\">\n    <div class=\"member-card-image\">\n      <img src=\"../../assets/Images/user_1.png\" alt=\"\" srcset=\"\" class=\"user-image\">\n    </div>\n    <div class=\"member-card-text\">\n      <p class=\"name card-item\">Vibrant_chef<ion-badge slot=\"end\"  color=\"light\">Parent</ion-badge></p>\n     \n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\">Hobbies:</span>Travel,Driving…</ion-label>\n      <ion-badge slot=\"end\"  color=\"light\">22</ion-badge>\n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\">Activities:</span>Happyhour..</ion-label>\n      <ion-badge slot=\"end\"  color=\"light\">22</ion-badge>\n      <p class=\"distance card-item\"><span class=\"left-heading\">Distance:</span>1 miles away</p> \n    </div>\n  </div>\n\n\n\n\n\n\n  <div class=\"member-cards\">\n    <div class=\"member-card-image\">\n      <img src=\"../../assets/Images/user_2.png\" alt=\"\" srcset=\"\" class=\"user-image\">\n    </div>\n    <div class=\"member-card-text\">\n      <p class=\"name card-item\">ikial_55<ion-badge slot=\"end\"  color=\"light\">Pet Owner</ion-badge></p>\n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\">Hobbies:</span>Travel,Driving…</ion-label>\n      <ion-badge slot=\"end\"  color=\"light\">22</ion-badge>\n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\">Activities:</span>Happyhour..</ion-label>\n      <ion-badge slot=\"end\"  color=\"light\">22</ion-badge>\n      <p class=\"distance card-item\"><span class=\"left-heading\">Distance:</span>10 miles away</p> \n    </div>\n  </div>\n\n  \n  <div class=\"member-cards\">\n    <div class=\"member-card-image\">\n      <img src=\"../../assets/Images/user_4.png\" alt=\"\" srcset=\"\" class=\"user-image\">\n    </div>\n    <div class=\"member-card-text\">\n      <p class=\"name card-item\">faithorg<ion-badge slot=\"end\"  color=\"light\">Parent</ion-badge></p>\n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\">Hobbies:</span>CookingDriving..</ion-label>\n      <ion-badge slot=\"end\"  color=\"light\">22</ion-badge>\n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\">Activities:</span>Videogames,yoga...</ion-label>\n      <ion-badge slot=\"end\"  color=\"light\">22</ion-badge>\n      <p class=\"distance card-item\"><span class=\"left-heading\">Distance:</span>10 miles away</p> \n    </div>\n  </div>\n\n  <div class=\"member-cards\">\n    <div class=\"member-card-image\">\n      <img src=\"../../assets/Images/user_5.png\" alt=\"\" srcset=\"\" class=\"user-image\">\n    </div>\n    <div class=\"member-card-text\">\n      <p class=\"name card-item\">dedrick96<ion-badge slot=\"end\"  color=\"light\">Pet Owner</ion-badge></p>\n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\">Hobbies:</span>Travel,Driving…</ion-label>\n      <ion-badge slot=\"end\"  color=\"light\">22</ion-badge>\n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\">Activities:</span>Happyhour..</ion-label>\n      <ion-badge slot=\"end\"  color=\"light\">22</ion-badge>\n      <p class=\"distance card-item\"><span class=\"left-heading\">Distance:</span>4 miles away</p> \n    </div>\n  </div>\n\n  <div class=\"member-cards\">\n    <div class=\"member-card-image\">\n      <img src=\"../../assets/Images/user_-4.png\" alt=\"\" srcset=\"\" class=\"user-image\">\n    </div>\n    <div class=\"member-card-text\">\n      <p class=\"name card-item\">YogaGuy<ion-badge slot=\"end\"  color=\"light\">Parent</ion-badge></p>\n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\">Hobbies:</span>Travel,Driving…</ion-label>\n      <ion-badge slot=\"end\"  color=\"light\">22</ion-badge>\n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\">Activities:</span>Happyhour,..</ion-label>\n      <ion-badge slot=\"end\"  color=\"light\">22</ion-badge>\n      <p class=\"distance card-item\"><span class=\"left-heading\">Distance:</span>1 miles away</p> \n    </div>\n  </div>\n\n\n\n  <div class=\"member-cards\">\n    <div class=\"member-card-image\">\n      <img src=\"../../assets/Images/user_7.png\" alt=\"\" srcset=\"\" class=\"user-image\">\n    </div>\n    <div class=\"member-card-text\">\n      <p class=\"name card-item\">DLeigh<ion-badge slot=\"end\"  color=\"light\">Pet Owner</ion-badge></p>\n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\">Hobbies:</span>Travel,Driving…</ion-label>\n      <ion-badge slot=\"end\"  color=\"light\">22</ion-badge>\n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\">Activities:</span>Happyhour..</ion-label>\n      <ion-badge slot=\"end\"  color=\"light\">22</ion-badge>\n      <p class=\"distance card-item\"><span class=\"left-heading\">Distance:</span>2 miles away</p> \n    </div>\n  </div>\n\n\n\n</div>\n\n\n\n\n  <!-- The Modal -->\n  <div class=\"modal\" id=\"myModal\">\n    <div class=\"modal-dialog\">\n      <div class=\"modal-content\">\n      \n        <!-- Modal Header -->\n        <div class=\"modal-header\">\n         \n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n          <p class=\"modal-para\">Not4Dating wants to help you create communities, build meaningful relationships and feel truly connected to others</p>\n           <h5 class=\"whos-on-site\">Who’s on the site?</h5>\n          <div class=\"checkbox-popup\">\n            <img src=\"../../assets/Images/check.png\" class=\"check-box\">\n            <p class=\"check-box-text\">Our youngest member is 18,our oldest member is 85</p>\n          </div>\n          <div class=\"checkbox-popup\">\n            <img src=\"../../assets/Images/check.png\" class=\"check-box\">\n            <p class=\"check-box-text\">64% In a Relationship, 36% Not in a Relationship  </p>\n          </div>\n\n          <div class=\"button-flex\">\n            <button type=\"button\" class=\"btn btn-primary register-button\" routerLink=\"/register\">Register Now</button>\n            <button type=\"button\" class=\"btn btn-primary login-button\">Login Now</button>\n          </div>\n        </div>\n       \n      \n        \n       \n        \n      </div>\n    </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header ></ion-header>\n\n<div class=\"background\">\n  <div class=\"tittle-home-page\">\n    <ion-card-subtitle class=\"tittle-home\">Recent members in you area</ion-card-subtitle>\n  </div>\n\n  \n\n  <div class=\"member-cards\" *ngFor=\"let posts of  postse\" routerLink=\"/detail/{{posts.name}}/{{posts.mail}}/{{posts.uid}}\">\n    <div class=\"member-card-image\">\n    \n \n<img src=\"../../assets/Images/user_-4.png\" alt=\"\" srcset=\"\" class=\"user-image\">\n    </div>\n    <div class=\"member-card-text\">\n      <p class=\"name card-item\">{{posts.name}}<ion-badge slot=\"end\"  color=\"light\" *ngIf=\"posts.Pets==0\">Parent</ion-badge><ion-badge slot=\"end\"  color=\"light\" *ngIf=\"posts.Pets\">{{posts.Pets}}</ion-badge></p>\n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\" >Hobbies:</span>{{posts.Activity | slice:-2:-1}} </ion-label>\n      <ion-badge slot=\"end\"  color=\"light\"></ion-badge><br>\n      <ion-label class=\"hobbies card-item\" ><span class=\"left-heading\">Activities:</span>{{posts.Activity | slice:-2:-1}}</ion-label>\n      <ion-badge slot=\"end\"  color=\"light\"></ion-badge>\n      <p class=\"distance card-item\"><span class=\"left-heading\">Distance:</span>1 miles away</p> \n    </div>\n  </div>\n \n</div>\n\n\n\n\n  <!-- The Modal -->\n  <div class=\"modal\" id=\"myModal\">\n    <div class=\"modal-dialog\">\n      <div class=\"modal-content\">\n      \n        <!-- Modal Header -->\n        <div class=\"modal-header\">\n         \n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\n        </div>\n        <div class=\"modal-body\">\n          <p class=\"modal-para\">Not4Dating wants to help you create communities, build meaningful relationships and feel truly connected to others</p>\n           <h5 class=\"whos-on-site\">Who’s on the site?</h5>\n          <div class=\"checkbox-popup\">\n            <img src=\"../../assets/Images/check.png\" class=\"check-box\">\n            <p class=\"check-box-text\">Our youngest member is 18,our oldest member is 85</p>\n          </div>\n          <div class=\"checkbox-popup\">\n            <img src=\"../../assets/Images/check.png\" class=\"check-box\">\n            <p class=\"check-box-text\">64% In a Relationship, 36% Not in a Relationship  </p>\n          </div>\n\n          <div class=\"button-flex\">\n            <button type=\"button\" class=\"btn btn-primary register-button\" routerLink=\"/register\">Register Now</button>\n            <button type=\"button\" class=\"btn btn-primary login-button\">Login Now</button>\n          </div>\n        </div>\n       \n      \n        \n       \n        \n      </div>\n    </div>");
 
 /***/ }),
 
@@ -30,6 +30,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _home_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./home.page */ "./src/app/home/home.page.ts");
+/* harmony import */ var _replace_pipe__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../replace.pipe */ "./src/app/replace.pipe.ts");
+
 
 
 
@@ -52,7 +54,7 @@ HomePageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 }
             ])
         ],
-        declarations: [_home_page__WEBPACK_IMPORTED_MODULE_6__["HomePage"]]
+        declarations: [_home_page__WEBPACK_IMPORTED_MODULE_6__["HomePage"], _replace_pipe__WEBPACK_IMPORTED_MODULE_7__["ReplacePipe"]]
     })
 ], HomePageModule);
 
@@ -85,19 +87,74 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePage", function() { return HomePage; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _config_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../config.service */ "./src/app/config.service.ts");
+
 
 
 let HomePage = class HomePage {
-    constructor() { }
+    constructor(Configservice) {
+        this.Configservice = Configservice;
+    }
+    ngOnInit() {
+        this.Configservice.getArticle()
+            .subscribe(data => {
+            console.log(this.uid);
+        });
+        this.Configservice.getHobbies()
+            .subscribe(element => {
+            this.postse = element;
+            console.log(element);
+        });
+    }
+    test() {
+        this.Configservice.getArticle()
+            .subscribe(data => {
+            this.post = data;
+            console.log(this.post);
+        });
+    }
 };
+HomePage.ctorParameters = () => [
+    { type: _config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"] }
+];
 HomePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-home',
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./home.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/home/home.page.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./home.page.scss */ "./src/app/home/home.page.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"]])
 ], HomePage);
+
+
+
+/***/ }),
+
+/***/ "./src/app/replace.pipe.ts":
+/*!*********************************!*\
+  !*** ./src/app/replace.pipe.ts ***!
+  \*********************************/
+/*! exports provided: ReplacePipe */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReplacePipe", function() { return ReplacePipe; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+
+
+let ReplacePipe = class ReplacePipe {
+    transform(value, regexValue, replaceValue) {
+        let regex = new RegExp(regexValue, 'g');
+        return value.replace(regex, replaceValue);
+    }
+};
+ReplacePipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({
+        name: 'replace'
+    })
+], ReplacePipe);
 
 
 
