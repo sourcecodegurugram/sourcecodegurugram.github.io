@@ -990,7 +990,7 @@ let ConfigService = class ConfigService {
         this.articleUrl = "https://gowebtutorial.com/api/json/user.json";
         this.userUrl = "https://gowebtutorial.com/api/json/user/";
         this.hobbieUrl = "https://gowebtutorial.com/api/json/hobbies-json";
-        this.postalUrl = "http://gowebtutorial.com/api/json/post-json?postal_code=";
+        this.postalUrl = "https://gowebtutorial.com/api/json/post-json?postal_code=";
     }
     getArticle() {
         return this.http.get(this.articleUrl);
