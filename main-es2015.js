@@ -451,7 +451,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <div class=\"navigation\">\n    <div class=\"main-logo\">\n    <img src=\"../../assets/Images/header-logo.png\" alt=\"\" srcset=\"\" class=\"header-logo\" routerLink=\"/\">\n    </div>\n    \n    <div class=\"account-status\">\n    \n      <img src=\"../../assets/Images/user-12.png\" class=\"status-check\" >\n    </div>\n    \n    <div class=\"humburger-menu\">\n      <img src=\"../../assets/Images/cross.png\" class=\"hum-burger-menu-cross\" *ngIf=\"crossSign\" (click)=\"humBurgerCross()\">\n      <img src=\"../../assets/Images/hum.png\" class=\"hum-burger-menu\" (click)=\"humburgereffect()\" *ngIf=\"humBurger\" >\n    </div>\n   \n    </div>\n    \n    <div class=\"main-menu\" *ngIf=\"mainMenu\">\n      <ul class=\"main-list\" (click)=\"itemclick()\">\n        <li><a routerLink=\"/home\">Screen1</a></li>\n        <li><a routerLink=\"/location-targetting\">Screen 3</a></li>\n        <li><a routerLink=\"/register\">Screen 4</a></li>\n        <li><a routerLink=\"/chat/searchTab\">Screen 8</a></li>\n        <li><a routerLink=\"/chat/tabs2\">Screen 9</a></li>\n        <li><a routerLink=\"/search-result\">Screen 10</a></li>\n        <li><a routerLink=\"/chat/tabs2\">Screen 11</a></li>\n        <li><a routerLink=\"/personal-chat\">Screen 12</a></li>\n        <li><a routerLink=\"/notificationchat\">Screen 13</a></li>\n        <li><a href=\"#\">LogOut</a></li>\n      </ul>\n    </div>\n  </ion-header>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <div class=\"navigation\">\n    <div class=\"main-logo\">\n    <img src=\"../../assets/Images/header-logo.png\" alt=\"\" srcset=\"\" class=\"header-logo\" routerLink=\"/\">\n    </div>\n    \n    <div class=\"account-status\">\n    \n      <img src=\"../../assets/Images/user-12.png\" class=\"status-check\" >\n    </div>\n    \n    <div class=\"humburger-menu\">\n      <img src=\"../../assets/Images/cross.png\" class=\"hum-burger-menu-cross\" *ngIf=\"crossSign\" (click)=\"humBurgerCross()\">\n      <img src=\"../../assets/Images/hum.png\" class=\"hum-burger-menu\" (click)=\"humburgereffect()\" *ngIf=\"humBurger\" >\n    </div>\n   \n    </div>\n    \n    <div class=\"main-menu\" *ngIf=\"mainMenu\">\n      <ul class=\"main-list\" (click)=\"itemclick()\">\n        <li><a routerLink=\"/elipsispipe\">Map</a></li>\n        <li><a routerLink=\"/home\">Screen1</a></li>\n        <li><a routerLink=\"/location-targetting\">Screen 3</a></li>\n        <li><a routerLink=\"/register\">Screen 4</a></li>\n        <li><a routerLink=\"/chat/searchTab\">Screen 8</a></li>\n        <li><a routerLink=\"/chat/tabs2\">Screen 9</a></li>\n        <li><a routerLink=\"/search-result\">Screen 10</a></li>\n        <li><a routerLink=\"/chat/tabs2\">Screen 11</a></li>\n        <li><a routerLink=\"/personal-chat\">Screen 12</a></li>\n        <li><a routerLink=\"/notificationchat\">Screen 13</a></li>\n        <li><a href=\"#\">LogOut</a></li>\n      </ul>\n    </div>\n  </ion-header>");
 
 /***/ }),
 
@@ -869,11 +869,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm2015/animations.js");
-/* harmony import */ var _livechat_angular_widget__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @livechat/angular-widget */ "./node_modules/@livechat/angular-widget/fesm2015/livechat-angular-widget.js");
-/* harmony import */ var _navigationbar_navigationbar_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./navigationbar/navigationbar.component */ "./src/app/navigationbar/navigationbar.component.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
-/* harmony import */ var _ellipsis_pipe__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../ellipsis.pipe */ "./src/ellipsis.pipe.ts");
+/* harmony import */ var _navigationbar_navigationbar_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./navigationbar/navigationbar.component */ "./src/app/navigationbar/navigationbar.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
+/* harmony import */ var _ellipsis_pipe__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../ellipsis.pipe */ "./src/ellipsis.pipe.ts");
+/* harmony import */ var _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ionic-native/native-geocoder/ngx */ "./node_modules/@ionic-native/native-geocoder/ngx/index.js");
 
 
 
@@ -893,22 +893,22 @@ let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _navigationbar_navigationbar_component__WEBPACK_IMPORTED_MODULE_11__["NavigationbarComponent"], _ellipsis_pipe__WEBPACK_IMPORTED_MODULE_14__["EllipsisPipe"],],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _navigationbar_navigationbar_component__WEBPACK_IMPORTED_MODULE_10__["NavigationbarComponent"], _ellipsis_pipe__WEBPACK_IMPORTED_MODULE_13__["EllipsisPipe"]],
         entryComponents: [],
-        imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_12__["HttpClientModule"],
+        imports: [
+            _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClientModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__["BrowserAnimationsModule"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(),
             _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
-            _livechat_angular_widget__WEBPACK_IMPORTED_MODULE_10__["LivechatWidgetModule"],
         ],
         providers: [
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
+            _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_12__["Geolocation"], _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_14__["NativeGeocoder"],
             { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
-            _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_13__["Geolocation"]
         ],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
     })
 ], AppModule);
 
@@ -987,10 +987,12 @@ __webpack_require__.r(__webpack_exports__);
 let ConfigService = class ConfigService {
     constructor(http) {
         this.http = http;
-        this.articleUrl = "https://gowebtutorial.com/api/json/user.json";
-        this.userUrl = "https://gowebtutorial.com/api/json/user/";
-        this.hobbieUrl = "https://gowebtutorial.com/api/json/hobbies-json";
-        this.postalUrl = "https://gowebtutorial.com/api/json/post-json?postal_code=";
+        this.serverUrl = "http://gowebtutorial.com/api/json/";
+        this.articleUrl = this.serverUrl + "user.json";
+        this.userUrl = this.serverUrl + "user/";
+        this.hobbieUrl = this.serverUrl + "hobbies-json";
+        this.postalUrl = this.serverUrl + "post-json?postal_code=";
+        this.locationUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
     }
     getArticle() {
         return this.http.get(this.articleUrl);
@@ -1004,13 +1006,16 @@ let ConfigService = class ConfigService {
     getPostal(post) {
         return this.http.get(this.postalUrl + post);
     }
+    getLocation(lat, lng) {
+        return this.http.get(this.locationUrl + lat + "," + lng + "&key=AIzaSyDDR5cIbr6IoMR59m7iwj34HcGO6aEP15k");
+    }
 };
 ConfigService.ctorParameters = () => [
     { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
 ];
 ConfigService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: "root"
+        providedIn: "root",
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
 ], ConfigService);

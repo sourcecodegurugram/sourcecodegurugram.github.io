@@ -90,16 +90,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _config_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../config.service */ "./src/app/config.service.ts");
 /* harmony import */ var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/geolocation/ngx */ "./node_modules/@ionic-native/geolocation/ngx/index.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+/* harmony import */ var _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/native-geocoder/ngx */ "./node_modules/@ionic-native/native-geocoder/ngx/index.js");
+
 
 
 
 
 
 let HomePage = class HomePage {
-    constructor(Configservice, geolocation, Platform) {
+    constructor(Configservice, geolocation, Platform, nativeGeocoder) {
         this.Configservice = Configservice;
         this.geolocation = geolocation;
         this.Platform = Platform;
+        this.nativeGeocoder = nativeGeocoder;
         this.showmore = true;
     }
     ngOnInit() {
@@ -108,13 +111,6 @@ let HomePage = class HomePage {
             console.log("longitude" + resp.coords.longitude);
         }).catch((error) => {
             console.log('Error getting location', error);
-        });
-        let watch = this.geolocation.watchPosition();
-        watch.subscribe((data) => {
-            // data can be a set of coordinates, or an error (if an error occurred).
-            console.log("conlatitude" + data.coords.latitude);
-            console.log("conlongitude" + data.coords.longitude);
-            console.log(data.coords);
         });
         this.Configservice.getArticle()
             .subscribe(data => {
@@ -137,7 +133,8 @@ let HomePage = class HomePage {
 HomePage.ctorParameters = () => [
     { type: _config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"] },
     { type: _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__["Geolocation"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["Platform"] }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["Platform"] },
+    { type: _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_5__["NativeGeocoder"] }
 ];
 HomePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -147,7 +144,8 @@ HomePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"],
         _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__["Geolocation"],
-        _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["Platform"]])
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["Platform"],
+        _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_5__["NativeGeocoder"]])
 ], HomePage);
 
 

@@ -176,14 +176,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @ionic/angular */
     "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+    /* harmony import */
+
+
+    var _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @ionic-native/native-geocoder/ngx */
+    "./node_modules/@ionic-native/native-geocoder/ngx/index.js");
 
     var HomePage = /*#__PURE__*/function () {
-      function HomePage(Configservice, geolocation, Platform) {
+      function HomePage(Configservice, geolocation, Platform, nativeGeocoder) {
         _classCallCheck(this, HomePage);
 
         this.Configservice = Configservice;
         this.geolocation = geolocation;
         this.Platform = Platform;
+        this.nativeGeocoder = nativeGeocoder;
         this.showmore = true;
       }
 
@@ -197,13 +204,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             console.log("longitude" + resp.coords.longitude);
           })["catch"](function (error) {
             console.log('Error getting location', error);
-          });
-          var watch = this.geolocation.watchPosition();
-          watch.subscribe(function (data) {
-            // data can be a set of coordinates, or an error (if an error occurred).
-            console.log("conlatitude" + data.coords.latitude);
-            console.log("conlongitude" + data.coords.longitude);
-            console.log(data.coords);
           });
           this.Configservice.getArticle().subscribe(function (data) {
             console.log(_this.uid);
@@ -235,6 +235,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__["Geolocation"]
       }, {
         type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["Platform"]
+      }, {
+        type: _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_5__["NativeGeocoder"]
       }];
     };
 
@@ -246,7 +248,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./home.page.scss */
       "./src/app/home/home.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"], _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__["Geolocation"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["Platform"]])], HomePage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"], _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__["Geolocation"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["Platform"], _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_5__["NativeGeocoder"]])], HomePage);
     /***/
   },
 

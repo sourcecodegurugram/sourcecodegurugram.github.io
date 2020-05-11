@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\n  <ion-toolbar>\n    <ion-title>navigation</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<div class=\"background\">\n\n  <ion-card class=\"card-one\">\n    <ion-card-content class=\"card-content-font\">\n      Location targeting is turned off on your device.  Please provide the following details to see members in your area.  Postal code and Country.  Search button will say find friends.\n    </ion-card-content>\n\n\n  \n    <p class=\"tittle-card\">Find Friends</p>\n    <form class=\"form-fields\">\n      <label for=\"fname\" class=\"form-label\"    >ZIP/Postal Code</label><br>\n      <input type=\"text\" id=\"fname\" name=\"post\" class=\"form-field-zip-code\" [(ngModel)]=\"post\"><br>\n\n      <label class=\"form-label-country\">Country</label><br>\n      <select id=\"country\" class=\"country-field\">\n        <option value=\"United States\">United States</option>\n        <option value=\"USA\">USA</option>\n        <option value=\"Dubai\">Dubai</option>\n        <option value=\"India\">India</option>\n      </select>\n      <br>\n      <div class=\"button-container\">\n        <button type=\"button\" class=\"button-common\" (click)=\"buttonClick()\" routerLink=\"/search-result/{{post}}\">Search</button>\n      </div>\n    </form>\n \n\n  \n    <p class=\"tittle-card\">Can’t find your \n      country ?\n      Send us a message here and we will add it\n    </p>\n\n    <form class=\"form-fields\">\n      \n      <label class=\"form-label-country form-label\">Country</label><br>\n      <select id=\"country\" class=\"country-field search-country\">\n        <option value=\"country\">Country</option>\n        <option value=\"USA\">USA</option>\n        <option value=\"Dubai\">Dubai</option>\n        <option value=\"India\">India</option>\n      </select>\n      <br>\n      <label for=\"fname\" class=\"form-label\">Postcode</label><br>\n      <input type=\"text\" id=\"fname\" name=\"fname\" class=\"form-field-zip-code search-country\"><br>\n\n      \n      <div class=\"button-container\">\n        <button type=\"button\" class=\"button-common\">Submit</button>\n      </div>\n    </form>\n  </ion-card>\n\n\n</div>";
+    __webpack_exports__["default"] = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>navigation</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<div class=\"background\">\r\n\r\n  <ion-card class=\"card-one\">\r\n    <ion-card-content class=\"card-content-font\">\r\n      Location targeting is turned off on your device. Please provide the following details to see members in your area.\r\n      Postal code and Country. Search button will say find friends.\r\n    </ion-card-content>\r\n\r\n    <p class=\"tittle-card\">Find Friends</p>\r\n    <form class=\"form-fields\">\r\n      <label for=\"fname\" class=\"form-label\">ZIP/Postal Code</label><br>\r\n      <input type=\"text\" id=\"fname\" name=\"post\" class=\"form-field-zip-code\" [(ngModel)]=\"post\"><br>\r\n\r\n      <label class=\"form-label-country\">Country</label><br>\r\n      <select id=\"country\" class=\"country-field\">\r\n        <option value=\"United States\">United States</option>\r\n        <option value=\"USA\">USA</option>\r\n        <option value=\"Dubai\">Dubai</option>\r\n        <option value=\"India\">India</option>\r\n      </select>\r\n      <br>\r\n      <div class=\"button-container\">\r\n        <button type=\"button\" class=\"button-common\" (click)=\"buttonClick()\"\r\n          routerLink=\"/search-result/{{post}}\">Search</button>\r\n      </div>\r\n    </form>\r\n\r\n\r\n\r\n    <p class=\"tittle-card\">Can’t find your\r\n      country ?\r\n      Send us a message here and we will add it\r\n    </p>\r\n\r\n    <form class=\"form-fields\">\r\n\r\n      <label class=\"form-label-country form-label\">Country</label><br>\r\n      <select id=\"country\" class=\"country-field search-country\">\r\n        <option value=\"country\">Country</option>\r\n        <option value=\"USA\">USA</option>\r\n        <option value=\"Dubai\">Dubai</option>\r\n        <option value=\"India\">India</option>\r\n      </select>\r\n      <br>\r\n      <label for=\"fname\" class=\"form-label\">Postcode</label><br>\r\n      <input type=\"text\" id=\"fname\" name=\"fname\" class=\"form-field-zip-code search-country\"><br>\r\n\r\n\r\n      <div class=\"button-container\">\r\n        <button type=\"button\" class=\"button-common\">Submit</button>\r\n      </div>\r\n    </form>\r\n  </ion-card>\r\n\r\n\r\n</div>";
     /***/
   },
 
@@ -221,20 +221,66 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _config_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../config.service */
     "./src/app/config.service.ts");
+    /* harmony import */
+
+
+    var _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @ionic-native/geolocation/ngx */
+    "./node_modules/@ionic-native/geolocation/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+    /* harmony import */
+
+
+    var _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @ionic-native/native-geocoder/ngx */
+    "./node_modules/@ionic-native/native-geocoder/ngx/index.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
 
     var LocationTargettingPage = /*#__PURE__*/function () {
-      function LocationTargettingPage(ConfigService) {
+      function LocationTargettingPage(ConfigService, geolocation, platform, nativeGeocoder, zone, _Activatedroute) {
         _classCallCheck(this, LocationTargettingPage);
 
         this.ConfigService = ConfigService;
+        this.geolocation = geolocation;
+        this.platform = platform;
+        this.nativeGeocoder = nativeGeocoder;
+        this.zone = zone;
+        this._Activatedroute = _Activatedroute;
       }
 
       _createClass(LocationTargettingPage, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          this.ConfigService.getPostal(this.post).subscribe(function (elements) {
-            console.log(elements);
-          });
+          var _this = this;
+
+          this.geolocation.getCurrentPosition().then(function (resp) {
+            _this.lat = resp.coords.latitude;
+            console.log(_this.lat);
+            _this.lng = resp.coords.longitude;
+
+            _this.ConfigService.getLocation(_this.lat, _this.lng).subscribe(function (elements) {
+              return console.log(elements);
+            });
+
+            console.log(_this.lng);
+          })["catch"](function (error) {
+            console.log('Error getting location', error);
+          }); //  this.sub = this._Activatedroute.paramMap.subscribe((params) => {
+          //   this.lats = params.get("lat");
+          //   this.lngs = params.get("lng");
+          //   console.log(this.lats)
+          //   console.log(this.lngs)
+          // });
         }
       }, {
         key: "buttonClick",
@@ -252,18 +298,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     LocationTargettingPage.ctorParameters = function () {
       return [{
         type: _config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"]
+      }, {
+        type: _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__["Geolocation"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["Platform"]
+      }, {
+        type: _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_5__["NativeGeocoder"]
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"]
       }];
     };
 
     LocationTargettingPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-location-targetting',
+      selector: "app-location-targetting",
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./location-targetting.page.html */
       "./node_modules/raw-loader/dist/cjs.js!./src/app/location-targetting/location-targetting.page.html"))["default"],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./location-targetting.page.scss */
       "./src/app/location-targetting/location-targetting.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"]])], LocationTargettingPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"], _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_3__["Geolocation"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["Platform"], _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_5__["NativeGeocoder"], _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"], _angular_router__WEBPACK_IMPORTED_MODULE_6__["ActivatedRoute"]])], LocationTargettingPage);
     /***/
   }
 }]);

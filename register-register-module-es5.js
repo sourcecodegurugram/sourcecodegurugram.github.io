@@ -257,24 +257,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.talkabout = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]();
         this.goodfriend = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]();
         this.Communication = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]();
-        this.toppingList = ['Dog', 'Cat', 'Rabbit'];
-        this.talkaboutList = ['work', 'Relationship', 'Gossip'];
-        this.goodfriendList = ['is always there for me', 'gives advice', 'take my advice'];
-        this.CommunicationList = ['Instant private message notification', 'Weekly private message reminder', 'Inactivity reminder email'];
-        this.isLiveChatWidgetLoaded = false;
+        this.toppingList = ["Dog", "Cat", "Rabbit"];
+        this.talkaboutList = ["work", "Relationship", "Gossip"];
+        this.goodfriendList = ["is always there for me", "gives advice", "take my advice"];
+        this.CommunicationList = ["Instant private message notification", "Weekly private message reminder", "Inactivity reminder email"];
         this.visitor = {
-          name: 'John Doe',
-          email: 'john@doe.com'
+          name: "John Doe",
+          email: "john@doe.com"
         };
         this.params = [{
-          name: 'Login',
-          value: 'joe_public'
+          name: "Login",
+          value: "joe_public"
         }, {
-          name: 'Account ID',
-          value: 'ABCD1234'
+          name: "Account ID",
+          value: "ABCD1234"
         }, {
-          name: 'Total order value',
-          value: '$123'
+          name: "Total order value",
+          value: "$123"
         }];
       }
 
@@ -296,22 +295,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function previousStep() {
           this.selectedIndex -= 1;
         }
-      }, {
-        key: "onChatLoaded",
-        value: function onChatLoaded(api) {
-          this.liveChatApi = api;
-          this.isLiveChatWidgetLoaded = true;
-        }
       }]);
 
       return RegisterPage;
     }();
 
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('liveChatWidget', {
-      "static": false
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Object)], RegisterPage.prototype, "liveChatWidget", void 0);
     RegisterPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-register',
+      selector: "app-register",
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./register.page.html */
       "./node_modules/raw-loader/dist/cjs.js!./src/app/register/register.page.html"))["default"],
