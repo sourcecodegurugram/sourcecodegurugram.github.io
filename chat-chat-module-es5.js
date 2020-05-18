@@ -83,7 +83,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | searchTab-searchTab-module */
-          [__webpack_require__.e("default~location-targetting-location-targetting-module~register-register-module~searchTab-searchTab-~acc541d7"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null,
           /*! ../searchTab/searchTab.module */
           "./src/app/searchTab/searchTab.module.ts")).then(function (m) {
             return m.SearchTabPageModule;
