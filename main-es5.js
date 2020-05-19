@@ -1396,13 +1396,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, ConfigService);
 
         this.http = http;
-        this.serverUrl = "http://gowebtutorial.com/api/json/";
+        this.serverUrl = "https://gowebtutorial.com/api/json/";
         this.articleUrl = this.serverUrl + "user.json";
         this.userUrl = this.serverUrl + "user/";
         this.hobbieUrl = this.serverUrl + "hobbies-json";
         this.postalUrl = this.serverUrl + "post-json?postal_code=";
         this.locationUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
-        this.createUrl = "http://latdating.dd:8083/api/json/user/register";
+        this.createUrl = "https://latdating.dd:8083/api/json/user/register";
       }
 
       _createClass(ConfigService, [{

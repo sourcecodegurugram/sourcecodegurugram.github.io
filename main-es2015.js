@@ -1006,13 +1006,13 @@ __webpack_require__.r(__webpack_exports__);
 let ConfigService = class ConfigService {
     constructor(http) {
         this.http = http;
-        this.serverUrl = "http://gowebtutorial.com/api/json/";
+        this.serverUrl = "https://gowebtutorial.com/api/json/";
         this.articleUrl = this.serverUrl + "user.json";
         this.userUrl = this.serverUrl + "user/";
         this.hobbieUrl = this.serverUrl + "hobbies-json";
         this.postalUrl = this.serverUrl + "post-json?postal_code=";
         this.locationUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
-        this.createUrl = "http://latdating.dd:8083/api/json/user/register";
+        this.createUrl = "https://latdating.dd:8083/api/json/user/register";
     }
     getArticle() {
         return this.http.get(this.articleUrl);

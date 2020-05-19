@@ -332,7 +332,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           console.log("lastname" + " " + lastname);
           console.log("DOB" + " " + DOB);
           console.log("Activity" + " " + status);
-          this.http.post("http://gowebtutorial.com/api/json/user/register", {
+          this.http.post("https://gowebtutorial.com/api/json/user/register", {
             name: name,
             mail: email,
             conf_mail: confirmemail,

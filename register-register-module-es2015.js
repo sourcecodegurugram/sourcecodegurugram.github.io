@@ -207,7 +207,7 @@ let RegisterPage = class RegisterPage {
         console.log("DOB" + " " + DOB);
         console.log("Activity" + " " + status);
         this.http
-            .post("http://gowebtutorial.com/api/json/user/register", {
+            .post("https://gowebtutorial.com/api/json/user/register", {
             name: name,
             mail: email,
             conf_mail: confirmemail,
