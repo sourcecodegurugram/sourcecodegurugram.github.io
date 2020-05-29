@@ -315,6 +315,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               localStorage.setItem("Signinuser", JSON.stringify(head));
               console.log(head);
               _this.LoggedIn = false;
+              window.location.reload();
 
               _this.router.navigate(["/"]);
             });

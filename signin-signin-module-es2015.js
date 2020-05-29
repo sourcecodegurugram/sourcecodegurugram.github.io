@@ -191,6 +191,7 @@ let SigninPage = class SigninPage {
                 localStorage.setItem("Signinuser", JSON.stringify(head));
                 console.log(head);
                 this.LoggedIn = false;
+                window.location.reload();
                 this.router.navigate(["/"]);
             });
         });
