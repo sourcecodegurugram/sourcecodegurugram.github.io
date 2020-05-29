@@ -451,7 +451,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <div class=\"navigation\">\r\n    <div class=\"main-logo\">\r\n    <img src=\"../../assets/Images/header-logo.png\" alt=\"\" srcset=\"\" class=\"header-logo\" routerLink=\"/\">\r\n    </div>\r\n    \r\n    <div class=\"account-status\">\r\n    \r\n      <img src=\"../../assets/Images/user.png\" class=\"status-check\"  data-toggle=\"modal\" data-target=\"#profile\">\r\n    </div>\r\n    \r\n    <div class=\"humburger-menu\">\r\n      <img src=\"../../assets/Images/cross.png\" class=\"hum-burger-menu-cross\" *ngIf=\"crossSign\" (click)=\"humBurgerCross()\">\r\n      <img src=\"../../assets/Images/newmenu.png\" class=\"hum-burger-menu\" (click)=\"humburgereffect()\" *ngIf=\"humBurger\" >\r\n    </div>\r\n   \r\n    </div>\r\n    \r\n    <div class=\"main-menu\" *ngIf=\"mainMenu\">\r\n      <ul class=\"main-list\" (click)=\"itemclick()\">\r\n        <li><a routerLink=\"/signup\">Signup</a></li>\r\n        <li><a routerLink=\"/signin\">SignIn</a></li>\r\n        <li><a routerLink=\"/chat/searchTab\">Search Tab</a></li>\r\n        <li><a routerLink=\"/optional-detail\">optional-detail</a></li>\r\n        <li><a routerLink=\"/register\">Old Register</a></li>\r\n      </ul>\r\n    </div>\r\n  </ion-header>\r\n\r\n <div class=\"login-form\" *ngIf=\"logggenIn\">\r\n\r\n  <form class=\"form-fields\">\r\n    <label for=\"name\" class=\"form-label\">Username</label><br>\r\n    <input type=\"text\" id=\"name\"  class=\"form-field-zip-code search-country\" name=\"username\" #username><br>\r\n\r\n    <label for=\"name\" class=\"form-label\">Password</label><br>\r\n    <input  id=\"password\" name=\"password\" class=\"form-field-zip-code search-country\" #password type=\"password\">\r\n\r\n    <div class=\"button-container\">\r\n      <button type=\"button\" class=\"button-common\" (click)=\"LoginForm(username.value,password.value)\">Submit</button>\r\n\r\n    </div>\r\n</form>\r\n\r\n\r\n </div>\r\n   <!-- The Modal nav Option-->\r\n   <div class=\"modal\" id=\"profile\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\" data-dismiss=\"modal\">\r\n      \r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n        </div>\r\n        \r\n        <!-- Modal body -->\r\n        <div class=\"modal-body\">\r\n          <div class=\"continue-button\" data-toggle=\"modal\" data-target=\"#profileedit\" data-dismiss=\"modal\">\r\n            View/Edit Profile\r\n          </div>\r\n          <div class=\"continue-button\" data-toggle=\"modal\" data-target=\"#Account\" data-dismiss=\"modal\">\r\n            Account Settings\r\n          </div>\r\n<div class=\"logout-text-container\">\r\n          <span class=\"log-out-text\">Log Out</span>\r\n        </div>\r\n        </div>\r\n        \r\n       \r\n        \r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <!-- The Modal Profile Edit-->\r\n  <div class=\"modal\" id=\"profileedit\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\" data-dismiss=\"modal\">\r\n      \r\n        <!-- Modal Header -->\r\n      <div class=\"modal-header\">\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n      </div>\r\n        \r\n        <!-- Modal body -->\r\n        <div class=\"modal-body\">\r\n          \r\n          <div class=\"modal-grid\">\r\n       \r\n            <div class=\"profile-picture-modal\">\r\n             <img src=\"../../assets/Images/p1.jpg\" class=\"image-profile\">\r\n\r\n            </div>\r\n\r\n            <div class=\"profile-name-modal\">\r\n              <span class=\"name\">Lorem</span>\r\n              <span class=\"not-verified\">Verified</span>\r\n\r\n           </div>\r\n\r\n       </div>\r\n\r\n       <div class=\"sidebar-content\">\r\n        <p class=\"detail-data\">FullName:<br><span class=\"output-text\">Lorem10</span></p>\r\n        <p class=\"detail-data\">Activities:<br><span class=\"output-text\">Lorem,lorem,lorem...</span></p>\r\n        <p class=\"detail-data\">Favorate Music:<br><span class=\"output-text\">English,Punjabi..</span></p>\r\n        <p class=\"detail-data\">Favorate Show:<br><span class=\"output-text\">Big Bang.</span></p>\r\n        <p class=\"detail-data\">Languages:<br><span class=\"output-text\">Hindi,English</span></p>\r\n        </div>\r\n        <div class=\"continue-button\" >\r\n          Add More Info\r\n        </div>\r\n        </div>\r\n        \r\n       \r\n        \r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n\r\n  <!-- The Modal Account-->\r\n  <div class=\"modal\" id=\"Account\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\" >\r\n      \r\n        <!-- Modal Header -->\r\n      <div class=\"modal-header\">\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n      </div>\r\n        \r\n        <!-- Modal body -->\r\n        <div class=\"modal-body\">\r\n          \r\n          <div class=\"forms-field\">\r\n            <div class=\"form-group font\">\r\n              <label for=\"sel1\">Communication Preferences</label>\r\n              <input type=\"text\" class=\"form-control\" id=\"usr\">\r\n            </div> \r\n\r\n           \r\n          \r\n\r\n         \r\n            <label for=\"sel1\" class=\"font\">Change App Subscription:</label>\r\n      <div class=\"form-check\">\r\n        <label class=\"form-check-label\">\r\n          <input type=\"checkbox\" class=\"form-check-input font\" value=\"\">Switch to Monthly\r\n        </label>\r\n      </div>\r\n      <div class=\"form-check\">\r\n        <label class=\"form-check-label\">\r\n          <input type=\"checkbox\" class=\"form-check-input font\" value=\"\">Switch to Annual\r\n        </label>\r\n      </div>\r\n      <div class=\"form-check\">\r\n        <label class=\"form-check-label\">\r\n          <input type=\"checkbox\" class=\"form-check-input font\" value=\"\">Freeze Subscription\r\n        </label>\r\n      </div>\r\n      <div class=\"form-check\">\r\n        <label class=\"form-check-label\">\r\n          <input type=\"checkbox\" class=\"form-check-input font\" value=\"\">Cancel App Subscription\r\n        </label>\r\n      </div>\r\n      <div class=\"continue-button blue\" >\r\n        Update Billing Info\r\n      </div>\r\n\r\n      <div class=\"form-group font\">\r\n        <label for=\"sel1\">New Password</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"usr\">\r\n      </div> \r\n      <div class=\"form-group font\">\r\n       \r\n        <input type=\"text\" class=\"form-control\" id=\"usr\" placeholder=\"Type again to confirm\">\r\n      </div> \r\n      <div class=\"continue-button\" >\r\n        Save Changes\r\n      </div>\r\n      <div class=\"close-account\">\r\n        Close Account <br>\r\n        (Delete all My Info)\r\n      </div>\r\n    </div>\r\n    </div>\r\n  </div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <div class=\"navigation\">\r\n    <div class=\"main-logo\">\r\n    <img src=\"../../assets/Images/header-logo.png\" alt=\"\" srcset=\"\" class=\"header-logo\"  (click)=\"refresh()\">\r\n    </div>\r\n    \r\n    <div class=\"account-status\">\r\n    \r\n      <img src=\"../../assets/Images/user.png\" class=\"status-check\"  data-toggle=\"modal\" data-target=\"#profile\" *ngIf=\"isLoogedIn\">\r\n    </div>\r\n    \r\n    <div class=\"humburger-menu\">\r\n      <!-- <img src=\"../../assets/Images/cross.png\" class=\"hum-burger-menu-cross\" *ngIf=\"crossSign\" (click)=\"humBurgerCross()\"> -->\r\n      <img src=\"../../assets/Images/newmenu.png\" class=\"hum-burger-menu\" (click)=\"humburgereffect()\" *ngIf=\"humBurger\" >\r\n    </div>\r\n   \r\n    </div>\r\n    \r\n    <div class=\"main-menu\" *ngIf=\"mainMenu\">\r\n\r\n          \r\n\r\n      <!-- <ul class=\"main-list\" (click)=\"itemclick()\">\r\n        <li><a routerLink=\"/signup\">Signup</a></li>\r\n        <li><a routerLink=\"/signin\">SignIn</a></li>\r\n        <li><a routerLink=\"/chat/searchTab\">Search Tab</a></li>\r\n        <li><a routerLink=\"/optional-detail\">optional-detail</a></li>\r\n        <li><a routerLink=\"/register\">Old Register</a></li>\r\n      </ul> -->\r\n    </div>\r\n  </ion-header>\r\n\r\n <div class=\"login-form\" *ngIf=\"logggenIn\">\r\n\r\n  <form class=\"form-fields\">\r\n    <label for=\"name\" class=\"form-label\">Username</label><br>\r\n    <input type=\"text\" id=\"name\"  class=\"form-field-zip-code search-country\" name=\"username\" #username><br>\r\n\r\n    <label for=\"name\" class=\"form-label\">Password</label><br>\r\n    <input  id=\"password\" name=\"password\" class=\"form-field-zip-code search-country\" #password type=\"password\">\r\n\r\n    <div class=\"button-container\">\r\n      <button type=\"button\" class=\"button-common\" (click)=\"LoginForm(username.value,password.value)\">Submit</button>\r\n\r\n    </div>\r\n</form>\r\n\r\n\r\n </div>\r\n   <!-- The Modal nav Option-->\r\n   <div class=\"modal\" id=\"profile\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\" data-dismiss=\"modal\">\r\n      \r\n        <div class=\"modal-header\">\r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n        </div>\r\n        \r\n        <!-- Modal body -->\r\n        <div class=\"modal-body\">\r\n          <div class=\"continue-button\" data-toggle=\"modal\" data-target=\"#profileedit\" data-dismiss=\"modal\">\r\n            View/Edit Profile\r\n          </div>\r\n          <div class=\"continue-button\" data-toggle=\"modal\" data-target=\"#Account\" data-dismiss=\"modal\">\r\n            Account Settings\r\n          </div>\r\n<div class=\"logout-text-container\" (click)=\"logOut()\">\r\n          <span class=\"log-out-text\">Log Out</span>\r\n        </div>\r\n        </div>\r\n        \r\n       \r\n        \r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <!-- The Modal Profile Edit-->\r\n  <div class=\"modal\" id=\"profileedit\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\" data-dismiss=\"modal\">\r\n      \r\n        <!-- Modal Header -->\r\n      <div class=\"modal-header\">\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n      </div>\r\n        \r\n        <!-- Modal body -->\r\n        <div class=\"modal-body\">\r\n          \r\n          <div class=\"modal-grid\">\r\n       \r\n            <div class=\"profile-picture-modal\">\r\n             <img src=\"../../assets/Images/p1.jpg\" class=\"image-profile\">\r\n\r\n            </div>\r\n\r\n            <div class=\"profile-name-modal\">\r\n              <span class=\"name\">{{name}}</span>\r\n              <span class=\"not-verified\">Verified</span>\r\n\r\n           </div>\r\n\r\n       </div>\r\n\r\n       <div class=\"sidebar-content\">\r\n        <p class=\"detail-data\">FullName:<br><span class=\"output-text\">{{fname}} {{lname}}</span></p>\r\n        <p class=\"detail-data\">Activities:<br><span class=\"output-text\" *ngFor=\"let actvities of activity\">{{actvities.value | slice:3:5}}</span></p>\r\n        <p class=\"detail-data\">Email:<br><span class=\"output-text\">{{Email}}</span></p>\r\n        <p class=\"detail-data\">Date of Birth:<br><span class=\"output-text\">{{DOB}}</span></p>\r\n        <p class=\"detail-data\">Languages:<br><span class=\"output-text\">Hindi,English</span></p>\r\n        </div>\r\n        <div class=\"continue-button\" >\r\n          Add More Info\r\n        </div>\r\n        </div>\r\n        \r\n       \r\n        \r\n      </div>\r\n    </div>\r\n  </div>\r\n\r\n\r\n\r\n  <!-- The Modal Account-->\r\n  <div class=\"modal\" id=\"Account\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\" >\r\n      \r\n        <!-- Modal Header -->\r\n      <div class=\"modal-header\">\r\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n      </div>\r\n        \r\n        <!-- Modal body -->\r\n        <div class=\"modal-body\">\r\n          \r\n          <div class=\"forms-field\">\r\n            <div class=\"form-group font\">\r\n              <label for=\"sel1\">Communication Preferences</label>\r\n              <input type=\"text\" class=\"form-control\" id=\"usr\">\r\n            </div> \r\n\r\n           \r\n          \r\n\r\n         \r\n            <label for=\"sel1\" class=\"font\">Change App Subscription:</label>\r\n      <div class=\"form-check\">\r\n        <label class=\"form-check-label\">\r\n          <input type=\"checkbox\" class=\"form-check-input font\" value=\"\">Switch to Monthly\r\n        </label>\r\n      </div>\r\n      <div class=\"form-check\">\r\n        <label class=\"form-check-label\">\r\n          <input type=\"checkbox\" class=\"form-check-input font\" value=\"\">Switch to Annual\r\n        </label>\r\n      </div>\r\n      <div class=\"form-check\">\r\n        <label class=\"form-check-label\">\r\n          <input type=\"checkbox\" class=\"form-check-input font\" value=\"\">Freeze Subscription\r\n        </label>\r\n      </div>\r\n      <div class=\"form-check\">\r\n        <label class=\"form-check-label\">\r\n          <input type=\"checkbox\" class=\"form-check-input font\" value=\"\">Cancel App Subscription\r\n        </label>\r\n      </div>\r\n      <div class=\"continue-button blue\" >\r\n        Update Billing Info\r\n      </div>\r\n\r\n      <div class=\"form-group font\">\r\n        <label for=\"sel1\">New Password</label>\r\n        <input type=\"text\" class=\"form-control\" id=\"usr\">\r\n      </div> \r\n      <div class=\"form-group font\">\r\n       \r\n        <input type=\"text\" class=\"form-control\" id=\"usr\" placeholder=\"Type again to confirm\">\r\n      </div> \r\n      <div class=\"continue-button\" >\r\n        Save Changes\r\n      </div>\r\n      <div class=\"close-account\">\r\n        Close Account <br>\r\n        (Delete all My Info)\r\n      </div>\r\n    </div>\r\n    </div>\r\n  </div>");
 
 /***/ }),
 
@@ -721,7 +721,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-    { path: 'home', loadChildren: () => __webpack_require__.e(/*! import() | home-home-module */ "home-home-module").then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomePageModule) },
+    { path: 'home/upload.php', loadChildren: () => __webpack_require__.e(/*! import() | home-home-module */ "home-home-module").then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomePageModule) },
     {
         path: 'location-targetting',
         loadChildren: () => Promise.all(/*! import() | location-targetting-location-targetting-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("location-targetting-location-targetting-module")]).then(__webpack_require__.bind(null, /*! ./location-targetting/location-targetting.module */ "./src/app/location-targetting/location-targetting.module.ts")).then(m => m.LocationTargettingPageModule)
@@ -781,6 +781,10 @@ const routes = [
     {
         path: 'optional-detail',
         loadChildren: () => Promise.all(/*! import() | optional-detail-optional-detail-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null, /*! ./optional-detail/optional-detail.module */ "./src/app/optional-detail/optional-detail.module.ts")).then(m => m.OptionalDetailPageModule)
+    },
+    {
+        path: 'popup/:uid',
+        loadChildren: () => __webpack_require__.e(/*! import() | popup-popup-module */ "popup-popup-module").then(__webpack_require__.bind(null, /*! ./popup/popup.module */ "./src/app/popup/popup.module.ts")).then(m => m.PopupPageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -1012,7 +1016,8 @@ let ConfigService = class ConfigService {
         this.hobbieUrl = this.serverUrl + "hobbies-json";
         this.postalUrl = this.serverUrl + "post-json?postal_code=";
         this.locationUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
-        this.createUrl = "https://latdating.dd:8083/api/json/user/register";
+        this.createUrl = "https://gowebtutorial.com/api/json/user/register";
+        this.searchUrl = this.serverUrl + "search-people?gender=";
     }
     getArticle() {
         return this.http.get(this.articleUrl);
@@ -1033,6 +1038,12 @@ let ConfigService = class ConfigService {
             lng +
             "&types;=postal_code" +
             "&key=AIzaSyBru6wNx3CwcvRbACg2G4-Cq7o6Lt4wOvI");
+    }
+    getMsg() {
+        return this.http.get("http://latdating.dd:8083/api/json/messages/list");
+    }
+    getSearchUrl(gender, meet, activity) {
+        return this.http.get(this.searchUrl + gender + "&meet=" + meet + "&activity=" + activity);
     }
 };
 ConfigService.ctorParameters = () => [
@@ -1078,6 +1089,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blog_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../blog.service */ "./src/app/blog.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+
+
 
 
 
@@ -1085,34 +1100,46 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let NavigationbarComponent = class NavigationbarComponent {
-    constructor(Configservice, blogService, route, router, http) {
+    constructor(Configservice, blogService, route, router, http, _location, alertController) {
         this.Configservice = Configservice;
         this.blogService = blogService;
         this.route = route;
         this.router = router;
         this.http = http;
+        this._location = _location;
+        this.alertController = alertController;
         this.crossSign = false;
         this.humBurger = true;
         this.mainMenu = false;
         this.mainMenuItem = true;
         this.id = null;
         this.logggenIn = false;
+        this.isLoading = false;
+        this.logoutUrl = "https://gowebtutorial.com/api/json/user/logout";
         this.url = "http://latdating.dd:8083/api/json/system/connect";
+        this.isLoogedIn = false;
+        this.token = "https://gowebtutorial.com/api/json/user/token";
     }
     ngOnInit() {
-        // this.Configservice.getArticle()
-        //   .subscribe(data => {
-        //     this.post = data;
-        //    console.log(data)
-        //   });
+        this.itrs = JSON.parse(localStorage.getItem("currentUser"));
+        if (this.itrs.user != null) {
+            this.isLoogedIn = true;
+            this.name = this.itrs.user.name;
+            this.activity = this.itrs.user.field_activities_interests.und;
+            this.Email = this.itrs.user.mail;
+            this.DOB = this.itrs.user.field_birth_date.und[0].value;
+            this.fname = this.itrs.user.field_first_name.und[0].value;
+            this.lname = this.itrs.user.field_last_name.und[0].value;
+            this.userlogged = JSON.parse(localStorage.getItem("Signinuser"));
+            console.log(this.userlogged);
+        }
+        console.log(this.itrs.token);
     }
     ngOnDestroy() {
         this.sub.unsubscribe();
     }
     humburgereffect() {
-        this.crossSign = true;
-        this.humBurger = false;
-        this.mainMenu = true;
+        this.correctAlert();
     }
     humBurgerCross() {
         this.crossSign = false;
@@ -1134,12 +1161,47 @@ let NavigationbarComponent = class NavigationbarComponent {
     }
     LoginForm(user, pass) {
         console.log(user, pass);
-        this.http.post('http://gowebtutorial.com/api/json/user/login', { username: user, password: pass }).subscribe(data => {
+        this.http
+            .post("http://gowebtutorial.com/api/json/user/login", {
+            username: user,
+            password: pass,
+        })
+            .subscribe((data) => {
             this.post = data.token;
             this.headerDict = { "X-CSRF-Token": data.token };
         });
-        return this.http.post(this.url, { headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpHeaders"](this.headerDict) }),
-            this.logggenIn = false;
+        return (this.http.post(this.url, { headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpHeaders"](this.headerDict) }),
+            (this.logggenIn = false));
+    }
+    close() {
+        this.isLoading = false;
+    }
+    refresh() {
+        this.router.navigate(["/"]);
+    }
+    correctAlert() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const correct = yield this.alertController.create({
+                message: "Logged In",
+                buttons: ["OK"],
+            });
+            yield correct.present();
+        });
+    }
+    logOut() {
+        const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpHeaders"]()
+            .set("X-CSRF-Token", this.itrs.token)
+            .set("Content-Type", "application/json")
+            .set("X-Cookie", this.itrs.session_name + "=" + this.itrs.sessid);
+        const requestOptions = {
+            headers: headers,
+            withCredentials: true,
+        };
+        this.http.post(this.logoutUrl, {}, requestOptions).subscribe((head) => {
+            console.log(head);
+            localStorage.clear();
+            window.location.reload();
+        });
     }
 };
 NavigationbarComponent.ctorParameters = () => [
@@ -1147,11 +1209,13 @@ NavigationbarComponent.ctorParameters = () => [
     { type: _blog_service__WEBPACK_IMPORTED_MODULE_3__["BlogService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"] }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"] },
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_7__["Location"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["AlertController"] }
 ];
 NavigationbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-navigationbar',
+        selector: "app-navigationbar",
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./navigationbar.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/navigationbar/navigationbar.component.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./navigationbar.component.scss */ "./src/app/navigationbar/navigationbar.component.scss")).default]
     }),
@@ -1159,7 +1223,9 @@ NavigationbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         _blog_service__WEBPACK_IMPORTED_MODULE_3__["BlogService"],
         _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"],
         _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"]])
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"],
+        _angular_common__WEBPACK_IMPORTED_MODULE_7__["Location"],
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["AlertController"]])
 ], NavigationbarComponent);
 
 

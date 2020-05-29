@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-content>\n<div class=\"main-singin\">\n\n<mat-tab-group class=\"mat-background\" [(selectedIndex)]=\"selectedIndex\">\n\n  <mat-tab>\n    \n      <div class=\"login-buton\">\n\n        <div class=\"continue-button-google\">\n          Sign Up with Google\n        </div>\n\n\n        <div class=\"continue-button-facebook\">\n          Sign up with Facebook\n        </div>\n\n      </div>\n\n      <div class=\"or\">OR</div>\n\n\n      <div class=\"forms-field\">\n        <div class=\"form-group\">\n\n          <input type=\"text\" class=\"form-control\" id=\"usr\" placeholder=\"Email Address\">\n\n        </div>\n\n        <div class=\"form-group\">\n\n          <input type=\"password\" class=\"form-control\" id=\"usr\" placeholder=\"Password\">\n\n        </div>\n        <div class=\"continue-button\" (click)=\"nextStep()\">\n          Continue\n        </div>\n\n      </div>\n  </mat-tab>\n\n  <!--Second Tab-->\n  <mat-tab>\n \n\n    <div class=\"success-market\">We are happy to see you again and can’t wait to help you find friends!  I see this is the first time you have logged in to the app.\n    </div>\n\n    <div class=\"last-tab-button\" (click)=\"nextStep()\">\n      <div class=\"continue-button-last\">\n        Free 7 day Trial\n      </div>\n\n      <div class=\"button-last\">\n        <span class=\"under-text-button\">(No card required)</span>\n      </div>\n    </div>\n\n\n\n\n    <div class=\"success-market\">Become a verified member now for ad-free app usage, unlimited instant messages, and\n      enhanced search</div>\n\n\n    <div class=\"last-tab-button\" (click)=\"nextStep()\">\n      <div class=\"continue-button-last\">\n        Become Verified\n      </div>\n\n      <div class=\"button-last\">\n        <span class=\"under-text-button\">\n          No Thanks!  I am happy to stay a basic member. Take me to the free web version at www.not4dating.com.</span>\n      </div>\n    </div>\n\n  </mat-tab>\n\n  <!--Third Tab-->\n  <mat-tab>\n \n\n    <div class=\"success-market\">Hello!  What would you like to do first?\n    </div>\n\n    <div class=\"last-tab-button\" (click)=\"nextStep()\">\n      <div class=\"continue-button-last singin-lasts\">\n       Find Friends\n      </div>\n    </div>\n\n\n\n\n    <div class=\"or\">OR</div>\n\n\n    <div class=\"last-tab-button\" routerLink=\"/optional-detail\">\n      <div class=\"continue-button-last-blue singin-last\">\n        Finish My Profile\n      </div>\n\n      <div class=\"success-market\">Your Profile is currently X% complete.  Our members who share more information in their profile get better results.  But, if you don’t want to finish now you can add to your profile later at any time.</div>\n    </div>\n\n  </mat-tab>\n\n\n\n\n</mat-tab-group>\n\n</div>\n</ion-content>";
+    __webpack_exports__["default"] = "<ion-content>\n<div class=\"main-singin\">\n\n<mat-tab-group class=\"mat-background\" [(selectedIndex)]=\"selectedIndex\">\n\n  <mat-tab *ngIf=\"!LoggedIn\">\n    \n      <div class=\"login-buton\">\n\n        <div class=\"continue-button-google\">\n          Sign Up with Google\n        </div>\n\n\n        <div class=\"continue-button-facebook\">\n          Sign up with Facebook\n        </div>\n\n      </div>\n\n      <div class=\"or\">OR</div>\n\n\n      <div class=\"forms-field\">\n        <div class=\"form-group\">\n\n          <input type=\"text\" class=\"form-control\" id=\"usr\" placeholder=\"Email Address\" name=\"user\"[(ngModel)]=\"user\">\n\n        </div>\n\n        <div class=\"form-group\">\n\n          <input type=\"password\" class=\"form-control\" id=\"usr\" placeholder=\"Password\" name=\"password\" [(ngModel)]=\"password\">\n\n        </div>\n        <div class=\"continue-button\" (click)=\"nextSteps()\">\n          Continue\n        </div>\n\n      </div>\n  </mat-tab>\n\n  <!--Second Tab-->\n  <mat-tab>\n \n\n    <div class=\"success-market\">We are happy to see you again and can’t wait to help you find friends!  I see this is the first time you have logged in to the app.\n    </div>\n\n    <div class=\"last-tab-button\" (click)=\"nextStep()\">\n      <div class=\"continue-button-last\">\n        Free 7 day Trial\n      </div>\n\n      <div class=\"button-last\">\n        <span class=\"under-text-button\">(No card required)</span>\n      </div>\n    </div>\n\n\n\n\n    <div class=\"success-market\">Become a verified member now for ad-free app usage, unlimited instant messages, and\n      enhanced search</div>\n\n\n    <div class=\"last-tab-button\" (click)=\"nextStep()\">\n      <div class=\"continue-button-last\">\n        Become Verified\n      </div>\n\n      <div class=\"button-last\">\n        <span class=\"under-text-button\">\n          No Thanks!  I am happy to stay a basic member. Take me to the free web version at www.not4dating.com.</span>\n      </div>\n    </div>\n\n  </mat-tab>\n\n  <!--Third Tab-->\n  <mat-tab>\n \n\n    <div class=\"success-market\">Hello!  What would you like to do first?\n    </div> \n\n    <div class=\"last-tab-button\" routerLink=\"/chat/searchTab\">\n      <div class=\"continue-button-last singin-lasts\">\n       Find Friends\n      </div>\n    </div>\n\n\n\n\n    <div class=\"or\">OR</div>\n\n\n    <div class=\"last-tab-button\" routerLink=\"/optional-detail\">\n      <div class=\"continue-button-last-blue singin-last\">\n        Finish My Profile\n      </div>\n\n      <div class=\"success-market\">Your Profile is currently X% complete.  Our members who share more information in their profile get better results.  But, if you don’t want to finish now you can add to your profile later at any time.</div>\n    </div>\n\n  </mat-tab>\n\n\n\n\n</mat-tab-group>\n\n</div>\n</ion-content>";
     /***/
   },
 
@@ -227,18 +227,49 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
     "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 
     var SigninPage = /*#__PURE__*/function () {
-      function SigninPage() {
+      function SigninPage(router, http, alertController) {
         _classCallCheck(this, SigninPage);
 
+        this.router = router;
+        this.http = http;
+        this.alertController = alertController;
         this.maxNumberOfTabs = 5;
         this.selectedIndex = 0;
+        this.url = "https://gowebtutorial.com/api/json/system/connect";
+        this.LoggedIn = true;
       }
 
       _createClass(SigninPage, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          this.itrs = JSON.parse(localStorage.getItem("currentUser"));
+
+          if (this.itrs == null) {
+            this.LoggedIn = false;
+          } else {
+            this.LoggedIn = true;
+          }
+        }
       }, {
         key: "tabChanged",
         value: function tabChanged(tabChangeEvent) {
@@ -254,20 +285,92 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function previousStep() {
           this.selectedIndex -= 1;
         }
+      }, {
+        key: "nextSteps",
+        value: function nextSteps() {
+          this.LoginForm(this.user, this.password);
+          this.selectedIndex += 1;
+        }
+      }, {
+        key: "LoginForm",
+        value: function LoginForm(user, pass) {
+          var _this = this;
+
+          this.http.post("https://gowebtutorial.com/api/json/user/login", {
+            username: user,
+            password: pass
+          }).subscribe(function (data) {
+            _this.post = data;
+            localStorage.setItem("currentUser", JSON.stringify(data));
+            _this.itr = JSON.parse(localStorage.getItem("currentUser"));
+            console.log(_this.itr);
+            var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set("X-CSRF-Token", _this.itr.token).set("Content-Type", "application/json").set("X-Cookie", _this.itr.session_name + "=" + _this.itr.sessid);
+            var requestOptions = {
+              headers: headers,
+              withCredentials: true
+            };
+
+            _this.http.post(_this.url, {}, requestOptions).subscribe(function (head) {
+              console.log("This is the response after sending token to connect " + JSON.stringify(head));
+              localStorage.setItem("Signinuser", JSON.stringify(head));
+              console.log(head);
+              _this.LoggedIn = false;
+              window.location.reload();
+            });
+          });
+        }
+      }, {
+        key: "correctAlert",
+        value: function correctAlert() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+            var correct;
+            return regeneratorRuntime.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    _context.next = 2;
+                    return this.alertController.create({
+                      message: "Logged In",
+                      buttons: ["OK"]
+                    });
+
+                  case 2:
+                    correct = _context.sent;
+                    _context.next = 5;
+                    return correct.present();
+
+                  case 5:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee, this);
+          }));
+        }
       }]);
 
       return SigninPage;
     }();
 
+    SigninPage.ctorParameters = function () {
+      return [{
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+      }, {
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"]
+      }];
+    };
+
     SigninPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-      selector: 'app-signin',
+      selector: "app-signin",
       template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! raw-loader!./signin.page.html */
       "./node_modules/raw-loader/dist/cjs.js!./src/app/signin/signin.page.html"))["default"],
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./signin.page.scss */
       "./src/app/signin/signin.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])], SigninPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"]])], SigninPage);
     /***/
   }
 }]);
