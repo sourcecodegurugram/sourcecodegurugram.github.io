@@ -1279,92 +1279,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
-  "./src/app/blog.service.ts":
-  /*!*********************************!*\
-    !*** ./src/app/blog.service.ts ***!
-    \*********************************/
-
-  /*! exports provided: BlogService */
-
-  /***/
-  function srcAppBlogServiceTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "BlogService", function () {
-      return BlogService;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-    /* harmony import */
-
-
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/common/http */
-    "./node_modules/@angular/common/fesm2015/http.js");
-    /* harmony import */
-
-
-    var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ../environments/environment */
-    "./src/environments/environment.ts");
-
-    var httpOptions = {
-      headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-        'Content-Type': 'application/json'
-      })
-    };
-
-    var BlogService = /*#__PURE__*/function () {
-      function BlogService(http) {
-        _classCallCheck(this, BlogService);
-
-        this.http = http;
-        this.API_URL = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
-      }
-
-      _createClass(BlogService, [{
-        key: "getBlogs",
-        value: function getBlogs(id) {
-          console.log(id);
-
-          if (id) {
-            return this.http.get(this.API_URL + '/api/json/node/article/' + id);
-          } else {
-            return this.http.get(this.API_URL + '/api/json/node/article?sort=-created');
-          }
-        }
-      }]);
-
-      return BlogService;
-    }();
-
-    BlogService.ctorParameters = function () {
-      return [{
-        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
-      }];
-    };
-
-    BlogService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-      providedIn: 'root'
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])], BlogService);
-    /***/
-  },
-
-  /***/
   "./src/app/config.service.ts":
   /*!***********************************!*\
     !*** ./src/app/config.service.ts ***!
@@ -1407,7 +1321,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, ConfigService);
 
         this.http = http;
-        this.serverUrl = "https://gowebtutorial.com/api/json/";
+        this.serverUrl = "http://gowebtutorial.com/api/json/";
         this.articleUrl = this.serverUrl + "user.json";
         this.userUrl = this.serverUrl + "user/";
         this.hobbieUrl = this.serverUrl + "hobbies-json";
@@ -1441,11 +1355,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "getLocation",
         value: function getLocation(lat, lng) {
           return this.http.get(this.locationUrl + lat + "," + lng + "&types;=postal_code" + "&key=AIzaSyBru6wNx3CwcvRbACg2G4-Cq7o6Lt4wOvI");
-        }
-      }, {
-        key: "getMsg",
-        value: function getMsg() {
-          return this.http.get("http://latdating.dd:8083/api/json/messages/list");
         }
       }, {
         key: "getSearchUrl",
@@ -1529,40 +1438,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _blog_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ../blog.service */
-    "./src/app/blog.service.ts");
-    /* harmony import */
-
-
-    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
     /* harmony import */
 
 
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
     /* harmony import */
 
 
-    var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @ionic/angular */
     "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
     /* harmony import */
 
 
-    var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! @angular/common */
     "./node_modules/@angular/common/fesm2015/common.js");
 
     var NavigationbarComponent = /*#__PURE__*/function () {
-      function NavigationbarComponent(Configservice, blogService, route, router, http, _location, alertController) {
+      function NavigationbarComponent(Configservice, route, router, http, _location, alertController) {
         _classCallCheck(this, NavigationbarComponent);
 
         this.Configservice = Configservice;
-        this.blogService = blogService;
         this.route = route;
         this.router = router;
         this.http = http;
@@ -1649,7 +1551,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             };
           });
           return this.http.post(this.url, {
-            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpHeaders"](this.headerDict)
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"](this.headerDict)
           }), this.logggenIn = false;
         }
       }, {
@@ -1673,7 +1575,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 0:
                     _context.next = 2;
                     return this.alertController.create({
-                      message: "Logged In",
+                      message: " chat for help",
                       buttons: ["OK"]
                     });
 
@@ -1693,7 +1595,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "logOut",
         value: function logOut() {
-          var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpHeaders"]().set("X-CSRF-Token", this.itrs.token).set("Content-Type", "application/json").set("X-Cookie", this.itrs.session_name + "=" + this.itrs.sessid);
+          var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]().set("X-CSRF-Token", this.itrs.token).set("Content-Type", "application/json").set("X-Cookie", this.itrs.session_name + "=" + this.itrs.sessid);
           var requestOptions = {
             headers: headers,
             withCredentials: true
@@ -1713,17 +1615,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return [{
         type: _config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"]
       }, {
-        type: _blog_service__WEBPACK_IMPORTED_MODULE_3__["BlogService"]
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
       }, {
-        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"]
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }, {
-        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]
       }, {
-        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"]
+        type: _angular_common__WEBPACK_IMPORTED_MODULE_6__["Location"]
       }, {
-        type: _angular_common__WEBPACK_IMPORTED_MODULE_7__["Location"]
-      }, {
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["AlertController"]
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["AlertController"]
       }];
     };
 
@@ -1735,7 +1635,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./navigationbar.component.scss */
       "./src/app/navigationbar/navigationbar.component.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"], _blog_service__WEBPACK_IMPORTED_MODULE_3__["BlogService"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["Location"], _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["AlertController"]])], NavigationbarComponent);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["Location"], _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["AlertController"]])], NavigationbarComponent);
     /***/
   },
 
@@ -1831,17 +1731,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var environment = {
       production: false,
-      apiUrl: 'http://ritin.website/uri/'
+      firebaseConfig: {
+        apiKey: "AIzaSyBWTVRij3BkCQ4PSg2jAlxyzORgy_yII1w",
+        authDomain: "chat-216c0.firebaseapp.com",
+        databaseURL: "https://chat-216c0.firebaseio.com",
+        projectId: "chat-216c0",
+        storageBucket: "chat-216c0.appspot.com",
+        messagingSenderId: "480997847828",
+        appId: "1:480997847828:web:2b64a4fba191e6ad344801"
+      }
     };
-    /*
-     * For easier debugging in development mode, you can import the following file
-     * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
-     *
-     * This import should be commented out in production mode because it will have a negative impact
-     * on performance if an error is thrown.
-     */
-    // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
-
     /***/
   },
 

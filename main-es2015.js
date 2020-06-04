@@ -939,58 +939,6 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/blog.service.ts":
-/*!*********************************!*\
-  !*** ./src/app/blog.service.ts ***!
-  \*********************************/
-/*! exports provided: BlogService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BlogService", function() { return BlogService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../environments/environment */ "./src/environments/environment.ts");
-
-
-
-
-const httpOptions = {
-    headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-        'Content-Type': 'application/json',
-    })
-};
-let BlogService = class BlogService {
-    constructor(http) {
-        this.http = http;
-        this.API_URL = _environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].apiUrl;
-    }
-    getBlogs(id) {
-        console.log(id);
-        if (id) {
-            return this.http.get(this.API_URL + '/api/json/node/article/' + id);
-        }
-        else {
-            return this.http.get(this.API_URL + '/api/json/node/article?sort=-created');
-        }
-    }
-};
-BlogService.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
-];
-BlogService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-        providedIn: 'root'
-    }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
-], BlogService);
-
-
-
-/***/ }),
-
 /***/ "./src/app/config.service.ts":
 /*!***********************************!*\
   !*** ./src/app/config.service.ts ***!
@@ -1010,7 +958,7 @@ __webpack_require__.r(__webpack_exports__);
 let ConfigService = class ConfigService {
     constructor(http) {
         this.http = http;
-        this.serverUrl = "https://gowebtutorial.com/api/json/";
+        this.serverUrl = "http://gowebtutorial.com/api/json/";
         this.articleUrl = this.serverUrl + "user.json";
         this.userUrl = this.serverUrl + "user/";
         this.hobbieUrl = this.serverUrl + "hobbies-json";
@@ -1038,9 +986,6 @@ let ConfigService = class ConfigService {
             lng +
             "&types;=postal_code" +
             "&key=AIzaSyBru6wNx3CwcvRbACg2G4-Cq7o6Lt4wOvI");
-    }
-    getMsg() {
-        return this.http.get("http://latdating.dd:8083/api/json/messages/list");
     }
     getSearchUrl(gender, meet, activity) {
         return this.http.get(this.searchUrl + gender + "&meet=" + meet + "&activity=" + activity);
@@ -1086,12 +1031,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _config_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../config.service */ "./src/app/config.service.ts");
-/* harmony import */ var _blog_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../blog.service */ "./src/app/blog.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
 
 
 
@@ -1100,9 +1043,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let NavigationbarComponent = class NavigationbarComponent {
-    constructor(Configservice, blogService, route, router, http, _location, alertController) {
+    constructor(Configservice, route, router, http, _location, alertController) {
         this.Configservice = Configservice;
-        this.blogService = blogService;
         this.route = route;
         this.router = router;
         this.http = http;
@@ -1170,7 +1112,7 @@ let NavigationbarComponent = class NavigationbarComponent {
             this.post = data.token;
             this.headerDict = { "X-CSRF-Token": data.token };
         });
-        return (this.http.post(this.url, { headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpHeaders"](this.headerDict) }),
+        return (this.http.post(this.url, { headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"](this.headerDict) }),
             (this.logggenIn = false));
     }
     close() {
@@ -1182,14 +1124,14 @@ let NavigationbarComponent = class NavigationbarComponent {
     correctAlert() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
             const correct = yield this.alertController.create({
-                message: "Logged In",
+                message: " chat for help",
                 buttons: ["OK"],
             });
             yield correct.present();
         });
     }
     logOut() {
-        const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpHeaders"]()
+        const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]()
             .set("X-CSRF-Token", this.itrs.token)
             .set("Content-Type", "application/json")
             .set("X-Cookie", this.itrs.session_name + "=" + this.itrs.sessid);
@@ -1206,12 +1148,11 @@ let NavigationbarComponent = class NavigationbarComponent {
 };
 NavigationbarComponent.ctorParameters = () => [
     { type: _config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"] },
-    { type: _blog_service__WEBPACK_IMPORTED_MODULE_3__["BlogService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"] },
-    { type: _angular_common__WEBPACK_IMPORTED_MODULE_7__["Location"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["AlertController"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_6__["Location"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["AlertController"] }
 ];
 NavigationbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1220,12 +1161,11 @@ NavigationbarComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./navigationbar.component.scss */ "./src/app/navigationbar/navigationbar.component.scss")).default]
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_config_service__WEBPACK_IMPORTED_MODULE_2__["ConfigService"],
-        _blog_service__WEBPACK_IMPORTED_MODULE_3__["BlogService"],
-        _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"],
-        _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"],
-        _angular_common__WEBPACK_IMPORTED_MODULE_7__["Location"],
-        _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["AlertController"]])
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"],
+        _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"],
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"],
+        _angular_common__WEBPACK_IMPORTED_MODULE_6__["Location"],
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["AlertController"]])
 ], NavigationbarComponent);
 
 
@@ -1286,16 +1226,16 @@ __webpack_require__.r(__webpack_exports__);
 
 const environment = {
     production: false,
-    apiUrl: 'http://ritin.website/uri/'
+    firebaseConfig: {
+        apiKey: "AIzaSyBWTVRij3BkCQ4PSg2jAlxyzORgy_yII1w",
+        authDomain: "chat-216c0.firebaseapp.com",
+        databaseURL: "https://chat-216c0.firebaseio.com",
+        projectId: "chat-216c0",
+        storageBucket: "chat-216c0.appspot.com",
+        messagingSenderId: "480997847828",
+        appId: "1:480997847828:web:2b64a4fba191e6ad344801"
+    }
 };
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/dist/zone-error';  // Included with Angular CLI.
 
 
 /***/ }),
