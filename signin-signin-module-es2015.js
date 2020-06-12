@@ -141,7 +141,7 @@ let SigninPage = class SigninPage {
         this.alertController = alertController;
         this.maxNumberOfTabs = 5;
         this.selectedIndex = 0;
-        this.url = "https://gowebtutorial.com/api/json/system/connect";
+        this.url = "http://gowebtutorial.com/api/json/system/connect";
         this.LoggedIn = true;
     }
     ngOnInit() {
@@ -168,7 +168,7 @@ let SigninPage = class SigninPage {
     }
     LoginForm(user, pass) {
         this.http
-            .post("https://gowebtutorial.com/api/json/user/login", {
+            .post("http://gowebtutorial.com/api/json/user/login", {
             username: user,
             password: pass,
         })
@@ -191,8 +191,6 @@ let SigninPage = class SigninPage {
                 localStorage.setItem("Signinuser", JSON.stringify(head));
                 console.log(head);
                 this.LoggedIn = false;
-                window.location.reload();
-                this.router.navigate(["/"]);
             });
         });
     }

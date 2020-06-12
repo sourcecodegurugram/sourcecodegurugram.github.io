@@ -720,71 +720,78 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-    { path: 'home/upload.php', loadChildren: () => __webpack_require__.e(/*! import() | home-home-module */ "home-home-module").then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomePageModule) },
+    { path: "", redirectTo: "welcome", pathMatch: "full" },
     {
-        path: 'location-targetting',
-        loadChildren: () => Promise.all(/*! import() | location-targetting-location-targetting-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("location-targetting-location-targetting-module")]).then(__webpack_require__.bind(null, /*! ./location-targetting/location-targetting.module */ "./src/app/location-targetting/location-targetting.module.ts")).then(m => m.LocationTargettingPageModule)
+        path: "home/upload.php",
+        loadChildren: () => __webpack_require__.e(/*! import() | home-home-module */ "home-home-module").then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then((m) => m.HomePageModule),
     },
     {
-        path: 'register',
-        loadChildren: () => Promise.all(/*! import() | register-register-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("register-register-module")]).then(__webpack_require__.bind(null, /*! ./register/register.module */ "./src/app/register/register.module.ts")).then(m => m.RegisterPageModule)
+        path: "location-targetting",
+        loadChildren: () => Promise.all(/*! import() | location-targetting-location-targetting-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("location-targetting-location-targetting-module")]).then(__webpack_require__.bind(null, /*! ./location-targetting/location-targetting.module */ "./src/app/location-targetting/location-targetting.module.ts")).then((m) => m.LocationTargettingPageModule),
     },
     {
-        path: 'chat',
-        loadChildren: () => __webpack_require__.e(/*! import() | chat-chat-module */ "chat-chat-module").then(__webpack_require__.bind(null, /*! ./chat/chat.module */ "./src/app/chat/chat.module.ts")).then(m => m.ChatPageModule)
+        path: "register",
+        loadChildren: () => Promise.all(/*! import() | register-register-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("register-register-module")]).then(__webpack_require__.bind(null, /*! ./register/register.module */ "./src/app/register/register.module.ts")).then((m) => m.RegisterPageModule),
     },
     {
-        path: 'searchTab',
-        loadChildren: () => Promise.all(/*! import() | searchTab-searchTab-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null, /*! ./searchTab/searchTab.module */ "./src/app/searchTab/searchTab.module.ts")).then(m => m.SearchTabPageModule)
+        path: "chat",
+        loadChildren: () => __webpack_require__.e(/*! import() | chat-chat-module */ "chat-chat-module").then(__webpack_require__.bind(null, /*! ./chat/chat.module */ "./src/app/chat/chat.module.ts")).then((m) => m.ChatPageModule),
     },
     {
-        path: 'tabs2',
-        loadChildren: () => __webpack_require__.e(/*! import() | tabs2-tabs2-module */ "tabs2-tabs2-module").then(__webpack_require__.bind(null, /*! ./tabs2/tabs2.module */ "./src/app/tabs2/tabs2.module.ts")).then(m => m.Tabs2PageModule)
+        path: "searchTab",
+        loadChildren: () => Promise.all(/*! import() | searchTab-searchTab-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null, /*! ./searchTab/searchTab.module */ "./src/app/searchTab/searchTab.module.ts")).then((m) => m.SearchTabPageModule),
     },
     {
-        path: 'tabs3',
-        loadChildren: () => __webpack_require__.e(/*! import() | tabs3-tabs3-module */ "tabs3-tabs3-module").then(__webpack_require__.bind(null, /*! ./tabs3/tabs3.module */ "./src/app/tabs3/tabs3.module.ts")).then(m => m.Tabs3PageModule)
+        path: "tabs2",
+        loadChildren: () => Promise.all(/*! import() | tabs2-tabs2-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null, /*! ./tabs2/tabs2.module */ "./src/app/tabs2/tabs2.module.ts")).then((m) => m.Tabs2PageModule),
     },
     {
-        path: 'personal-chat',
-        loadChildren: () => __webpack_require__.e(/*! import() | personal-chat-personal-chat-module */ "personal-chat-personal-chat-module").then(__webpack_require__.bind(null, /*! ./personal-chat/personal-chat.module */ "./src/app/personal-chat/personal-chat.module.ts")).then(m => m.PersonalChatPageModule)
+        path: "tabs3",
+        loadChildren: () => __webpack_require__.e(/*! import() | tabs3-tabs3-module */ "tabs3-tabs3-module").then(__webpack_require__.bind(null, /*! ./tabs3/tabs3.module */ "./src/app/tabs3/tabs3.module.ts")).then((m) => m.Tabs3PageModule),
     },
     {
-        path: 'notificationchat',
-        loadChildren: () => __webpack_require__.e(/*! import() | notificationchat-notificationchat-module */ "notificationchat-notificationchat-module").then(__webpack_require__.bind(null, /*! ./notificationchat/notificationchat.module */ "./src/app/notificationchat/notificationchat.module.ts")).then(m => m.NotificationchatPageModule)
+        path: "personal-chat",
+        loadChildren: () => __webpack_require__.e(/*! import() | personal-chat-personal-chat-module */ "personal-chat-personal-chat-module").then(__webpack_require__.bind(null, /*! ./personal-chat/personal-chat.module */ "./src/app/personal-chat/personal-chat.module.ts")).then((m) => m.PersonalChatPageModule),
     },
     {
-        path: 'search-result/:post',
-        loadChildren: () => __webpack_require__.e(/*! import() | search-result-search-result-module */ "search-result-search-result-module").then(__webpack_require__.bind(null, /*! ./search-result/search-result.module */ "./src/app/search-result/search-result.module.ts")).then(m => m.SearchResultPageModule)
+        path: "notificationchat/:thread_id/:image_path/:name",
+        loadChildren: () => __webpack_require__.e(/*! import() | notificationchat-notificationchat-module */ "notificationchat-notificationchat-module").then(__webpack_require__.bind(null, /*! ./notificationchat/notificationchat.module */ "./src/app/notificationchat/notificationchat.module.ts")).then((m) => m.NotificationchatPageModule),
     },
     {
-        path: 'detail/:name/:mail/:uid',
-        loadChildren: () => __webpack_require__.e(/*! import() | detail-detail-module */ "detail-detail-module").then(__webpack_require__.bind(null, /*! ./detail/detail.module */ "./src/app/detail/detail.module.ts")).then(m => m.DetailPageModule)
+        path: "search-result/:post",
+        loadChildren: () => __webpack_require__.e(/*! import() | search-result-search-result-module */ "search-result-search-result-module").then(__webpack_require__.bind(null, /*! ./search-result/search-result.module */ "./src/app/search-result/search-result.module.ts")).then((m) => m.SearchResultPageModule),
     },
     {
-        path: 'elipsispipe',
-        loadChildren: () => __webpack_require__.e(/*! import() | elipsispipe-elipsispipe-module */ "elipsispipe-elipsispipe-module").then(__webpack_require__.bind(null, /*! ./elipsispipe/elipsispipe.module */ "./src/app/elipsispipe/elipsispipe.module.ts")).then(m => m.ElipsispipePageModule)
+        path: "detail/:name/:mail/:uid",
+        loadChildren: () => __webpack_require__.e(/*! import() | detail-detail-module */ "detail-detail-module").then(__webpack_require__.bind(null, /*! ./detail/detail.module */ "./src/app/detail/detail.module.ts")).then((m) => m.DetailPageModule),
     },
     {
-        path: 'welcome',
-        loadChildren: () => Promise.all(/*! import() | welcome-welcome-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null, /*! ./welcome/welcome.module */ "./src/app/welcome/welcome.module.ts")).then(m => m.WelcomePageModule)
+        path: "elipsispipe",
+        loadChildren: () => __webpack_require__.e(/*! import() | elipsispipe-elipsispipe-module */ "elipsispipe-elipsispipe-module").then(__webpack_require__.bind(null, /*! ./elipsispipe/elipsispipe.module */ "./src/app/elipsispipe/elipsispipe.module.ts")).then((m) => m.ElipsispipePageModule),
     },
     {
-        path: 'signup',
-        loadChildren: () => Promise.all(/*! import() | signup-signup-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("signup-signup-module")]).then(__webpack_require__.bind(null, /*! ./signup/signup.module */ "./src/app/signup/signup.module.ts")).then(m => m.SignupPageModule)
+        path: "welcome",
+        loadChildren: () => Promise.all(/*! import() | welcome-welcome-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null, /*! ./welcome/welcome.module */ "./src/app/welcome/welcome.module.ts")).then((m) => m.WelcomePageModule),
     },
     {
-        path: 'signin',
-        loadChildren: () => Promise.all(/*! import() | signin-signin-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("signin-signin-module")]).then(__webpack_require__.bind(null, /*! ./signin/signin.module */ "./src/app/signin/signin.module.ts")).then(m => m.SigninPageModule)
+        path: "signup",
+        loadChildren: () => Promise.all(/*! import() | signup-signup-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("signup-signup-module")]).then(__webpack_require__.bind(null, /*! ./signup/signup.module */ "./src/app/signup/signup.module.ts")).then((m) => m.SignupPageModule),
     },
     {
-        path: 'optional-detail',
-        loadChildren: () => Promise.all(/*! import() | optional-detail-optional-detail-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null, /*! ./optional-detail/optional-detail.module */ "./src/app/optional-detail/optional-detail.module.ts")).then(m => m.OptionalDetailPageModule)
+        path: "signin",
+        loadChildren: () => Promise.all(/*! import() | signin-signin-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("signin-signin-module")]).then(__webpack_require__.bind(null, /*! ./signin/signin.module */ "./src/app/signin/signin.module.ts")).then((m) => m.SigninPageModule),
     },
     {
-        path: 'popup/:uid',
-        loadChildren: () => __webpack_require__.e(/*! import() | popup-popup-module */ "popup-popup-module").then(__webpack_require__.bind(null, /*! ./popup/popup.module */ "./src/app/popup/popup.module.ts")).then(m => m.PopupPageModule)
+        path: "optional-detail",
+        loadChildren: () => Promise.all(/*! import() | optional-detail-optional-detail-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null, /*! ./optional-detail/optional-detail.module */ "./src/app/optional-detail/optional-detail.module.ts")).then((m) => m.OptionalDetailPageModule),
+    },
+    {
+        path: "popup/:uid",
+        loadChildren: () => __webpack_require__.e(/*! import() | popup-popup-module */ "popup-popup-module").then(__webpack_require__.bind(null, /*! ./popup/popup.module */ "./src/app/popup/popup.module.ts")).then((m) => m.PopupPageModule),
+    },
+    {
+        path: 'new-message/:uid/:name',
+        loadChildren: () => __webpack_require__.e(/*! import() | new-message-new-message-module */ "new-message-new-message-module").then(__webpack_require__.bind(null, /*! ./new-message/new-message.module */ "./src/app/new-message/new-message.module.ts")).then(m => m.NewMessagePageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -792,9 +799,9 @@ let AppRoutingModule = class AppRoutingModule {
 AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
         imports: [
-            _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes, { preloadingStrategy: _angular_router__WEBPACK_IMPORTED_MODULE_2__["PreloadAllModules"] })
+            _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes, { preloadingStrategy: _angular_router__WEBPACK_IMPORTED_MODULE_2__["PreloadAllModules"] }),
         ],
-        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]],
     })
 ], AppRoutingModule);
 
@@ -928,7 +935,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         providers: [
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
-            _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_12__["Geolocation"], _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_15__["NativeGeocoder"],
+            _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_12__["Geolocation"],
+            _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_15__["NativeGeocoder"],
             { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
@@ -965,7 +973,7 @@ let ConfigService = class ConfigService {
         this.postalUrl = this.serverUrl + "post-json?postal_code=";
         this.locationUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
         this.createUrl = "https://gowebtutorial.com/api/json/user/register";
-        this.searchUrl = this.serverUrl + "search-people?gender=";
+        this.searchUrl = this.serverUrl + "search-view?gender=";
     }
     getArticle() {
         return this.http.get(this.articleUrl);
@@ -987,8 +995,18 @@ let ConfigService = class ConfigService {
             "&types;=postal_code" +
             "&key=AIzaSyBru6wNx3CwcvRbACg2G4-Cq7o6Lt4wOvI");
     }
-    getSearchUrl(gender, meet, activity) {
-        return this.http.get(this.searchUrl + gender + "&meet=" + meet + "&activity=" + activity);
+    getSearchUrl(gender, meet, activity, Postalcode) {
+        return this.http.get(this.serverUrl +
+            "search-view?gender=" +
+            gender +
+            "&meet=" +
+            meet +
+            "&activity=" +
+            activity
+            +
+                "&postal="
+            +
+                Postalcode);
     }
 };
 ConfigService.ctorParameters = () => [
@@ -1057,8 +1075,8 @@ let NavigationbarComponent = class NavigationbarComponent {
         this.id = null;
         this.logggenIn = false;
         this.isLoading = false;
-        this.logoutUrl = "https://gowebtutorial.com/api/json/user/logout";
-        this.url = "http://latdating.dd:8083/api/json/system/connect";
+        this.logoutUrl = "http://gowebtutorial.com/api/json/user/logout";
+        this.url = "https://latdating.dd:8083/api/json/system/connect";
         this.isLoogedIn = false;
         this.token = "https://gowebtutorial.com/api/json/user/token";
     }
@@ -1102,7 +1120,6 @@ let NavigationbarComponent = class NavigationbarComponent {
         }
     }
     LoginForm(user, pass) {
-        console.log(user, pass);
         this.http
             .post("http://gowebtutorial.com/api/json/user/login", {
             username: user,

@@ -822,11 +822,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/@angular/router/fesm2015/router.js");
 
     var routes = [{
-      path: '',
-      redirectTo: 'welcome',
-      pathMatch: 'full'
+      path: "",
+      redirectTo: "welcome",
+      pathMatch: "full"
     }, {
-      path: 'home/upload.php',
+      path: "home/upload.php",
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
         /*! import() | home-home-module */
@@ -837,29 +837,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
       }
     }, {
-      path: 'location-targetting',
+      path: "location-targetting",
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | location-targetting-location-targetting-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("location-targetting-location-targetting-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("location-targetting-location-targetting-module")]).then(__webpack_require__.bind(null,
         /*! ./location-targetting/location-targetting.module */
         "./src/app/location-targetting/location-targetting.module.ts")).then(function (m) {
           return m.LocationTargettingPageModule;
         });
       }
     }, {
-      path: 'register',
+      path: "register",
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | register-register-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("register-register-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("register-register-module")]).then(__webpack_require__.bind(null,
         /*! ./register/register.module */
         "./src/app/register/register.module.ts")).then(function (m) {
           return m.RegisterPageModule;
         });
       }
     }, {
-      path: 'chat',
+      path: "chat",
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
         /*! import() | chat-chat-module */
@@ -870,29 +870,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
       }
     }, {
-      path: 'searchTab',
+      path: "searchTab",
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | searchTab-searchTab-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null,
         /*! ./searchTab/searchTab.module */
         "./src/app/searchTab/searchTab.module.ts")).then(function (m) {
           return m.SearchTabPageModule;
         });
       }
     }, {
-      path: 'tabs2',
+      path: "tabs2",
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | tabs2-tabs2-module */
-        "tabs2-tabs2-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null,
         /*! ./tabs2/tabs2.module */
         "./src/app/tabs2/tabs2.module.ts")).then(function (m) {
           return m.Tabs2PageModule;
         });
       }
     }, {
-      path: 'tabs3',
+      path: "tabs3",
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
         /*! import() | tabs3-tabs3-module */
@@ -903,7 +903,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
       }
     }, {
-      path: 'personal-chat',
+      path: "personal-chat",
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
         /*! import() | personal-chat-personal-chat-module */
@@ -914,7 +914,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
       }
     }, {
-      path: 'notificationchat',
+      path: "notificationchat/:thread_id/:image_path/:name",
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
         /*! import() | notificationchat-notificationchat-module */
@@ -925,7 +925,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
       }
     }, {
-      path: 'search-result/:post',
+      path: "search-result/:post",
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
         /*! import() | search-result-search-result-module */
@@ -936,7 +936,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
       }
     }, {
-      path: 'detail/:name/:mail/:uid',
+      path: "detail/:name/:mail/:uid",
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
         /*! import() | detail-detail-module */
@@ -947,7 +947,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
       }
     }, {
-      path: 'elipsispipe',
+      path: "elipsispipe",
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
         /*! import() | elipsispipe-elipsispipe-module */
@@ -958,51 +958,51 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
       }
     }, {
-      path: 'welcome',
+      path: "welcome",
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | welcome-welcome-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null,
         /*! ./welcome/welcome.module */
         "./src/app/welcome/welcome.module.ts")).then(function (m) {
           return m.WelcomePageModule;
         });
       }
     }, {
-      path: 'signup',
+      path: "signup",
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | signup-signup-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("signup-signup-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("signup-signup-module")]).then(__webpack_require__.bind(null,
         /*! ./signup/signup.module */
         "./src/app/signup/signup.module.ts")).then(function (m) {
           return m.SignupPageModule;
         });
       }
     }, {
-      path: 'signin',
+      path: "signin",
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | signin-signin-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("signin-signin-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("signin-signin-module")]).then(__webpack_require__.bind(null,
         /*! ./signin/signin.module */
         "./src/app/signin/signin.module.ts")).then(function (m) {
           return m.SigninPageModule;
         });
       }
     }, {
-      path: 'optional-detail',
+      path: "optional-detail",
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | optional-detail-optional-detail-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null,
         /*! ./optional-detail/optional-detail.module */
         "./src/app/optional-detail/optional-detail.module.ts")).then(function (m) {
           return m.OptionalDetailPageModule;
         });
       }
     }, {
-      path: 'popup/:uid',
+      path: "popup/:uid",
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
         /*! import() | popup-popup-module */
@@ -1010,6 +1010,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /*! ./popup/popup.module */
         "./src/app/popup/popup.module.ts")).then(function (m) {
           return m.PopupPageModule;
+        });
+      }
+    }, {
+      path: 'new-message/:uid/:name',
+      loadChildren: function loadChildren() {
+        return __webpack_require__.e(
+        /*! import() | new-message-new-message-module */
+        "new-message-new-message-module").then(__webpack_require__.bind(null,
+        /*! ./new-message/new-message.module */
+        "./src/app/new-message/new-message.module.ts")).then(function (m) {
+          return m.NewMessagePageModule;
         });
       }
     }];
@@ -1328,7 +1339,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.postalUrl = this.serverUrl + "post-json?postal_code=";
         this.locationUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
         this.createUrl = "https://gowebtutorial.com/api/json/user/register";
-        this.searchUrl = this.serverUrl + "search-people?gender=";
+        this.searchUrl = this.serverUrl + "search-view?gender=";
       }
 
       _createClass(ConfigService, [{
@@ -1358,8 +1369,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       }, {
         key: "getSearchUrl",
-        value: function getSearchUrl(gender, meet, activity) {
-          return this.http.get(this.searchUrl + gender + "&meet=" + meet + "&activity=" + activity);
+        value: function getSearchUrl(gender, meet, activity, Postalcode) {
+          return this.http.get(this.serverUrl + "search-view?gender=" + gender + "&meet=" + meet + "&activity=" + activity + "&postal=" + Postalcode);
         }
       }]);
 
@@ -1477,8 +1488,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.id = null;
         this.logggenIn = false;
         this.isLoading = false;
-        this.logoutUrl = "https://gowebtutorial.com/api/json/user/logout";
-        this.url = "http://latdating.dd:8083/api/json/system/connect";
+        this.logoutUrl = "http://gowebtutorial.com/api/json/user/logout";
+        this.url = "https://latdating.dd:8083/api/json/system/connect";
         this.isLoogedIn = false;
         this.token = "https://gowebtutorial.com/api/json/user/token";
       }
@@ -1540,7 +1551,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function LoginForm(user, pass) {
           var _this2 = this;
 
-          console.log(user, pass);
           this.http.post("http://gowebtutorial.com/api/json/user/login", {
             username: user,
             password: pass

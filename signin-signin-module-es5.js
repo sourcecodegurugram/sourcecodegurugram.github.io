@@ -255,7 +255,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.alertController = alertController;
         this.maxNumberOfTabs = 5;
         this.selectedIndex = 0;
-        this.url = "https://gowebtutorial.com/api/json/system/connect";
+        this.url = "http://gowebtutorial.com/api/json/system/connect";
         this.LoggedIn = true;
       }
 
@@ -296,7 +296,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function LoginForm(user, pass) {
           var _this = this;
 
-          this.http.post("https://gowebtutorial.com/api/json/user/login", {
+          this.http.post("http://gowebtutorial.com/api/json/user/login", {
             username: user,
             password: pass
           }).subscribe(function (data) {
@@ -315,9 +315,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               localStorage.setItem("Signinuser", JSON.stringify(head));
               console.log(head);
               _this.LoggedIn = false;
-              window.location.reload();
-
-              _this.router.navigate(["/"]);
             });
           });
         }

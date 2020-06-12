@@ -83,7 +83,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | searchTab-searchTab-module */
-          [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~5a236dac"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null,
           /*! ../searchTab/searchTab.module */
           "./src/app/searchTab/searchTab.module.ts")).then(function (m) {
             return m.SearchTabPageModule;
@@ -92,9 +92,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         path: 'tabs2',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | tabs2-tabs2-module */
-          "tabs2-tabs2-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~location-targetting-location-targetting-module~optional-detail-optional-detail-module~regist~46c00606"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null,
           /*! ../tabs2/tabs2.module */
           "./src/app/tabs2/tabs2.module.ts")).then(function (m) {
             return m.Tabs2PageModule;
