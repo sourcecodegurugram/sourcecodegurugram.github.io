@@ -160,7 +160,7 @@ let NotificationchatPage = class NotificationchatPage {
             withCredentials: true,
         };
         this.http
-            .post("http://gowebtutorial.com/api/json/privatemsg/", {
+            .post("https://gowebtutorial.com/api/json/privatemsg/", {
             thread_id: this.thread,
             recipients: "44135",
             subject: "hello",
@@ -184,7 +184,7 @@ let NotificationchatPage = class NotificationchatPage {
                 withCredentials: true,
             };
             return this.http
-                .get("http://gowebtutorial.com/api/json/privatemsg/" + this.thread, requestOptions)
+                .get("https://gowebtutorial.com/api/json/privatemsg/" + this.thread, requestOptions)
                 .subscribe((getMessages) => {
                 this.messages = getMessages;
                 this.message = this.messages.messages;

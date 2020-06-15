@@ -266,7 +266,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             headers: headers,
             withCredentials: true
           };
-          this.http.post("http://gowebtutorial.com/api/json/privatemsg/", {
+          this.http.post("https://gowebtutorial.com/api/json/privatemsg/", {
             thread_id: this.thread,
             recipients: "44135",
             subject: "hello",
@@ -290,7 +290,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               headers: headers,
               withCredentials: true
             };
-            return this.http.get("http://gowebtutorial.com/api/json/privatemsg/" + this.thread, requestOptions).subscribe(function (getMessages) {
+            return this.http.get("https://gowebtutorial.com/api/json/privatemsg/" + this.thread, requestOptions).subscribe(function (getMessages) {
               _this3.messages = getMessages;
               _this3.message = _this3.messages.messages;
               _this3.thread = _this3.messages.pmtid;
