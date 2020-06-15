@@ -147,7 +147,7 @@ let NewMessagePage = class NewMessagePage {
             withCredentials: true,
         };
         return this.http
-            .post("http://gowebtutorial.com/api/json/privatemsg", {
+            .post("https://gowebtutorial.com/api/json/privatemsg", {
             recipients: this.name,
             subject: this.Subject,
             body: this.Message

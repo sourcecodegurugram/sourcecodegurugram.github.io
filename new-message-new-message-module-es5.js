@@ -253,7 +253,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             headers: headers,
             withCredentials: true
           };
-          return this.http.post("http://gowebtutorial.com/api/json/privatemsg", {
+          return this.http.post("https://gowebtutorial.com/api/json/privatemsg", {
             recipients: this.name,
             subject: this.Subject,
             body: this.Message
