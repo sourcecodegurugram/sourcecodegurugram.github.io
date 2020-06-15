@@ -141,7 +141,7 @@ let PopupPage = class PopupPage {
         this.sub = this._Activatedroute.paramMap.subscribe((params) => {
             this.uid = params.get("uid");
         });
-        this.http.get("http://gowebtutorial.com/api/json/user/" + this.uid).subscribe((data) => {
+        this.http.get("https://gowebtutorial.com/api/json/user/" + this.uid).subscribe((data) => {
             this.post = data;
             this.name = this.post.name; //
             this.picture = this.post.picture.url; //
@@ -181,7 +181,7 @@ let PopupPage = class PopupPage {
     getFavorite() {
         this.scope = [];
         this.http
-            .get("http://gowebtutorial.com/api/json/user/" + this.itrs.user.uid)
+            .get("https://gowebtutorial.com/api/json/user/" + this.itrs.user.uid)
             .subscribe((users) => {
             this.respnoseJSON = users;
             if (this.respnoseJSON.field_favorite_users.und) {
@@ -210,7 +210,7 @@ let PopupPage = class PopupPage {
         this.responseString = JSON.stringify(this.scope);
         console.log(this.scope);
         this.http
-            .put("http://gowebtutorial.com/api/json/user/" + this.itrs.user.uid, {
+            .put("https://gowebtutorial.com/api/json/user/" + this.itrs.user.uid, {
             field_favorite_users: {
                 und: [
                     {

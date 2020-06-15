@@ -255,7 +255,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.sub = this._Activatedroute.paramMap.subscribe(function (params) {
             _this.uid = params.get("uid");
           });
-          this.http.get("http://gowebtutorial.com/api/json/user/" + this.uid).subscribe(function (data) {
+          this.http.get("https://gowebtutorial.com/api/json/user/" + this.uid).subscribe(function (data) {
             _this.post = data;
             _this.name = _this.post.name; //
 
@@ -312,7 +312,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this2 = this;
 
           this.scope = [];
-          this.http.get("http://gowebtutorial.com/api/json/user/" + this.itrs.user.uid).subscribe(function (users) {
+          this.http.get("https://gowebtutorial.com/api/json/user/" + this.itrs.user.uid).subscribe(function (users) {
             _this2.respnoseJSON = users;
 
             if (_this2.respnoseJSON.field_favorite_users.und) {
@@ -341,7 +341,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.responseString = JSON.stringify(this.scope);
           console.log(this.scope);
-          this.http.put("http://gowebtutorial.com/api/json/user/" + this.itrs.user.uid, {
+          this.http.put("https://gowebtutorial.com/api/json/user/" + this.itrs.user.uid, {
             field_favorite_users: {
               und: [{
                 value: this.responseString
