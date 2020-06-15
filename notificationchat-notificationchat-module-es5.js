@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "  <ion-content style=\"background-color: white;\">\r\n    <div class=\"background-card new\">\r\n      <div class=\"header-persona-chat\" >\r\n        <div class=\"arrow\" routerLink=\"/chat/tabs2\">\r\n\r\n          <img src=\"../../assets/Images/asset-1.png\" class=\"arrow-image\">\r\n        </div>\r\n        <div class=\"image\">\r\n          <img src=\"https://gowebtutorial.com/sites/default/files/{{image}}\" class=\"image-chat\">\r\n        </div>\r\n        <div class=\"name\">\r\n          {{name}}\r\n        </div>\r\n        <div class=\"refesh-button\" (click)=\"refreshChat()\">\r\n\r\n\r\n    <img src=\"../../assets/Images/refresh.png\" class=\"refesh-button-image\">\r\n\r\n        </div>\r\n      </div>\r\n      <div class=\"extra\"></div>\r\n      <div class=\"chat-time\" id=\"test\">\r\n        <div class=\"chat-align\" *ngFor=\"let new of message\">\r\n          <div class=\"left-chat-align\">\r\n            <div class=\"right-chat\">\r\n              <p class=\"chat-content\" *ngIf=\"new.author!=itr.user.uid\">{{new.body}}</p>\r\n            </div>\r\n          </div>\r\n          <div class=\"right-chat-align\">\r\n            <div class=\"left-chat\">\r\n              <p class=\"chat-content\" *ngIf=\"new.author==itr.user.uid\">{{new.body}}</p>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"background-card\">\r\n      <div class=\"text-message-writer\">\r\n        <input type=\"text\" id=\"chat\" name=\"chat\" class=\"chat-field\" placeholder=\"Type your message here\"\r\n          [(ngModel)]=\"chat\">\r\n       <img src=\"../../assets/Images/send.png\" class=\"img-send\" (click)=\"sendMsg(chat)\" *ngIf=\"Send\">\r\n        <img src=\"../../assets/Images/rolling.gif\" class=\"img-send-rolling\"  *ngIf=\"Sending\" >\r\n      </div>\r\n    </div>\r\n  </ion-content>";
+    __webpack_exports__["default"] = "  <ion-content style=\"background-color: white;\">\r\n    <div class=\"background-card new\">\r\n      <div class=\"header-persona-chat\" >\r\n        <div class=\"arrow\" routerLink=\"/chat/tabs2\">\r\n\r\n          <img src=\"../../assets/Images/asset-1.png\" class=\"arrow-image\">\r\n        </div>\r\n        <div class=\"image\">\r\n          <img src=\"https://gowebtutorial.com/sites/default/files/{{image}}\" class=\"image-chat\">\r\n        </div>\r\n        <div class=\"name\">\r\n          {{name}}\r\n        </div>\r\n        <div class=\"refesh-button\" (click)=\"refreshChat()\">\r\n          <i class=\"fa fa-refresh fa-spin\" style=\"font-size:24px\" *ngIf=\"updating\"></i>\r\n          <i style=\"font-size:24px\" class=\"fa\" *ngIf=\"!updating\">&#xf021;</i>\r\n\r\n    <!-- <img src=\"../../assets/Images/refresh.png\" class=\"refesh-button-image\"> -->\r\n\r\n        </div>\r\n      </div>\r\n      <div class=\"extra\"></div>\r\n      <div class=\"chat-time\" id=\"test\">\r\n        <div class=\"chat-align\" *ngFor=\"let new of message\">\r\n          <div class=\"left-chat-align\">\r\n            <div class=\"right-chat\">\r\n              <p class=\"chat-content\" *ngIf=\"new.author!=itr.user.uid\">{{new.body}}</p>\r\n            </div>\r\n          </div>\r\n          <div class=\"right-chat-align\">\r\n            <div class=\"left-chat\">\r\n              <p class=\"chat-content\" *ngIf=\"new.author==itr.user.uid\">{{new.body}}</p>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"background-card\">\r\n      <div class=\"text-message-writer\">\r\n        <input type=\"text\" id=\"chat\" name=\"chat\" class=\"chat-field\" placeholder=\"Type your message here\"\r\n          [(ngModel)]=\"chat\">\r\n       <img src=\"../../assets/Images/send.png\" class=\"img-send\" (click)=\"sendMsg(chat)\" *ngIf=\"Send\">\r\n        <img src=\"../../assets/Images/rolling.gif\" class=\"img-send-rolling\"  *ngIf=\"Sending\" >\r\n      </div>\r\n    </div>\r\n  </ion-content>";
     /***/
   },
 
@@ -230,6 +230,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this._Activatedroute = _Activatedroute;
         this.Send = true;
         this.Sending = false;
+        this.updating = false;
       }
 
       _createClass(NotificationchatPage, [{
@@ -285,6 +286,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this3 = this;
 
           if (this.itr != null) {
+            this.updating = true;
             var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set("X-CSRF-Token", this.itr.token).set("Content-Type", "application/json").set("X-Cookie", this.itr.session_name + "=" + this.itr.sessid);
             var requestOptions = {
               headers: headers,
@@ -295,6 +297,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this3.message = _this3.messages.messages;
               _this3.thread = _this3.messages.pmtid;
               console.log(getMessages);
+              _this3.updating = false;
             });
           }
         }

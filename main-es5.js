@@ -841,7 +841,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | location-targetting-location-targetting-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("location-targetting-location-targetting-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("location-targetting-location-targetting-module")]).then(__webpack_require__.bind(null,
         /*! ./location-targetting/location-targetting.module */
         "./src/app/location-targetting/location-targetting.module.ts")).then(function (m) {
           return m.LocationTargettingPageModule;
@@ -852,7 +852,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | register-register-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("register-register-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("register-register-module")]).then(__webpack_require__.bind(null,
         /*! ./register/register.module */
         "./src/app/register/register.module.ts")).then(function (m) {
           return m.RegisterPageModule;
@@ -874,7 +874,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | searchTab-searchTab-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null,
         /*! ./searchTab/searchTab.module */
         "./src/app/searchTab/searchTab.module.ts")).then(function (m) {
           return m.SearchTabPageModule;
@@ -885,7 +885,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | tabs2-tabs2-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null,
         /*! ./tabs2/tabs2.module */
         "./src/app/tabs2/tabs2.module.ts")).then(function (m) {
           return m.Tabs2PageModule;
@@ -962,7 +962,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | welcome-welcome-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null,
         /*! ./welcome/welcome.module */
         "./src/app/welcome/welcome.module.ts")).then(function (m) {
           return m.WelcomePageModule;
@@ -973,7 +973,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | signup-signup-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("signup-signup-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("signup-signup-module")]).then(__webpack_require__.bind(null,
         /*! ./signup/signup.module */
         "./src/app/signup/signup.module.ts")).then(function (m) {
           return m.SignupPageModule;
@@ -984,7 +984,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | signin-signin-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("signin-signin-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("signin-signin-module")]).then(__webpack_require__.bind(null,
         /*! ./signin/signin.module */
         "./src/app/signin/signin.module.ts")).then(function (m) {
           return m.SigninPageModule;
@@ -995,7 +995,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | optional-detail-optional-detail-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null,
         /*! ./optional-detail/optional-detail.module */
         "./src/app/optional-detail/optional-detail.module.ts")).then(function (m) {
           return m.OptionalDetailPageModule;
@@ -1004,9 +1004,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: "popup/:uid",
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | popup-popup-module */
-        "popup-popup-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("popup-popup-module")]).then(__webpack_require__.bind(null,
         /*! ./popup/popup.module */
         "./src/app/popup/popup.module.ts")).then(function (m) {
           return m.PopupPageModule;
@@ -1017,7 +1017,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | new-message-new-message-module */
-        [__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("new-message-new-message-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("new-message-new-message-module")]).then(__webpack_require__.bind(null,
         /*! ./new-message/new-message.module */
         "./src/app/new-message/new-message.module.ts")).then(function (m) {
           return m.NewMessagePageModule;
@@ -1032,6 +1032,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /*! ./find-friends/find-friends.module */
         "./src/app/find-friends/find-friends.module.ts")).then(function (m) {
           return m.FindFriendsPageModule;
+        });
+      }
+    }, {
+      path: 'favorate-popup/:uid',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | favorate-popup-favorate-popup-module */
+        [__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("favorate-popup-favorate-popup-module")]).then(__webpack_require__.bind(null,
+        /*! ./favorate-popup/favorate-popup.module */
+        "./src/app/favorate-popup/favorate-popup.module.ts")).then(function (m) {
+          return m.FavoratePopupPageModule;
         });
       }
     }];
@@ -1623,7 +1634,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.id = null;
         this.logggenIn = false;
         this.isLoading = false;
-        this.logoutUrl = "http://gowebtutorial.com/api/json/user/logout";
+        this.logoutUrl = "https://gowebtutorial.com/api/json/user/logout";
         this.url = "https://latdating.dd:8083/api/json/system/connect";
         this.isLoogedIn = false;
         this.token = "https://gowebtutorial.com/api/json/user/token";
@@ -1643,10 +1654,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             this.fname = this.itrs.user.field_first_name.und[0].value;
             this.lname = this.itrs.user.field_last_name.und[0].value;
             this.userlogged = JSON.parse(localStorage.getItem("Signinuser"));
-            console.log(this.userlogged);
           }
-
-          console.log(this.itrs.token);
         }
       }, {
         key: "ngOnDestroy",
@@ -1686,7 +1694,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function LoginForm(user, pass) {
           var _this2 = this;
 
-          this.http.post("http://gowebtutorial.com/api/json/user/login", {
+          this.http.post("https://gowebtutorial.com/api/json/user/login", {
             username: user,
             password: pass
           }).subscribe(function (data) {

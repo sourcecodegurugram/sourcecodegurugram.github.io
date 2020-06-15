@@ -727,11 +727,11 @@ const routes = [
     },
     {
         path: "location-targetting",
-        loadChildren: () => Promise.all(/*! import() | location-targetting-location-targetting-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("location-targetting-location-targetting-module")]).then(__webpack_require__.bind(null, /*! ./location-targetting/location-targetting.module */ "./src/app/location-targetting/location-targetting.module.ts")).then((m) => m.LocationTargettingPageModule),
+        loadChildren: () => Promise.all(/*! import() | location-targetting-location-targetting-module */[__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("location-targetting-location-targetting-module")]).then(__webpack_require__.bind(null, /*! ./location-targetting/location-targetting.module */ "./src/app/location-targetting/location-targetting.module.ts")).then((m) => m.LocationTargettingPageModule),
     },
     {
         path: "register",
-        loadChildren: () => Promise.all(/*! import() | register-register-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("register-register-module")]).then(__webpack_require__.bind(null, /*! ./register/register.module */ "./src/app/register/register.module.ts")).then((m) => m.RegisterPageModule),
+        loadChildren: () => Promise.all(/*! import() | register-register-module */[__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("register-register-module")]).then(__webpack_require__.bind(null, /*! ./register/register.module */ "./src/app/register/register.module.ts")).then((m) => m.RegisterPageModule),
     },
     {
         path: "chat",
@@ -739,11 +739,11 @@ const routes = [
     },
     {
         path: "searchTab",
-        loadChildren: () => Promise.all(/*! import() | searchTab-searchTab-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null, /*! ./searchTab/searchTab.module */ "./src/app/searchTab/searchTab.module.ts")).then((m) => m.SearchTabPageModule),
+        loadChildren: () => Promise.all(/*! import() | searchTab-searchTab-module */[__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null, /*! ./searchTab/searchTab.module */ "./src/app/searchTab/searchTab.module.ts")).then((m) => m.SearchTabPageModule),
     },
     {
         path: "tabs2",
-        loadChildren: () => Promise.all(/*! import() | tabs2-tabs2-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null, /*! ./tabs2/tabs2.module */ "./src/app/tabs2/tabs2.module.ts")).then((m) => m.Tabs2PageModule),
+        loadChildren: () => Promise.all(/*! import() | tabs2-tabs2-module */[__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null, /*! ./tabs2/tabs2.module */ "./src/app/tabs2/tabs2.module.ts")).then((m) => m.Tabs2PageModule),
     },
     {
         path: "tabs3",
@@ -771,31 +771,35 @@ const routes = [
     },
     {
         path: "welcome",
-        loadChildren: () => Promise.all(/*! import() | welcome-welcome-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null, /*! ./welcome/welcome.module */ "./src/app/welcome/welcome.module.ts")).then((m) => m.WelcomePageModule),
+        loadChildren: () => Promise.all(/*! import() | welcome-welcome-module */[__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null, /*! ./welcome/welcome.module */ "./src/app/welcome/welcome.module.ts")).then((m) => m.WelcomePageModule),
     },
     {
         path: "signup",
-        loadChildren: () => Promise.all(/*! import() | signup-signup-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("signup-signup-module")]).then(__webpack_require__.bind(null, /*! ./signup/signup.module */ "./src/app/signup/signup.module.ts")).then((m) => m.SignupPageModule),
+        loadChildren: () => Promise.all(/*! import() | signup-signup-module */[__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("signup-signup-module")]).then(__webpack_require__.bind(null, /*! ./signup/signup.module */ "./src/app/signup/signup.module.ts")).then((m) => m.SignupPageModule),
     },
     {
         path: "signin",
-        loadChildren: () => Promise.all(/*! import() | signin-signin-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("signin-signin-module")]).then(__webpack_require__.bind(null, /*! ./signin/signin.module */ "./src/app/signin/signin.module.ts")).then((m) => m.SigninPageModule),
+        loadChildren: () => Promise.all(/*! import() | signin-signin-module */[__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("signin-signin-module")]).then(__webpack_require__.bind(null, /*! ./signin/signin.module */ "./src/app/signin/signin.module.ts")).then((m) => m.SigninPageModule),
     },
     {
         path: "optional-detail",
-        loadChildren: () => Promise.all(/*! import() | optional-detail-optional-detail-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null, /*! ./optional-detail/optional-detail.module */ "./src/app/optional-detail/optional-detail.module.ts")).then((m) => m.OptionalDetailPageModule),
+        loadChildren: () => Promise.all(/*! import() | optional-detail-optional-detail-module */[__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null, /*! ./optional-detail/optional-detail.module */ "./src/app/optional-detail/optional-detail.module.ts")).then((m) => m.OptionalDetailPageModule),
     },
     {
         path: "popup/:uid",
-        loadChildren: () => __webpack_require__.e(/*! import() | popup-popup-module */ "popup-popup-module").then(__webpack_require__.bind(null, /*! ./popup/popup.module */ "./src/app/popup/popup.module.ts")).then((m) => m.PopupPageModule),
+        loadChildren: () => Promise.all(/*! import() | popup-popup-module */[__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("popup-popup-module")]).then(__webpack_require__.bind(null, /*! ./popup/popup.module */ "./src/app/popup/popup.module.ts")).then((m) => m.PopupPageModule),
     },
     {
         path: 'new-message/:uid/:name',
-        loadChildren: () => Promise.all(/*! import() | new-message-new-message-module */[__webpack_require__.e("default~location-targetting-location-targetting-module~new-message-new-message-module~optional-detai~dd52df0b"), __webpack_require__.e("new-message-new-message-module")]).then(__webpack_require__.bind(null, /*! ./new-message/new-message.module */ "./src/app/new-message/new-message.module.ts")).then(m => m.NewMessagePageModule)
+        loadChildren: () => Promise.all(/*! import() | new-message-new-message-module */[__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("new-message-new-message-module")]).then(__webpack_require__.bind(null, /*! ./new-message/new-message.module */ "./src/app/new-message/new-message.module.ts")).then(m => m.NewMessagePageModule)
     },
     {
         path: 'find-friends',
         loadChildren: () => __webpack_require__.e(/*! import() | find-friends-find-friends-module */ "find-friends-find-friends-module").then(__webpack_require__.bind(null, /*! ./find-friends/find-friends.module */ "./src/app/find-friends/find-friends.module.ts")).then(m => m.FindFriendsPageModule)
+    },
+    {
+        path: 'favorate-popup/:uid',
+        loadChildren: () => Promise.all(/*! import() | favorate-popup-favorate-popup-module */[__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("favorate-popup-favorate-popup-module")]).then(__webpack_require__.bind(null, /*! ./favorate-popup/favorate-popup.module */ "./src/app/favorate-popup/favorate-popup.module.ts")).then(m => m.FavoratePopupPageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -1163,7 +1167,7 @@ let NavigationbarComponent = class NavigationbarComponent {
         this.id = null;
         this.logggenIn = false;
         this.isLoading = false;
-        this.logoutUrl = "http://gowebtutorial.com/api/json/user/logout";
+        this.logoutUrl = "https://gowebtutorial.com/api/json/user/logout";
         this.url = "https://latdating.dd:8083/api/json/system/connect";
         this.isLoogedIn = false;
         this.token = "https://gowebtutorial.com/api/json/user/token";
@@ -1179,9 +1183,7 @@ let NavigationbarComponent = class NavigationbarComponent {
             this.fname = this.itrs.user.field_first_name.und[0].value;
             this.lname = this.itrs.user.field_last_name.und[0].value;
             this.userlogged = JSON.parse(localStorage.getItem("Signinuser"));
-            console.log(this.userlogged);
         }
-        console.log(this.itrs.token);
     }
     ngOnDestroy() {
         this.sub.unsubscribe();
@@ -1209,7 +1211,7 @@ let NavigationbarComponent = class NavigationbarComponent {
     }
     LoginForm(user, pass) {
         this.http
-            .post("http://gowebtutorial.com/api/json/user/login", {
+            .post("https://gowebtutorial.com/api/json/user/login", {
             username: user,
             password: pass,
         })
