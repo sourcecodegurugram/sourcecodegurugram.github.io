@@ -406,6 +406,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           var ts = Math.round(new Date().getTime() / 1000);
           console.log(ts);
+          this.http.post("https://gowebtutorial.com/api/json/file/", this.uploadData).subscribe(function (res) {
+            _this2.Picurl = res, console.log(_this2.Picurl);
+          });
           this.http.post("https://gowebtutorial.com/api/json/user/register", {
             name: name,
             mail: email,
@@ -487,15 +490,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             pass: {
               pass1: password,
               pass2: confirmpassword
-            } // field_user_avatar: {
-            //   und: [
-            //     {
-            //       fid: this.Picurl.fid,
-            //     },
-            //   ],
-            // },
-            // picture: this.uploadPicture,
-
+            },
+            field_user_avatar: {
+              und: [{
+                fid: this.Picurl.fid
+              }]
+            },
+            picture: this.uploadPicture
           }).subscribe(function (data) {
             _this2.post = data;
             console.log(_this2.post);

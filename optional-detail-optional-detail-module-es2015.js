@@ -127,19 +127,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+
+
 
 
 
 let OptionalDetailPage = class OptionalDetailPage {
-    constructor(http) {
+    constructor(http, _location, _Activatedroute) {
         this.http = http;
+        this._location = _location;
+        this._Activatedroute = _Activatedroute;
         this.maxNumberOfTabs = 5;
         this.selectedIndex = 0;
     }
     ngOnInit() {
         this.userDetail = JSON.parse(localStorage.getItem("currentUser"));
         this.uid = this.userDetail.user.uid;
-        this.optionDetail(this.live);
     }
     tabChanged(tabChangeEvent) {
         this.selectedIndex = tabChangeEvent.index;
@@ -151,6 +156,7 @@ let OptionalDetailPage = class OptionalDetailPage {
         this.selectedIndex -= 1;
     }
     optionDetail(live) {
+        console.log(live);
         const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]()
             .set("X-CSRF-Token", this.userDetail.token)
             .set("Content-Type", "application/json")
@@ -161,19 +167,20 @@ let OptionalDetailPage = class OptionalDetailPage {
         };
         this.http.put("https://gowebtutorial.com/api/json/user/" + this.uid, {
             field_long_in_city: {
-                und: [
-                    {
-                        value: live
-                    }
-                ]
+                und: live
             },
         }, requestOptions).subscribe(UserData => {
             console.log(UserData);
         });
     }
+    backClicked() {
+        this._location.back();
+    }
 };
 OptionalDetailPage.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
+    { type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] }
 ];
 OptionalDetailPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -181,7 +188,7 @@ OptionalDetailPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./optional-detail.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/optional-detail/optional-detail.page.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./optional-detail.page.scss */ "./src/app/optional-detail/optional-detail.page.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])
 ], OptionalDetailPage);
 
 

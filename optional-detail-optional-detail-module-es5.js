@@ -233,12 +233,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/fesm2015/common.js");
 
     var OptionalDetailPage = /*#__PURE__*/function () {
-      function OptionalDetailPage(http) {
+      function OptionalDetailPage(http, _location, _Activatedroute) {
         _classCallCheck(this, OptionalDetailPage);
 
         this.http = http;
+        this._location = _location;
+        this._Activatedroute = _Activatedroute;
         this.maxNumberOfTabs = 5;
         this.selectedIndex = 0;
       }
@@ -248,7 +262,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           this.userDetail = JSON.parse(localStorage.getItem("currentUser"));
           this.uid = this.userDetail.user.uid;
-          this.optionDetail(this.live);
         }
       }, {
         key: "tabChanged",
@@ -268,6 +281,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "optionDetail",
         value: function optionDetail(live) {
+          console.log(live);
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set("X-CSRF-Token", this.userDetail.token).set("Content-Type", "application/json").set("X-Cookie", this.userDetail.session_name + "=" + this.userDetail.sessid);
           var requestOptions = {
             headers: headers,
@@ -275,13 +289,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           };
           this.http.put("https://gowebtutorial.com/api/json/user/" + this.uid, {
             field_long_in_city: {
-              und: [{
-                value: live
-              }]
+              und: live
             }
           }, requestOptions).subscribe(function (UserData) {
             console.log(UserData);
           });
+        }
+      }, {
+        key: "backClicked",
+        value: function backClicked() {
+          this._location.back();
         }
       }]);
 
@@ -291,6 +308,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     OptionalDetailPage.ctorParameters = function () {
       return [{
         type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+      }, {
+        type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
       }];
     };
 
@@ -302,7 +323,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./optional-detail.page.scss */
       "./src/app/optional-detail/optional-detail.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])], OptionalDetailPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["Location"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]])], OptionalDetailPage);
     /***/
   }
 }]);

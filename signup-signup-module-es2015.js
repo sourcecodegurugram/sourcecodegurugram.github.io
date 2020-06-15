@@ -274,6 +274,11 @@ let SignupPage = class SignupPage {
         var ts = Math.round((new Date()).getTime() / 1000);
         console.log(ts);
         this.http
+            .post("https://gowebtutorial.com/api/json/file/", this.uploadData)
+            .subscribe((res) => {
+            (this.Picurl = res), console.log(this.Picurl);
+        });
+        this.http
             .post("https://gowebtutorial.com/api/json/user/register", {
             name: name,
             mail: email,
@@ -363,15 +368,15 @@ let SignupPage = class SignupPage {
             pass: {
                 pass1: password,
                 pass2: confirmpassword,
-            }
-            // field_user_avatar: {
-            //   und: [
-            //     {
-            //       fid: this.Picurl.fid,
-            //     },
-            //   ],
-            // },
-            // picture: this.uploadPicture,
+            },
+            field_user_avatar: {
+                und: [
+                    {
+                        fid: this.Picurl.fid,
+                    },
+                ],
+            },
+            picture: this.uploadPicture,
         })
             .subscribe((data) => {
             this.post = data;
