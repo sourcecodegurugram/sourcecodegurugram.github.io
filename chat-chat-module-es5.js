@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n<ion-tabs class=\"background-card\">\n  <ion-tab-bar slot=\"bottom\"  class=\"background-card\">\n \n\n    <ion-tab-button tab=\"tabs2\"  class=\"background-card\">\n      <ion-icon name=\"chatbubbles\"></ion-icon>\n      <ion-label>Chat</ion-label>\n    </ion-tab-button>\n\n    <ion-tab-button  tab=\"tabs3\"  class=\"background-card\">\n      <ion-icon name=\"star\"></ion-icon>\n      <ion-label>Favorite</ion-label>\n    </ion-tab-button>\n    <ion-tab-button tab=\"searchTab\" class=\"background-card\">\n      <ion-icon name=\"search-sharp\"></ion-icon>\n      <ion-label>Search</ion-label>\n    </ion-tab-button>\n  </ion-tab-bar>\n\n  \n\n</ion-tabs>";
+    __webpack_exports__["default"] = "\r\n<ion-tabs class=\"background-card\">\r\n  <ion-tab-bar slot=\"bottom\"  class=\"background-card\">\r\n \r\n\r\n    <ion-tab-button tab=\"tabs2\"  class=\"background-card\">\r\n      <ion-icon name=\"chatbubbles\"></ion-icon>\r\n      <ion-label>Chat</ion-label>\r\n    </ion-tab-button>\r\n\r\n    <ion-tab-button  tab=\"tabs3\"  class=\"background-card\">\r\n      <ion-icon name=\"star\"></ion-icon>\r\n      <ion-label>Favorite</ion-label>\r\n    </ion-tab-button>\r\n    <ion-tab-button tab=\"searchTab\" class=\"background-card\">\r\n      <ion-icon name=\"search-sharp\"></ion-icon>\r\n      <ion-label>Search</ion-label>\r\n    </ion-tab-button>\r\n  </ion-tab-bar>\r\n\r\n  \r\n\r\n</ion-tabs>";
     /***/
   },
 

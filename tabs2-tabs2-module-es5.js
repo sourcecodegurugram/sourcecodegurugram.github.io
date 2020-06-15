@@ -248,7 +248,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               headers: headers,
               withCredentials: true
             };
-            return this.http.get("http://gowebtutorial.com/api/json/privatemsg/", requestOptions).subscribe(function (getMessages) {
+            return this.http.get("https://gowebtutorial.com/api/json/privatemsg/", requestOptions).subscribe(function (getMessages) {
               _this.messages = getMessages;
 
               for (var i = 0; i < _this.messages.length; i++) {
@@ -277,7 +277,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             headers: headers,
             withCredentials: true
           };
-          return this.http.get("http://gowebtutorial.com/api/json/privatemsg/", requestOptions).subscribe(function (getMessages) {});
+          return this.http.get("https://gowebtutorial.com/api/json/privatemsg/", requestOptions).subscribe(function (getMessages) {});
         }
       }, {
         key: "convertTimestamp",

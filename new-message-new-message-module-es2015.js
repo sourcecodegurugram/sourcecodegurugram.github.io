@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n  <ion-toolbar>\n    <ion-title>newMessage</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n\n<div class=\"main-New-message-container\">\n  <div class=\"form-group\">\n    <input type=\"text\" class=\"form-control\" id=\"usr\" name=\"Subject\" [(ngModel)]=\"Subject\" placeholder=\"Enter Subject\">\n  </div>\n  <div class=\"form-group\">\n  \n    <textarea class=\"form-control\" rows=\"5\" id=\"comment\" name=\"Message\" [(ngModel)]=\"Message\"  placeholder=\"Enter Message\"></textarea>\n  </div>\n\n<div class=\"button-align\">\n\n  <button type=\"button\" class=\"btn btn-primary\" (click)=\"sendMessage()\">Send</button>\n</div>\n</div>\n\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>newMessage</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n\r\n<div class=\"main-New-message-container\">\r\n  <div class=\"form-group\">\r\n    <input type=\"text\" class=\"form-control\" id=\"usr\" name=\"Subject\" [(ngModel)]=\"Subject\" placeholder=\"Enter Subject\">\r\n  </div>\r\n  <div class=\"form-group\">\r\n  \r\n    <textarea class=\"form-control\" rows=\"5\" id=\"comment\" name=\"Message\" [(ngModel)]=\"Message\"  placeholder=\"Enter Message\"></textarea>\r\n  </div>\r\n\r\n<div class=\"button-align\">\r\n\r\n  <button type=\"button\" class=\"btn btn-primary\" (click)=\"sendMessage()\">Send</button>\r\n</div>\r\n</div>\r\n\r\n");
 
 /***/ }),
 
