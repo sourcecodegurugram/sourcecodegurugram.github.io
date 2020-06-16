@@ -13,6 +13,108 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/app/config.service.ts":
+/*!***********************************!*\
+  !*** ./src/app/config.service.ts ***!
+  \***********************************/
+/*! exports provided: ConfigService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfigService", function() { return ConfigService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+let ConfigService = class ConfigService {
+    constructor(http) {
+        this.http = http;
+        this.serverUrl = "https://gowebtutorial.com/api/json/";
+        this.articleUrl = this.serverUrl + "user.json";
+        this.userUrl = this.serverUrl + "user/";
+        this.hobbieUrl = this.serverUrl + "hobbies-json";
+        this.postalUrl = this.serverUrl + "post-json?postal_code=";
+        this.locationUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
+        this.createUrl = "https://gowebtutorial.com/api/json/user/register";
+        this.searchUrl = this.serverUrl + "search-view?gender=";
+    }
+    getArticle() {
+        return this.http.get(this.articleUrl);
+    }
+    getUser(uid) {
+        return this.http.get(this.userUrl + uid);
+    }
+    getHobbies() {
+        return this.http.get(this.hobbieUrl);
+    }
+    getPostal(post, pageIndex) {
+        return this.http.get(this.postalUrl + post + "&page=" + pageIndex);
+    }
+    getLocation(lat, lng) {
+        return this.http.get(this.locationUrl +
+            lat +
+            "," +
+            lng +
+            "&types;=postal_code" +
+            "&key=AIzaSyBru6wNx3CwcvRbACg2G4-Cq7o6Lt4wOvI");
+    }
+    getSearchUrl(gender, meet, activity, Postalcode) {
+        // Only use fields that are specified
+        if (gender) {
+            this.gender = "&gender=" + gender;
+        }
+        else {
+            this.gender = "";
+        }
+        if (meet) {
+            this.meet = "&meet=" + meet;
+        }
+        else {
+            this.meet = "";
+        }
+        if (activity) {
+            this.activity = "&activity=" + activity;
+        }
+        else {
+            this.activity = "";
+        }
+        if (Postalcode) {
+            this.Postalcode = "&postal=" + Postalcode;
+        }
+        else {
+            this.Postalcode = "";
+        }
+        console.log(this.serverUrl +
+            "search-view?test=test" +
+            this.gender +
+            this.meet +
+            this.activity +
+            this.Postalcode);
+        return this.http.get(this.serverUrl +
+            "search-view?test=test" +
+            this.gender +
+            this.meet +
+            this.activity +
+            this.Postalcode);
+    }
+};
+ConfigService.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
+ConfigService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: "root",
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
+], ConfigService);
+
+
+
+/***/ }),
+
 /***/ "./src/app/home/home.module.ts":
 /*!*************************************!*\
   !*** ./src/app/home/home.module.ts ***!

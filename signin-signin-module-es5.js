@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div  *ngIf=\"isLoading\" class=\"loading-container\">\r\n  <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\r\n</div>\r\n  <div class=\"main-singin\">\r\n        <div class=\"login-buton\">\r\n          <p class=\"heading-login\">Log in to Not 4 Dating below</p>\r\n        </div>\r\n        <div class=\"or\"></div>\r\n        <div class=\"forms-field\">\r\n          <div class=\"form-group\">\r\n            <input type=\"text\" class=\"form-control\" id=\"usr\" placeholder=\"User Name\" name=\"user\" [(ngModel)]=\"user\">\r\n          </div>\r\n\r\n          <div class=\"form-group\">\r\n\r\n            <input type=\"password\" class=\"form-control\" id=\"usr\" placeholder=\"Password\" name=\"password\"\r\n              [(ngModel)]=\"password\">\r\n\r\n          </div>\r\n          <div class=\"continue-button\" (click)=\"nextSteps()\">\r\n            Continue\r\n          </div>\r\n\r\n        </div>\r\n  \r\n\r\n  </div>\r\n";
+    __webpack_exports__["default"] = "<div *ngIf=\"isLoading\" class=\"loading-container\">\r\n  <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\r\n</div>\r\n<ion-header>\r\n  <app-navigationbar> </app-navigationbar>\r\n</ion-header>\r\n\r\n\r\n<div class=\"main-singin\">\r\n  <div class=\"login-buton\">\r\n    <p class=\"heading-login\">Log in to Not 4 Dating below</p>\r\n  </div>\r\n  <div class=\"or\"></div>\r\n  <div class=\"forms-field\">\r\n    <div class=\"form-group\">\r\n      <input type=\"text\" class=\"form-control\" id=\"usr\" placeholder=\"User Name\" name=\"user\" [(ngModel)]=\"user\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n\r\n      <input type=\"password\" class=\"form-control\" id=\"usr\" placeholder=\"Password\" name=\"password\"\r\n        [(ngModel)]=\"password\">\r\n\r\n    </div>\r\n    <div class=\"continue-button\" (click)=\"nextSteps()\">\r\n      Continue\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n</div>";
     /***/
   },
 
@@ -72,6 +72,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var routes = [{
       path: '',
       component: _signin_page__WEBPACK_IMPORTED_MODULE_3__["SigninPage"]
+    }, {
+      path: 'nav-bar',
+      loadChildren: function loadChildren() {
+        return __webpack_require__.e(
+        /*! import() | nav-bar-nav-bar-module */
+        "nav-bar-nav-bar-module").then(__webpack_require__.bind(null,
+        /*! ../nav-bar/nav-bar.module */
+        "./src/app/nav-bar/nav-bar.module.ts")).then(function (m) {
+          return m.NavBarPageModule;
+        });
+      }
     }];
 
     var SigninPageRoutingModule = function SigninPageRoutingModule() {
@@ -164,13 +175,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _material_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ../material.module */
     "./src/app/material.module.ts");
+    /* harmony import */
+
+
+    var _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    /*! ../navigationbar/navigationbar.module */
+    "./src/app/navigationbar/navigationbar.module.ts");
 
     var SigninPageModule = function SigninPageModule() {
       _classCallCheck(this, SigninPageModule);
     };
 
     SigninPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _signin_routing_module__WEBPACK_IMPORTED_MODULE_5__["SigninPageRoutingModule"], _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_8__["MatTabsModule"], _material_module__WEBPACK_IMPORTED_MODULE_9__["MaterialModule"]],
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _signin_routing_module__WEBPACK_IMPORTED_MODULE_5__["SigninPageRoutingModule"], _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"], _angular_material_tabs__WEBPACK_IMPORTED_MODULE_8__["MatTabsModule"], _material_module__WEBPACK_IMPORTED_MODULE_9__["MaterialModule"], _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_10__["NavigationbarModule"]],
       declarations: [_signin_page__WEBPACK_IMPORTED_MODULE_6__["SigninPage"]]
     })], SigninPageModule);
     /***/
@@ -273,19 +290,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this = this;
 
           this.siginUser = JSON.parse(localStorage.getItem("currentUser"));
-          this.isLoading = true;
 
-          if (this.siginUser != null) {
+          if (this.siginUser == null) {
+            this.isLoading = false;
+          } else if (this.siginUser != null) {
+            this.isLoading = true;
             this.AuthService.systemConnect().subscribe(function (UserLoggedIn) {
               localStorage.setItem("Signinuser", JSON.stringify(UserLoggedIn));
               _this.UserDetails = UserLoggedIn;
 
               if (_this.UserDetails != null) {
-                _this.router.navigate(['/find-friends']);
+                _this.isLoading = false;
+
+                _this.router.navigate(["/find-friends"]);
               }
             });
-          } else {
-            this.isLoading = false;
           }
         }
       }, {
@@ -322,7 +341,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this2.UserDetails = UserLoggedIn;
 
               if (_this2.UserDetails != null) {
-                _this2.router.navigate(['/find-friends']);
+                _this2.router.navigate(["/find-friends"]);
               }
             });
           });

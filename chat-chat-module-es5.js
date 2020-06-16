@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\r\n<ion-tabs class=\"background-card\">\r\n  <ion-tab-bar slot=\"bottom\"  class=\"background-card\">\r\n \r\n\r\n    <ion-tab-button tab=\"tabs2\"  class=\"background-card\">\r\n      <ion-icon name=\"chatbubbles\"></ion-icon>\r\n      <ion-label>Chat</ion-label>\r\n    </ion-tab-button>\r\n\r\n    <ion-tab-button  tab=\"tabs3\"  class=\"background-card\">\r\n      <ion-icon name=\"star\"></ion-icon>\r\n      <ion-label>Favorite</ion-label>\r\n    </ion-tab-button>\r\n    <ion-tab-button tab=\"searchTab\" class=\"background-card\">\r\n      <ion-icon name=\"search-sharp\"></ion-icon>\r\n      <ion-label>Search</ion-label>\r\n    </ion-tab-button>\r\n  </ion-tab-bar>\r\n\r\n  \r\n\r\n</ion-tabs>";
+    __webpack_exports__["default"] = "<ion-header>\r\n  <app-navigationbar></app-navigationbar>\r\n</ion-header>\r\n\r\n\r\n\r\n<ion-tabs class=\"background-card\">\r\n  <ion-tab-bar slot=\"bottom\"  class=\"background-card\">\r\n    <ion-tab-button tab=\"tabs2\"  class=\"background-card\">\r\n      <ion-icon name=\"chatbubbles\"></ion-icon>\r\n      <ion-label>Chat</ion-label>\r\n    </ion-tab-button>\r\n\r\n    <ion-tab-button  tab=\"tabs3\"  class=\"background-card\">\r\n      <ion-icon name=\"star\"></ion-icon>\r\n      <ion-label>Favorite</ion-label>\r\n    </ion-tab-button>\r\n    <ion-tab-button tab=\"searchTab\" class=\"background-card\">\r\n      <ion-icon name=\"search-sharp\"></ion-icon>\r\n      <ion-label>Search</ion-label>\r\n    </ion-tab-button>\r\n  </ion-tab-bar>\r\n\r\n  \r\n\r\n</ion-tabs>";
     /***/
   },
 
@@ -83,7 +83,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | searchTab-searchTab-module */
-          [__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~f01dcdfd"), __webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null,
           /*! ../searchTab/searchTab.module */
           "./src/app/searchTab/searchTab.module.ts")).then(function (m) {
             return m.SearchTabPageModule;
@@ -94,7 +94,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         loadChildren: function loadChildren() {
           return Promise.all(
           /*! import() | tabs2-tabs2-module */
-          [__webpack_require__.e("default~favorate-popup-favorate-popup-module~location-targetting-location-targetting-module~new-mess~8c4b86fd"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~f01dcdfd"), __webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null,
           /*! ../tabs2/tabs2.module */
           "./src/app/tabs2/tabs2.module.ts")).then(function (m) {
             return m.Tabs2PageModule;
@@ -103,9 +103,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         path: 'tabs3',
         loadChildren: function loadChildren() {
-          return __webpack_require__.e(
+          return Promise.all(
           /*! import() | tabs3-tabs3-module */
-          "tabs3-tabs3-module").then(__webpack_require__.bind(null,
+          [__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~f01dcdfd"), __webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("tabs3-tabs3-module")]).then(__webpack_require__.bind(null,
           /*! ../tabs3/tabs3.module */
           "./src/app/tabs3/tabs3.module.ts")).then(function (m) {
             return m.Tabs3PageModule;
@@ -190,7 +190,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _chat_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../navigationbar/navigationbar.module */
+    "./src/app/navigationbar/navigationbar.module.ts");
+    /* harmony import */
+
+
+    var _chat_page__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ./chat.page */
     "./src/app/chat/chat.page.ts");
 
@@ -199,8 +205,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     ChatPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _chat_routing_module__WEBPACK_IMPORTED_MODULE_5__["ChatPageRoutingModule"]],
-      declarations: [_chat_page__WEBPACK_IMPORTED_MODULE_6__["ChatPage"]]
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _chat_routing_module__WEBPACK_IMPORTED_MODULE_5__["ChatPageRoutingModule"], _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_6__["NavigationbarModule"]],
+      declarations: [_chat_page__WEBPACK_IMPORTED_MODULE_7__["ChatPage"]]
     })], ChatPageModule);
     /***/
   },

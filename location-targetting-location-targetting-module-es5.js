@@ -1,8 +1,8 @@
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["location-targetting-location-targetting-module"], {
   /***/
@@ -22,6 +22,132 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     __webpack_exports__["default"] = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>navigation</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<div class=\"background\">\r\n\r\n  <ion-card class=\"card-one\" *ngIf=\"hide\">\r\n    <ion-card-content class=\"card-content-font\">\r\n      Location targeting is turned off on your device. Please provide the following details to see members in your area.\r\n      Postal code and Country. Search button will say find friends.\r\n    </ion-card-content>\r\n\r\n    <p class=\"tittle-card\">Find Friends</p>\r\n    <form class=\"form-fields\">\r\n      <label for=\"fname\" class=\"form-label\">ZIP/Postal Code</label><br>\r\n      <input type=\"text\" id=\"fname\" name=\"post\" class=\"form-field-zip-code\" [(ngModel)]=\"post\"><br>\r\n\r\n      <label class=\"form-label-country\">Country</label><br>\r\n      <select id=\"country\" class=\"country-field\">\r\n        <option value=\"United States\">United States</option>\r\n        <option value=\"USA\">USA</option>\r\n        <option value=\"Dubai\">Dubai</option>\r\n        <option value=\"India\">India</option>\r\n      </select>\r\n      <br>\r\n      <div class=\"button-container\">\r\n        <button type=\"button\" class=\"button-common\" (click)=\"buttonClick()\"\r\n          routerLink=\"/search-result/{{post}}\">Search</button>\r\n      </div>\r\n    </form>\r\n\r\n\r\n\r\n    <p class=\"tittle-card\">Can’t find your\r\n      country ?\r\n      Send us a message here and we will add it\r\n    </p>\r\n\r\n    <form class=\"form-fields\">\r\n\r\n      <label class=\"form-label-country form-label\">Country</label><br>\r\n      <select id=\"country\" class=\"country-field search-country\">\r\n        <option value=\"country\">Country</option>\r\n        <option value=\"USA\">USA</option>\r\n        <option value=\"Dubai\">Dubai</option>\r\n        <option value=\"India\">India</option>\r\n      </select>\r\n      <br>\r\n      <label for=\"fname\" class=\"form-label\">Postcode</label><br>\r\n      <input type=\"text\" id=\"fname\" name=\"fname\" class=\"form-field-zip-code search-country\"><br>\r\n\r\n\r\n      <div class=\"button-container\">\r\n        <button type=\"button\" class=\"button-common\">Submit</button>\r\n      </div>\r\n    </form>\r\n  </ion-card>\r\n\r\n\r\n</div>";
+    /***/
+  },
+
+  /***/
+  "./src/app/config.service.ts":
+  /*!***********************************!*\
+    !*** ./src/app/config.service.ts ***!
+    \***********************************/
+
+  /*! exports provided: ConfigService */
+
+  /***/
+  function srcAppConfigServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ConfigService", function () {
+      return ConfigService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+
+    var ConfigService = /*#__PURE__*/function () {
+      function ConfigService(http) {
+        _classCallCheck(this, ConfigService);
+
+        this.http = http;
+        this.serverUrl = "https://gowebtutorial.com/api/json/";
+        this.articleUrl = this.serverUrl + "user.json";
+        this.userUrl = this.serverUrl + "user/";
+        this.hobbieUrl = this.serverUrl + "hobbies-json";
+        this.postalUrl = this.serverUrl + "post-json?postal_code=";
+        this.locationUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
+        this.createUrl = "https://gowebtutorial.com/api/json/user/register";
+        this.searchUrl = this.serverUrl + "search-view?gender=";
+      }
+
+      _createClass(ConfigService, [{
+        key: "getArticle",
+        value: function getArticle() {
+          return this.http.get(this.articleUrl);
+        }
+      }, {
+        key: "getUser",
+        value: function getUser(uid) {
+          return this.http.get(this.userUrl + uid);
+        }
+      }, {
+        key: "getHobbies",
+        value: function getHobbies() {
+          return this.http.get(this.hobbieUrl);
+        }
+      }, {
+        key: "getPostal",
+        value: function getPostal(post, pageIndex) {
+          return this.http.get(this.postalUrl + post + "&page=" + pageIndex);
+        }
+      }, {
+        key: "getLocation",
+        value: function getLocation(lat, lng) {
+          return this.http.get(this.locationUrl + lat + "," + lng + "&types;=postal_code" + "&key=AIzaSyBru6wNx3CwcvRbACg2G4-Cq7o6Lt4wOvI");
+        }
+      }, {
+        key: "getSearchUrl",
+        value: function getSearchUrl(gender, meet, activity, Postalcode) {
+          // Only use fields that are specified
+          if (gender) {
+            this.gender = "&gender=" + gender;
+          } else {
+            this.gender = "";
+          }
+
+          if (meet) {
+            this.meet = "&meet=" + meet;
+          } else {
+            this.meet = "";
+          }
+
+          if (activity) {
+            this.activity = "&activity=" + activity;
+          } else {
+            this.activity = "";
+          }
+
+          if (Postalcode) {
+            this.Postalcode = "&postal=" + Postalcode;
+          } else {
+            this.Postalcode = "";
+          }
+
+          console.log(this.serverUrl + "search-view?test=test" + this.gender + this.meet + this.activity + this.Postalcode);
+          return this.http.get(this.serverUrl + "search-view?test=test" + this.gender + this.meet + this.activity + this.Postalcode);
+        }
+      }]);
+
+      return ConfigService;
+    }();
+
+    ConfigService.ctorParameters = function () {
+      return [{
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+      }];
+    };
+
+    ConfigService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: "root"
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])], ConfigService);
     /***/
   },
 

@@ -1,8 +1,8 @@
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["home-home-module"], {
   /***/
@@ -22,6 +22,132 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     __webpack_exports__["default"] = "<ion-header ></ion-header>\r\n\r\n<div class=\"background\">\r\n  <div class=\"tittle-home-page\">\r\n    <ion-card-subtitle class=\"tittle-home\">Recent members in you area</ion-card-subtitle>\r\n  </div>\r\n\r\n  \r\n\r\n  <div class=\"member-cards\" *ngFor=\"let posts of  postse\" routerLink=\"/detail/{{posts.name}}/{{posts.mail}}/{{posts.uid}}\">\r\n    <div class=\"member-card-image\">\r\n    \r\n \r\n<img src=\"../../assets/Images/user_-4.png\" alt=\"\" srcset=\"\" class=\"user-image\">\r\n    </div>\r\n    <div class=\"member-card-text\">\r\n      <p class=\"name card-item\">{{posts.name}}<ion-badge slot=\"end\"  color=\"light\" *ngIf=\"posts.Pets.length==0\">Parent</ion-badge><ion-badge slot=\"end\"  color=\"light\" *ngIf=\"posts.Pets.length>0\">Pet Owner</ion-badge></p>\r\n      <ion-label class=\"hobbies card-item\"><span class=\"left-heading\" >Activities:&nbsp;</span>{{posts.Activity | slice:3:5}}... </ion-label>\r\n      <ion-badge slot=\"end\"  color=\"light\">{{posts.Activity.length}}</ion-badge><br>\r\n      <!-- <ion-label class=\"hobbies card-item\" ><span class=\"left-heading\">Activities:</span>{{posts.Activity | slice:-2:-1}}</ion-label>\r\n      <ion-badge slot=\"end\"  color=\"light\"></ion-badge> -->\r\n      <p class=\"distance card-item\"><span class=\"left-heading\">Distance:</span>1 miles away</p> \r\n    </div>\r\n  </div>\r\n \r\n</div>\r\n\r\n<div class=\"Load-more\" *ngIf=\"showmore\" >Load More</div>\r\n\r\n\r\n  <!-- The Modal -->\r\n  <div class=\"modal\" id=\"myModal\">\r\n    <div class=\"modal-dialog\">\r\n      <div class=\"modal-content\">\r\n      \r\n        <!-- Modal Header -->\r\n        <div class=\"modal-header\">\r\n         \r\n          <button type=\"button\" class=\"close\" data-dismiss=\"modal\">&times;</button>\r\n        </div>\r\n        <div class=\"modal-body\">\r\n          <p class=\"modal-para\">Not4Dating wants to help you create communities, build meaningful relationships and feel truly connected to others</p>\r\n           <h5 class=\"whos-on-site\">Who’s on the site?</h5>\r\n          <div class=\"checkbox-popup\">\r\n            <img src=\"../../assets/Images/check.png\" class=\"check-box\">\r\n            <p class=\"check-box-text\">Our youngest member is 18,our oldest member is 85</p>\r\n          </div>\r\n          <div class=\"checkbox-popup\">\r\n            <img src=\"../../assets/Images/check.png\" class=\"check-box\">\r\n            <p class=\"check-box-text\">64% In a Relationship, 36% Not in a Relationship  </p>\r\n          </div>\r\n\r\n          <div class=\"button-flex\">\r\n            <button type=\"button\" class=\"btn btn-primary register-button\" routerLink=\"/register\">Register Now</button>\r\n            <button type=\"button\" class=\"btn btn-primary login-button\">Login Now</button>\r\n          </div>\r\n        </div>\r\n       \r\n      \r\n        \r\n       \r\n        \r\n      </div>\r\n    </div>";
+    /***/
+  },
+
+  /***/
+  "./src/app/config.service.ts":
+  /*!***********************************!*\
+    !*** ./src/app/config.service.ts ***!
+    \***********************************/
+
+  /*! exports provided: ConfigService */
+
+  /***/
+  function srcAppConfigServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ConfigService", function () {
+      return ConfigService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+
+    var ConfigService = /*#__PURE__*/function () {
+      function ConfigService(http) {
+        _classCallCheck(this, ConfigService);
+
+        this.http = http;
+        this.serverUrl = "https://gowebtutorial.com/api/json/";
+        this.articleUrl = this.serverUrl + "user.json";
+        this.userUrl = this.serverUrl + "user/";
+        this.hobbieUrl = this.serverUrl + "hobbies-json";
+        this.postalUrl = this.serverUrl + "post-json?postal_code=";
+        this.locationUrl = "https://maps.googleapis.com/maps/api/geocode/json?latlng=";
+        this.createUrl = "https://gowebtutorial.com/api/json/user/register";
+        this.searchUrl = this.serverUrl + "search-view?gender=";
+      }
+
+      _createClass(ConfigService, [{
+        key: "getArticle",
+        value: function getArticle() {
+          return this.http.get(this.articleUrl);
+        }
+      }, {
+        key: "getUser",
+        value: function getUser(uid) {
+          return this.http.get(this.userUrl + uid);
+        }
+      }, {
+        key: "getHobbies",
+        value: function getHobbies() {
+          return this.http.get(this.hobbieUrl);
+        }
+      }, {
+        key: "getPostal",
+        value: function getPostal(post, pageIndex) {
+          return this.http.get(this.postalUrl + post + "&page=" + pageIndex);
+        }
+      }, {
+        key: "getLocation",
+        value: function getLocation(lat, lng) {
+          return this.http.get(this.locationUrl + lat + "," + lng + "&types;=postal_code" + "&key=AIzaSyBru6wNx3CwcvRbACg2G4-Cq7o6Lt4wOvI");
+        }
+      }, {
+        key: "getSearchUrl",
+        value: function getSearchUrl(gender, meet, activity, Postalcode) {
+          // Only use fields that are specified
+          if (gender) {
+            this.gender = "&gender=" + gender;
+          } else {
+            this.gender = "";
+          }
+
+          if (meet) {
+            this.meet = "&meet=" + meet;
+          } else {
+            this.meet = "";
+          }
+
+          if (activity) {
+            this.activity = "&activity=" + activity;
+          } else {
+            this.activity = "";
+          }
+
+          if (Postalcode) {
+            this.Postalcode = "&postal=" + Postalcode;
+          } else {
+            this.Postalcode = "";
+          }
+
+          console.log(this.serverUrl + "search-view?test=test" + this.gender + this.meet + this.activity + this.Postalcode);
+          return this.http.get(this.serverUrl + "search-view?test=test" + this.gender + this.meet + this.activity + this.Postalcode);
+        }
+      }]);
+
+      return ConfigService;
+    }();
+
+    ConfigService.ctorParameters = function () {
+      return [{
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+      }];
+    };
+
+    ConfigService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: "root"
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])], ConfigService);
     /***/
   },
 

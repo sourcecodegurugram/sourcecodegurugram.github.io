@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>searchResult</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <div class=\"background\">\r\n    <div class=\"tittle-home-page\">\r\n      <ion-card-subtitle class=\"tittle-home\">Search > Result</ion-card-subtitle>\r\n    </div>\r\n\r\n\r\n <div class=\"member-cards\" *ngFor=\"let posts of  searchResponse\"\r\n      routerLink=\"/detail/{{posts.name}}/{{posts.mail}}/{{posts.uid}}\" >\r\n  \r\n  \r\n      <div class=\"member-card-image\">\r\n  \r\n        <img src=\"{{posts.Picture}}\" alt=\"\" srcset=\"\" class=\"user-image\">\r\n      \r\n      </div>\r\n      <div class=\"member-card-text\">\r\n<div class=\"badage-name\">\r\n        <div class=\"name card-item\">{{posts.name}} </div>\r\n        <div class=\"parent-badge\">\r\n\r\n        <ion-badge slot=\"end\" color=\"medium\" *ngIf=\"posts.Pets.length==0\" class=\"badge-font\">Parent\r\n          </ion-badge>\r\n        <ion-badge slot=\"end\" color=\"medium\"*ngIf=\"posts.Pets.length>0\" class=\"badge-font\" >Pet Owner</ion-badge>\r\n    </div>\r\n       </div>\r\n\r\n       <div class=\"activity-container\">\r\n <div class=\"left-heading \">Activities:</div>\r\n <div class=\"right-heading\">{{posts.Activity}}</div>\r\n<div class=\"badage-container\"><ion-badge slot=\"end\" color=\"medium\">{{posts.Activity.length}}</ion-badge></div>\r\n       </div>\r\n       \r\n  <div class=\"distance-container\">\r\n<div class=\"distance card-item\">Distance:</div>\r\n<div class=\"distance-ouput\">1 miles away</div>\r\n\r\n  </div>\r\n \r\n \r\n    </div>\r\n    <button *ngIf=\"currPage.length == 25\" class=\"showMore\" (click)=\"getSearchData()\">Show More</button>\r\n  </div>\r\n\r\n\r\n  \r\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <app-navigationbar></app-navigationbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <div class=\"background\">\r\n    <div class=\"tittle-home-page\">\r\n      <ion-card-subtitle class=\"tittle-home\">Search > Result</ion-card-subtitle>\r\n    </div>\r\n\r\n\r\n <div class=\"member-cards\" *ngFor=\"let posts of  searchResponse\"\r\n      routerLink=\"/detail/{{posts.name}}/{{posts.mail}}/{{posts.uid}}\" >\r\n  \r\n  \r\n      <div class=\"member-card-image\">\r\n  \r\n        <img src=\"{{posts.Picture}}\" alt=\"\" srcset=\"\" class=\"user-image\">\r\n      \r\n      </div>\r\n      <div class=\"member-card-text\">\r\n<div class=\"badage-name\">\r\n        <div class=\"name card-item\">{{posts.name}} </div>\r\n        <div class=\"parent-badge\">\r\n\r\n        <ion-badge slot=\"end\" color=\"medium\" *ngIf=\"posts.Pets.length==0\" class=\"badge-font\">Parent\r\n          </ion-badge>\r\n        <ion-badge slot=\"end\" color=\"medium\"*ngIf=\"posts.Pets.length>0\" class=\"badge-font\" >Pet Owner</ion-badge>\r\n    </div>\r\n       </div>\r\n\r\n       <div class=\"activity-container\">\r\n <div class=\"left-heading \">Activities:</div>\r\n <div class=\"right-heading\">{{posts.Activity}}</div>\r\n<div class=\"badage-container\"><ion-badge slot=\"end\" color=\"medium\">{{posts.Activity.length}}</ion-badge></div>\r\n       </div>\r\n       \r\n  <div class=\"distance-container\">\r\n<div class=\"distance card-item\">Distance:</div>\r\n<div class=\"distance-ouput\">1 miles away</div>\r\n\r\n  </div>\r\n \r\n \r\n    </div>\r\n    <button *ngIf=\"currPage.length == 25\" class=\"showMore\" (click)=\"getSearchData()\">Show More</button>\r\n  </div>\r\n\r\n\r\n  \r\n</ion-content>");
 
 /***/ }),
 
@@ -67,6 +67,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 /* harmony import */ var _search_result_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./search-result-routing.module */ "./src/app/search-result/search-result-routing.module.ts");
 /* harmony import */ var _search_result_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./search-result.page */ "./src/app/search-result/search-result.page.ts");
+/* harmony import */ var _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../navigationbar/navigationbar.module */ "./src/app/navigationbar/navigationbar.module.ts");
+
 
 
 
@@ -82,7 +84,8 @@ SearchResultPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
-            _search_result_routing_module__WEBPACK_IMPORTED_MODULE_5__["SearchResultPageRoutingModule"]
+            _search_result_routing_module__WEBPACK_IMPORTED_MODULE_5__["SearchResultPageRoutingModule"],
+            _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_7__["NavigationbarModule"]
         ],
         declarations: [_search_result_page__WEBPACK_IMPORTED_MODULE_6__["SearchResultPage"],]
     })

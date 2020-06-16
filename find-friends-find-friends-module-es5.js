@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"main-div\">\n  <div class=\"success-market\">Hello! What would you like to do first?\n  </div>\n\n  <div class=\"last-tab-button\" routerLink=\"/chat/searchTab\">\n    <div class=\"continue-button-last singin-lasts\">\n      Find Friends\n    </div>\n  </div>\n\n\n\n\n  <div class=\"or\">OR</div>\n\n\n  <div class=\"last-tab-button\" routerLink=\"/optional-detail\">\n    <div class=\"continue-button-last-blue singin-last\">\n      Finish My Profile\n    </div>\n\n    <div class=\"success-market\">Your Profile is currently X% complete. Our members who share more information in\n      their profile get better results. But, if you don’t want to finish now you can add to your profile later at\n      any time.</div>\n  </div>\n</div>";
+    __webpack_exports__["default"] = "\r\n<ion-header>\r\n  <app-navigationbar></app-navigationbar>\r\n</ion-header>\r\n\r\n<div class=\"main-div\">\r\n  <div class=\"success-market\">Hello! What would you like to do first?\r\n  </div>\r\n\r\n  <div class=\"last-tab-button\" routerLink=\"/chat/searchTab\">\r\n    <div class=\"continue-button-last singin-lasts\">\r\n      Find Friends\r\n    </div>\r\n  </div>\r\n\r\n\r\n\r\n\r\n  <div class=\"or\">OR</div>\r\n\r\n\r\n  <div class=\"last-tab-button\" routerLink=\"/optional-detail\">\r\n    <div class=\"continue-button-last-blue singin-last\">\r\n      Finish My Profile\r\n    </div>\r\n\r\n    <div class=\"success-market\">Your Profile is currently X% complete. Our members who share more information in\r\n      their profile get better results. But, if you don’t want to finish now you can add to your profile later at\r\n      any time.</div>\r\n  </div>\r\n</div>";
     /***/
   },
 
@@ -146,13 +146,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _find_friends_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ./find-friends.page */
     "./src/app/find-friends/find-friends.page.ts");
+    /* harmony import */
+
+
+    var _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ../navigationbar/navigationbar.module */
+    "./src/app/navigationbar/navigationbar.module.ts");
 
     var FindFriendsPageModule = function FindFriendsPageModule() {
       _classCallCheck(this, FindFriendsPageModule);
     };
 
     FindFriendsPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _find_friends_routing_module__WEBPACK_IMPORTED_MODULE_5__["FindFriendsPageRoutingModule"]],
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _find_friends_routing_module__WEBPACK_IMPORTED_MODULE_5__["FindFriendsPageRoutingModule"], _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_7__["NavigationbarModule"]],
       declarations: [_find_friends_page__WEBPACK_IMPORTED_MODULE_6__["FindFriendsPage"]]
     })], FindFriendsPageModule);
     /***/

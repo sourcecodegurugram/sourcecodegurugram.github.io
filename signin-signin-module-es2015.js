@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div  *ngIf=\"isLoading\" class=\"loading-container\">\r\n  <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\r\n</div>\r\n  <div class=\"main-singin\">\r\n        <div class=\"login-buton\">\r\n          <p class=\"heading-login\">Log in to Not 4 Dating below</p>\r\n        </div>\r\n        <div class=\"or\"></div>\r\n        <div class=\"forms-field\">\r\n          <div class=\"form-group\">\r\n            <input type=\"text\" class=\"form-control\" id=\"usr\" placeholder=\"User Name\" name=\"user\" [(ngModel)]=\"user\">\r\n          </div>\r\n\r\n          <div class=\"form-group\">\r\n\r\n            <input type=\"password\" class=\"form-control\" id=\"usr\" placeholder=\"Password\" name=\"password\"\r\n              [(ngModel)]=\"password\">\r\n\r\n          </div>\r\n          <div class=\"continue-button\" (click)=\"nextSteps()\">\r\n            Continue\r\n          </div>\r\n\r\n        </div>\r\n  \r\n\r\n  </div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"isLoading\" class=\"loading-container\">\r\n  <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\r\n</div>\r\n<ion-header>\r\n  <app-navigationbar> </app-navigationbar>\r\n</ion-header>\r\n\r\n\r\n<div class=\"main-singin\">\r\n  <div class=\"login-buton\">\r\n    <p class=\"heading-login\">Log in to Not 4 Dating below</p>\r\n  </div>\r\n  <div class=\"or\"></div>\r\n  <div class=\"forms-field\">\r\n    <div class=\"form-group\">\r\n      <input type=\"text\" class=\"form-control\" id=\"usr\" placeholder=\"User Name\" name=\"user\" [(ngModel)]=\"user\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n\r\n      <input type=\"password\" class=\"form-control\" id=\"usr\" placeholder=\"Password\" name=\"password\"\r\n        [(ngModel)]=\"password\">\r\n\r\n    </div>\r\n    <div class=\"continue-button\" (click)=\"nextSteps()\">\r\n      Continue\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n</div>");
 
 /***/ }),
 
@@ -35,6 +35,10 @@ const routes = [
     {
         path: '',
         component: _signin_page__WEBPACK_IMPORTED_MODULE_3__["SigninPage"]
+    },
+    {
+        path: 'nav-bar',
+        loadChildren: () => __webpack_require__.e(/*! import() | nav-bar-nav-bar-module */ "nav-bar-nav-bar-module").then(__webpack_require__.bind(null, /*! ../nav-bar/nav-bar.module */ "./src/app/nav-bar/nav-bar.module.ts")).then(m => m.NavBarPageModule)
     }
 ];
 let SigninPageRoutingModule = class SigninPageRoutingModule {
@@ -70,6 +74,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/table */ "./node_modules/@angular/material/esm2015/table.js");
 /* harmony import */ var _angular_material_tabs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/tabs */ "./node_modules/@angular/material/esm2015/tabs.js");
 /* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../material.module */ "./src/app/material.module.ts");
+/* harmony import */ var _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../navigationbar/navigationbar.module */ "./src/app/navigationbar/navigationbar.module.ts");
+
 
 
 
@@ -91,9 +97,10 @@ SigninPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _signin_routing_module__WEBPACK_IMPORTED_MODULE_5__["SigninPageRoutingModule"],
             _angular_material_table__WEBPACK_IMPORTED_MODULE_7__["MatTableModule"],
             _angular_material_tabs__WEBPACK_IMPORTED_MODULE_8__["MatTabsModule"],
-            _material_module__WEBPACK_IMPORTED_MODULE_9__["MaterialModule"]
+            _material_module__WEBPACK_IMPORTED_MODULE_9__["MaterialModule"],
+            _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_10__["NavigationbarModule"],
         ],
-        declarations: [_signin_page__WEBPACK_IMPORTED_MODULE_6__["SigninPage"]]
+        declarations: [_signin_page__WEBPACK_IMPORTED_MODULE_6__["SigninPage"]],
     })
 ], SigninPageModule);
 
@@ -150,18 +157,19 @@ let SigninPage = class SigninPage {
     }
     ngOnInit() {
         this.siginUser = JSON.parse(localStorage.getItem("currentUser"));
-        this.isLoading = true;
-        if (this.siginUser != null) {
-            this.AuthService.systemConnect().subscribe(UserLoggedIn => {
+        if (this.siginUser == null) {
+            this.isLoading = false;
+        }
+        else if (this.siginUser != null) {
+            this.isLoading = true;
+            this.AuthService.systemConnect().subscribe((UserLoggedIn) => {
                 localStorage.setItem("Signinuser", JSON.stringify(UserLoggedIn));
                 this.UserDetails = UserLoggedIn;
                 if (this.UserDetails != null) {
-                    this.router.navigate(['/find-friends']);
+                    this.isLoading = false;
+                    this.router.navigate(["/find-friends"]);
                 }
             });
-        }
-        else {
-            this.isLoading = false;
         }
     }
     tabChanged(tabChangeEvent) {
@@ -178,13 +186,13 @@ let SigninPage = class SigninPage {
     }
     LoginForm(user, pass) {
         this.isLoading = true;
-        this.AuthService.loginUser(user, pass).subscribe(userDetail => {
+        this.AuthService.loginUser(user, pass).subscribe((userDetail) => {
             localStorage.setItem("currentUser", JSON.stringify(userDetail));
-            this.AuthService.systemConnect().subscribe(UserLoggedIn => {
+            this.AuthService.systemConnect().subscribe((UserLoggedIn) => {
                 localStorage.setItem("Signinuser", JSON.stringify(UserLoggedIn));
                 this.UserDetails = UserLoggedIn;
                 if (this.UserDetails != null) {
-                    this.router.navigate(['/find-friends']);
+                    this.router.navigate(["/find-friends"]);
                 }
             });
         });
