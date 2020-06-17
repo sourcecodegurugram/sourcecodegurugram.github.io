@@ -39,13 +39,13 @@ const routes = [
         component: _chat_page__WEBPACK_IMPORTED_MODULE_4__["ChatPage"],
         children: [
             { path: 'searchTab',
-                loadChildren: () => Promise.all(/*! import() | searchTab-searchTab-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~f01dcdfd"), __webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null, /*! ../searchTab/searchTab.module */ "./src/app/searchTab/searchTab.module.ts")).then(m => m.SearchTabPageModule) },
+                loadChildren: () => Promise.all(/*! import() | searchTab-searchTab-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null, /*! ../searchTab/searchTab.module */ "./src/app/searchTab/searchTab.module.ts")).then(m => m.SearchTabPageModule) },
             {
                 path: 'tabs2',
-                loadChildren: () => Promise.all(/*! import() | tabs2-tabs2-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~f01dcdfd"), __webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null, /*! ../tabs2/tabs2.module */ "./src/app/tabs2/tabs2.module.ts")).then(m => m.Tabs2PageModule)
+                loadChildren: () => Promise.all(/*! import() | tabs2-tabs2-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null, /*! ../tabs2/tabs2.module */ "./src/app/tabs2/tabs2.module.ts")).then(m => m.Tabs2PageModule)
             },
             { path: 'tabs3',
-                loadChildren: () => Promise.all(/*! import() | tabs3-tabs3-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~f01dcdfd"), __webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("tabs3-tabs3-module")]).then(__webpack_require__.bind(null, /*! ../tabs3/tabs3.module */ "./src/app/tabs3/tabs3.module.ts")).then(m => m.Tabs3PageModule) }
+                loadChildren: () => Promise.all(/*! import() | tabs3-tabs3-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("tabs3-tabs3-module")]).then(__webpack_require__.bind(null, /*! ../tabs3/tabs3.module */ "./src/app/tabs3/tabs3.module.ts")).then(m => m.Tabs3PageModule) }
         ]
     },
     {
