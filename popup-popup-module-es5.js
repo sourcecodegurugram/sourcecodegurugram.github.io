@@ -278,8 +278,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.http.get("https://gowebtutorial.com/api/json/user/" + this.uid).subscribe(function (data) {
             _this.post = data;
             _this.name = _this.post.name; //
-
-            _this.picture = _this.post.picture.url; //
+            // this.picture = this.post.picture.url; //
 
             _this["long"] = _this.post.field_long_in_city.length;
             _this.genders = _this.post.field_gender.und; //
@@ -315,11 +314,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this.pets = _this.post.field_any_pets.und;
             _this.favInfo = [{
               name: _this.post.name,
-              picture: _this.post.picture.url,
+              // picture: this.post.picture.url,
               activities: _this.post.field_activities_interests.und,
               uid: _this.uid
             }];
-            console.log(_this.post);
           });
         }
       }, {
@@ -346,7 +344,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               console.log("value doesnt exist");
 
               _this2.scope.push(_this2.favInfo);
-            }
+            } //Make scope unique
+
+
+            _this2.uniqueScope = _this2.removeDuplicatesBy(function (x) {
+              return x[0].name;
+            }, _this2.scope);
 
             _this2.addFavorite();
           });
@@ -363,8 +366,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             withCredentials: true
           }; // Add entry into favorites
 
-          this.responseString = JSON.stringify(this.scope);
-          console.log(this.scope);
+          this.responseString = JSON.stringify(this.uniqueScope);
+          console.log(this.uniqueScope);
           this.http.put("https://gowebtutorial.com/api/json/user/" + this.itrs.user.uid, {
             field_favorite_users: {
               und: [{
@@ -404,6 +407,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             }, _callee, this);
           }));
+        }
+      }, {
+        key: "removeDuplicatesBy",
+        value: function removeDuplicatesBy(keyFn, array) {
+          var mySet = new Set();
+          return array.filter(function (x) {
+            var key = keyFn(x),
+                isNew = !mySet.has(key);
+            if (isNew) mySet.add(key);
+            return isNew;
+          });
         }
       }]);
 

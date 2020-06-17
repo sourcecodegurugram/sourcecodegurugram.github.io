@@ -151,10 +151,12 @@ let PopupPage = class PopupPage {
         this.sub = this._Activatedroute.paramMap.subscribe((params) => {
             this.uid = params.get("uid");
         });
-        this.http.get("https://gowebtutorial.com/api/json/user/" + this.uid).subscribe((data) => {
+        this.http
+            .get("https://gowebtutorial.com/api/json/user/" + this.uid)
+            .subscribe((data) => {
             this.post = data;
             this.name = this.post.name; //
-            this.picture = this.post.picture.url; //
+            // this.picture = this.post.picture.url; //
             this.long = this.post.field_long_in_city.length;
             this.genders = this.post.field_gender.und; //
             this.statu = this.post.field_relationship_status.und; //
@@ -178,12 +180,11 @@ let PopupPage = class PopupPage {
             this.favInfo = [
                 {
                     name: this.post.name,
-                    picture: this.post.picture.url,
+                    // picture: this.post.picture.url,
                     activities: this.post.field_activities_interests.und,
-                    uid: this.uid
+                    uid: this.uid,
                 },
             ];
-            console.log(this.post);
         });
     }
     backClicked() {
@@ -205,6 +206,8 @@ let PopupPage = class PopupPage {
                 console.log("value doesnt exist");
                 this.scope.push(this.favInfo);
             }
+            //Make scope unique
+            this.uniqueScope = this.removeDuplicatesBy((x) => x[0].name, this.scope);
             this.addFavorite();
         });
     }
@@ -219,8 +222,8 @@ let PopupPage = class PopupPage {
             withCredentials: true,
         };
         // Add entry into favorites
-        this.responseString = JSON.stringify(this.scope);
-        console.log(this.scope);
+        this.responseString = JSON.stringify(this.uniqueScope);
+        console.log(this.uniqueScope);
         this.http
             .put("https://gowebtutorial.com/api/json/user/" + this.itrs.user.uid, {
             field_favorite_users: {
@@ -243,6 +246,15 @@ let PopupPage = class PopupPage {
                 buttons: ["OK"],
             });
             yield correct.present();
+        });
+    }
+    removeDuplicatesBy(keyFn, array) {
+        var mySet = new Set();
+        return array.filter(function (x) {
+            var key = keyFn(x), isNew = !mySet.has(key);
+            if (isNew)
+                mySet.add(key);
+            return isNew;
         });
     }
 };

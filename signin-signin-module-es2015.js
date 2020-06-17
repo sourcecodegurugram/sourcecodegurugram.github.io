@@ -238,11 +238,11 @@ let SigninPage = class SigninPage {
     }
     something() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            const correct = yield this.alertController.create({
-                message: "Something bad happened; please try again later.",
-                buttons: ["OK"],
-            });
-            yield correct.present();
+            // const correct = await this.alertController.create({
+            //   message: "Something bad happened; please try again later.",
+            //   buttons: ["OK"],
+            // });
+            // await correct.present();
         });
     }
 };

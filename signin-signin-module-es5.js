@@ -446,28 +446,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "something",
         value: function something() {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
-            var correct;
             return regeneratorRuntime.wrap(function _callee4$(_context4) {
               while (1) {
                 switch (_context4.prev = _context4.next) {
                   case 0:
-                    _context4.next = 2;
-                    return this.alertController.create({
-                      message: "Something bad happened; please try again later.",
-                      buttons: ["OK"]
-                    });
-
-                  case 2:
-                    correct = _context4.sent;
-                    _context4.next = 5;
-                    return correct.present();
-
-                  case 5:
                   case "end":
                     return _context4.stop();
                 }
               }
-            }, _callee4, this);
+            }, _callee4);
           }));
         }
       }]);
