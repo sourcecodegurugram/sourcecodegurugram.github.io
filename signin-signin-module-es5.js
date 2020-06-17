@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div *ngIf=\"isLoading\" class=\"loading-container\">\r\n  <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\r\n</div>\r\n<ion-header>\r\n  <app-navigationbar> </app-navigationbar>\r\n</ion-header>\r\n\r\n\r\n<div class=\"main-singin\">\r\n  <div class=\"login-buton\">\r\n    <p class=\"heading-login\">Log in to Not 4 Dating below</p>\r\n  </div>\r\n  <div class=\"or\"></div>\r\n  <div class=\"forms-field\">\r\n    <div class=\"form-group\">\r\n      <input type=\"text\" class=\"form-control\" id=\"usr\" placeholder=\"User Name\" name=\"user\" [(ngModel)]=\"user\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n\r\n      <input type=\"password\" class=\"form-control\" id=\"usr\" placeholder=\"Password\" name=\"password\"\r\n        [(ngModel)]=\"password\">\r\n\r\n    </div>\r\n    <div class=\"continue-button\" (click)=\"nextSteps()\">\r\n      Continue\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n</div>";
+    __webpack_exports__["default"] = "\r\n  <app-navigationbar> </app-navigationbar>\r\n\r\n\r\n<div *ngIf=\"isLoading\" class=\"loading-container\">\r\n  <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\r\n</div>\r\n\r\n\r\n<div class=\"main-singin\">\r\n  <div class=\"login-buton\">\r\n    <p class=\"heading-login\">Log in to Not 4 Dating below</p>\r\n  </div>\r\n  <div class=\"or\"></div>\r\n  <div class=\"forms-field\">\r\n    <div class=\"form-group\">\r\n      <input type=\"text\" class=\"form-control\" id=\"usr\" placeholder=\"User Name\" name=\"user\" [(ngModel)]=\"user\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n\r\n      <input type=\"password\" class=\"form-control\" id=\"usr\" placeholder=\"Password\" name=\"password\"\r\n        [(ngModel)]=\"password\">\r\n\r\n    </div>\r\n    <div class=\"continue-button\" (click)=\"nextSteps()\">\r\n      Continue\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n</div>";
     /***/
   },
 
@@ -72,17 +72,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var routes = [{
       path: '',
       component: _signin_page__WEBPACK_IMPORTED_MODULE_3__["SigninPage"]
-    }, {
-      path: 'nav-bar',
-      loadChildren: function loadChildren() {
-        return __webpack_require__.e(
-        /*! import() | nav-bar-nav-bar-module */
-        "nav-bar-nav-bar-module").then(__webpack_require__.bind(null,
-        /*! ../nav-bar/nav-bar.module */
-        "./src/app/nav-bar/nav-bar.module.ts")).then(function (m) {
-          return m.NavBarPageModule;
-        });
-      }
     }];
 
     var SigninPageRoutingModule = function SigninPageRoutingModule() {
@@ -253,21 +242,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/common/http */
-    "./node_modules/@angular/common/fesm2015/http.js");
-    /* harmony import */
-
-
-    var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @ionic/angular */
     "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
     /* harmony import */
 
 
-    var _auth_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../auth.service */
     "./src/app/auth.service.ts");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
 
     var SigninPage = /*#__PURE__*/function () {
       function SigninPage(router, http, alertController, AuthService) {
@@ -333,7 +334,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this2 = this;
 
           this.isLoading = true;
-          this.AuthService.loginUser(user, pass).subscribe(function (userDetail) {
+          this.AuthService.loginUser(user, pass).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])(function (error) {
+            if (error.status == 401) {
+              _this2.username();
+            } else if (error.status == 403) {
+              _this2.notActivated();
+            }
+
+            _this2.isLoading = false;
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["throwError"])(_this2.something());
+          })).subscribe(function (userDetail) {
             localStorage.setItem("currentUser", JSON.stringify(userDetail));
 
             _this2.AuthService.systemConnect().subscribe(function (UserLoggedIn) {
@@ -343,6 +353,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (_this2.UserDetails != null) {
                 _this2.router.navigate(["/find-friends"]);
               }
+
+              console.log(UserLoggedIn);
             });
           });
         }
@@ -374,6 +386,90 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }, _callee, this);
           }));
         }
+      }, {
+        key: "username",
+        value: function username() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+            var correct;
+            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+              while (1) {
+                switch (_context2.prev = _context2.next) {
+                  case 0:
+                    _context2.next = 2;
+                    return this.alertController.create({
+                      message: "Your username or password is incorrect",
+                      buttons: ["OK"]
+                    });
+
+                  case 2:
+                    correct = _context2.sent;
+                    _context2.next = 5;
+                    return correct.present();
+
+                  case 5:
+                  case "end":
+                    return _context2.stop();
+                }
+              }
+            }, _callee2, this);
+          }));
+        }
+      }, {
+        key: "notActivated",
+        value: function notActivated() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+            var correct;
+            return regeneratorRuntime.wrap(function _callee3$(_context3) {
+              while (1) {
+                switch (_context3.prev = _context3.next) {
+                  case 0:
+                    _context3.next = 2;
+                    return this.alertController.create({
+                      message: "The username  has not been activated or is blocked",
+                      buttons: ["OK"]
+                    });
+
+                  case 2:
+                    correct = _context3.sent;
+                    _context3.next = 5;
+                    return correct.present();
+
+                  case 5:
+                  case "end":
+                    return _context3.stop();
+                }
+              }
+            }, _callee3, this);
+          }));
+        }
+      }, {
+        key: "something",
+        value: function something() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+            var correct;
+            return regeneratorRuntime.wrap(function _callee4$(_context4) {
+              while (1) {
+                switch (_context4.prev = _context4.next) {
+                  case 0:
+                    _context4.next = 2;
+                    return this.alertController.create({
+                      message: "Something bad happened; please try again later.",
+                      buttons: ["OK"]
+                    });
+
+                  case 2:
+                    correct = _context4.sent;
+                    _context4.next = 5;
+                    return correct.present();
+
+                  case 5:
+                  case "end":
+                    return _context4.stop();
+                }
+              }
+            }, _callee4, this);
+          }));
+        }
       }]);
 
       return SigninPage;
@@ -383,11 +479,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       return [{
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
       }, {
-        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClient"]
       }, {
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"]
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AlertController"]
       }, {
-        type: _auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"]
+        type: _auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]
       }];
     };
 
@@ -399,7 +495,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./signin.page.scss */
       "./src/app/signin/signin.page.scss"))["default"]]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"], _auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"]])], SigninPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClient"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AlertController"], _auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]])], SigninPage);
     /***/
   }
 }]);

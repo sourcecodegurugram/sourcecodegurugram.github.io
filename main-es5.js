@@ -171,6 +171,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/navigationbar/alert-profile/alert-profile-dialog.component.html":
+  /*!***********************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/navigationbar/alert-profile/alert-profile-dialog.component.html ***!
+    \***********************************************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppNavigationbarAlertProfileAlertProfileDialogComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<div class=\"modal-body\" >\r\n    <div class=\"continue-button\" routerLink=\"/edit-profile\" (click)=\"onConfirmClick()\">\r\n      View/Edit Profile\r\n    </div>\r\n    <div class=\"continue-button\" routerLink=\"/account-setting\" (click)=\"onConfirmClick()\">\r\n      Account Settings\r\n    </div>\r\n    <div class=\"logout-text-container\" (click)=\"logOut()\" (click)=\"onConfirmClick()\">\r\n      <span class=\"log-out-text\">Log Out</span>\r\n    </div>\r\n\r\n  </div>";
+    /***/
+  },
+
+  /***/
   "./node_modules/tslib/tslib.es6.js":
   /*!*****************************************!*\
     !*** ./node_modules/tslib/tslib.es6.js ***!
@@ -1026,14 +1046,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         });
       }
     }, {
-      path: 'nav-bar',
+      path: 'edit-profile',
       loadChildren: function loadChildren() {
         return __webpack_require__.e(
-        /*! import() | nav-bar-nav-bar-module */
-        "nav-bar-nav-bar-module").then(__webpack_require__.bind(null,
-        /*! ./nav-bar/nav-bar.module */
-        "./src/app/nav-bar/nav-bar.module.ts")).then(function (m) {
-          return m.NavBarPageModule;
+        /*! import() | navigationbar-edit-profile-edit-profile-module */
+        "navigationbar-edit-profile-edit-profile-module").then(__webpack_require__.bind(null,
+        /*! ./navigationbar/edit-profile/edit-profile.module */
+        "./src/app/navigationbar/edit-profile/edit-profile.module.ts")).then(function (m) {
+          return m.EditProfilePageModule;
+        });
+      }
+    }, {
+      path: 'account-setting',
+      loadChildren: function loadChildren() {
+        return __webpack_require__.e(
+        /*! import() | navigationbar-account-setting-account-setting-module */
+        "navigationbar-account-setting-account-setting-module").then(__webpack_require__.bind(null,
+        /*! ./navigationbar/account-setting/account-setting.module */
+        "./src/app/navigationbar/account-setting/account-setting.module.ts")).then(function (m) {
+          return m.AccountSettingPageModule;
         });
       }
     }];
@@ -1278,14 +1309,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
     /*! @ionic-native/native-geocoder/ngx */
     "./node_modules/@ionic-native/native-geocoder/ngx/index.js");
+    /* harmony import */
+
+
+    var _navigationbar_alert_profile_alert_profile_dialog_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    /*! ./navigationbar/alert-profile/alert-profile-dialog.component */
+    "./src/app/navigationbar/alert-profile/alert-profile-dialog.component.ts");
 
     var AppModule = function AppModule() {
       _classCallCheck(this, AppModule);
     };
 
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _ellipsis_pipe__WEBPACK_IMPORTED_MODULE_13__["EllipsisPipe"]],
-      entryComponents: [],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _ellipsis_pipe__WEBPACK_IMPORTED_MODULE_13__["EllipsisPipe"], _navigationbar_alert_profile_alert_profile_dialog_component__WEBPACK_IMPORTED_MODULE_15__["AlertProfileDialogComponent"]],
+      entryComponents: [_navigationbar_alert_profile_alert_profile_dialog_component__WEBPACK_IMPORTED_MODULE_15__["AlertProfileDialogComponent"]],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__["BrowserAnimationsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], ng_recaptcha__WEBPACK_IMPORTED_MODULE_12__["RecaptchaModule"].forRoot()],
       providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], _ionic_native_geolocation_ngx__WEBPACK_IMPORTED_MODULE_11__["Geolocation"], _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_14__["NativeGeocoder"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
@@ -1293,6 +1330,159 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
     })], AppModule);
+    /***/
+  },
+
+  /***/
+  "./src/app/navigationbar/alert-profile/alert-profile-dialog.component.scss":
+  /*!*********************************************************************************!*\
+    !*** ./src/app/navigationbar/alert-profile/alert-profile-dialog.component.scss ***!
+    \*********************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppNavigationbarAlertProfileAlertProfileDialogComponentScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = ".login-form {\n  background-color: white;\n  z-index: 1;\n  position: relative;\n  height: 100vh;\n}\n\n.continue-button {\n  background-color: #54B151;\n  height: 3em;\n  color: white;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 12px;\n  margin: 2em;\n  font-size: 18px;\n  padding: 2em 1em;\n}\n\n.logout-text-container {\n  text-align: center;\n  font-size: 21px;\n  margin: 1em;\n  text-transform: uppercase;\n}\n\n.modal-grid {\n  display: grid;\n  grid-template-columns: 2fr 3fr;\n  grid-gap: 11px;\n}\n\n.profile-name-modal {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  font-size: 18px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmF2aWdhdGlvbmJhci9hbGVydC1wcm9maWxlL0s6XFxBbmd1bGFyIFByb2plY3RcXG5vdDREYXRpbmcvc3JjXFxhcHBcXG5hdmlnYXRpb25iYXJcXGFsZXJ0LXByb2ZpbGVcXGFsZXJ0LXByb2ZpbGUtZGlhbG9nLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9uYXZpZ2F0aW9uYmFyL2FsZXJ0LXByb2ZpbGUvYWxlcnQtcHJvZmlsZS1kaWFsb2cuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx1QkFBQTtFQUNBLFVBQUE7RUFDQSxrQkFBQTtFQUNBLGFBQUE7QUNDSjs7QURDQTtFQUNJLHlCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQUNBLG1CQUFBO0VBQ0EsV0FBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtBQ0VKOztBREFBO0VBQ0ksa0JBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtFQUNBLHlCQUFBO0FDR0o7O0FEREE7RUFDSSxhQUFBO0VBQ0EsOEJBQUE7RUFDQSxjQUFBO0FDSUo7O0FERkE7RUFDSSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSx1QkFBQTtFQUNBLGVBQUE7QUNLSiIsImZpbGUiOiJzcmMvYXBwL25hdmlnYXRpb25iYXIvYWxlcnQtcHJvZmlsZS9hbGVydC1wcm9maWxlLWRpYWxvZy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb2dpbi1mb3JtIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xyXG4gICAgei1pbmRleDogMTtcclxuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICAgIGhlaWdodDogMTAwdmg7XHJcbn1cclxuLmNvbnRpbnVlLWJ1dHRvbntcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICM1NEIxNTE7XHJcbiAgICBoZWlnaHQ6IDNlbTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgICBib3JkZXItcmFkaXVzOiAxMnB4O1xyXG4gICAgbWFyZ2luOiAyZW07XHJcbiAgICBmb250LXNpemU6IDE4cHg7XHJcbiAgICBwYWRkaW5nOiAyZW0gMWVtO1xyXG59XHJcbi5sb2dvdXQtdGV4dC1jb250YWluZXIge1xyXG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gICAgZm9udC1zaXplOiAyMXB4O1xyXG4gICAgbWFyZ2luOiAxZW07XHJcbiAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xyXG59XHJcbi5tb2RhbC1ncmlkIHtcclxuICAgIGRpc3BsYXk6IGdyaWQ7XHJcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDJmciAzZnI7XHJcbiAgICBncmlkLWdhcDogMTFweDtcclxufVxyXG4ucHJvZmlsZS1uYW1lLW1vZGFsIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICBmb250LXNpemU6IDE4cHg7XHJcbn1cclxuIiwiLmxvZ2luLWZvcm0ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgei1pbmRleDogMTtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDEwMHZoO1xufVxuXG4uY29udGludWUtYnV0dG9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzU0QjE1MTtcbiAgaGVpZ2h0OiAzZW07XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGJvcmRlci1yYWRpdXM6IDEycHg7XG4gIG1hcmdpbjogMmVtO1xuICBmb250LXNpemU6IDE4cHg7XG4gIHBhZGRpbmc6IDJlbSAxZW07XG59XG5cbi5sb2dvdXQtdGV4dC1jb250YWluZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogMjFweDtcbiAgbWFyZ2luOiAxZW07XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi5tb2RhbC1ncmlkIHtcbiAgZGlzcGxheTogZ3JpZDtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAyZnIgM2ZyO1xuICBncmlkLWdhcDogMTFweDtcbn1cblxuLnByb2ZpbGUtbmFtZS1tb2RhbCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBmb250LXNpemU6IDE4cHg7XG59Il19 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/navigationbar/alert-profile/alert-profile-dialog.component.ts":
+  /*!*******************************************************************************!*\
+    !*** ./src/app/navigationbar/alert-profile/alert-profile-dialog.component.ts ***!
+    \*******************************************************************************/
+
+  /*! exports provided: AlertProfileDialogComponent */
+
+  /***/
+  function srcAppNavigationbarAlertProfileAlertProfileDialogComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AlertProfileDialogComponent", function () {
+      return AlertProfileDialogComponent;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/material */
+    "./node_modules/@angular/material/esm2015/material.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @angular/router */
+    "./node_modules/@angular/router/fesm2015/router.js");
+
+    var AlertProfileDialogComponent = /*#__PURE__*/function () {
+      function AlertProfileDialogComponent(data, dialogRef, http, router) {
+        _classCallCheck(this, AlertProfileDialogComponent);
+
+        this.data = data;
+        this.dialogRef = dialogRef;
+        this.http = http;
+        this.router = router;
+        this.message = "";
+        this.cancelButtonText = "Cancel";
+        this.logoutUrl = "https://gowebtutorial.com/api/json/user/logout";
+
+        if (data) {
+          this.message = data.message || this.message;
+
+          if (data.buttonText) {
+            this.cancelButtonText = data.buttonText.cancel || this.cancelButtonText;
+          }
+        }
+
+        this.dialogRef.updateSize('300vw', '300vw');
+      }
+
+      _createClass(AlertProfileDialogComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.itrs = JSON.parse(localStorage.getItem("currentUser"));
+        }
+      }, {
+        key: "logOut",
+        value: function logOut() {
+          var _this2 = this;
+
+          var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]().set("X-CSRF-Token", this.itrs.token).set("Content-Type", "application/json").set("X-Cookie", this.itrs.session_name + "=" + this.itrs.sessid);
+          var requestOptions = {
+            headers: headers,
+            withCredentials: true
+          };
+          this.http.post(this.logoutUrl, {}, requestOptions).subscribe(function (head) {
+            console.log(head);
+            localStorage.clear();
+
+            _this2.router.navigate(["/"]);
+          });
+        }
+      }, {
+        key: "onConfirmClick",
+        value: function onConfirmClick() {
+          this.dialogRef.close(true);
+        }
+      }]);
+
+      return AlertProfileDialogComponent;
+    }();
+
+    AlertProfileDialogComponent.ctorParameters = function () {
+      return [{
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"],
+          args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]]
+        }]
+      }, {
+        type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"]
+      }, {
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+      }];
+    };
+
+    AlertProfileDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-alert-profile-dialog',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! raw-loader!./alert-profile-dialog.component.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/navigationbar/alert-profile/alert-profile-dialog.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
+      /*! ./alert-profile-dialog.component.scss */
+      "./src/app/navigationbar/alert-profile/alert-profile-dialog.component.scss"))["default"]]
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object, _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])], AlertProfileDialogComponent);
     /***/
   },
 

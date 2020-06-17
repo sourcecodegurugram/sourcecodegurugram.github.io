@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"isLoading\" class=\"loading-container\">\r\n  <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\r\n</div>\r\n<ion-header>\r\n  <app-navigationbar> </app-navigationbar>\r\n</ion-header>\r\n\r\n\r\n<div class=\"main-singin\">\r\n  <div class=\"login-buton\">\r\n    <p class=\"heading-login\">Log in to Not 4 Dating below</p>\r\n  </div>\r\n  <div class=\"or\"></div>\r\n  <div class=\"forms-field\">\r\n    <div class=\"form-group\">\r\n      <input type=\"text\" class=\"form-control\" id=\"usr\" placeholder=\"User Name\" name=\"user\" [(ngModel)]=\"user\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n\r\n      <input type=\"password\" class=\"form-control\" id=\"usr\" placeholder=\"Password\" name=\"password\"\r\n        [(ngModel)]=\"password\">\r\n\r\n    </div>\r\n    <div class=\"continue-button\" (click)=\"nextSteps()\">\r\n      Continue\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n  <app-navigationbar> </app-navigationbar>\r\n\r\n\r\n<div *ngIf=\"isLoading\" class=\"loading-container\">\r\n  <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\r\n</div>\r\n\r\n\r\n<div class=\"main-singin\">\r\n  <div class=\"login-buton\">\r\n    <p class=\"heading-login\">Log in to Not 4 Dating below</p>\r\n  </div>\r\n  <div class=\"or\"></div>\r\n  <div class=\"forms-field\">\r\n    <div class=\"form-group\">\r\n      <input type=\"text\" class=\"form-control\" id=\"usr\" placeholder=\"User Name\" name=\"user\" [(ngModel)]=\"user\">\r\n    </div>\r\n\r\n    <div class=\"form-group\">\r\n\r\n      <input type=\"password\" class=\"form-control\" id=\"usr\" placeholder=\"Password\" name=\"password\"\r\n        [(ngModel)]=\"password\">\r\n\r\n    </div>\r\n    <div class=\"continue-button\" (click)=\"nextSteps()\">\r\n      Continue\r\n    </div>\r\n\r\n  </div>\r\n\r\n\r\n</div>");
 
 /***/ }),
 
@@ -36,10 +36,6 @@ const routes = [
         path: '',
         component: _signin_page__WEBPACK_IMPORTED_MODULE_3__["SigninPage"]
     },
-    {
-        path: 'nav-bar',
-        loadChildren: () => __webpack_require__.e(/*! import() | nav-bar-nav-bar-module */ "nav-bar-nav-bar-module").then(__webpack_require__.bind(null, /*! ../nav-bar/nav-bar.module */ "./src/app/nav-bar/nav-bar.module.ts")).then(m => m.NavBarPageModule)
-    }
 ];
 let SigninPageRoutingModule = class SigninPageRoutingModule {
 };
@@ -134,9 +130,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
-/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../auth.service */ "./src/app/auth.service.ts");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
 
 
 
@@ -186,7 +186,18 @@ let SigninPage = class SigninPage {
     }
     LoginForm(user, pass) {
         this.isLoading = true;
-        this.AuthService.loginUser(user, pass).subscribe((userDetail) => {
+        this.AuthService.loginUser(user, pass)
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["catchError"])((error) => {
+            if (error.status == 401) {
+                this.username();
+            }
+            else if (error.status == 403) {
+                this.notActivated();
+            }
+            this.isLoading = false;
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_6__["throwError"])(this.something());
+        }))
+            .subscribe((userDetail) => {
             localStorage.setItem("currentUser", JSON.stringify(userDetail));
             this.AuthService.systemConnect().subscribe((UserLoggedIn) => {
                 localStorage.setItem("Signinuser", JSON.stringify(UserLoggedIn));
@@ -194,6 +205,7 @@ let SigninPage = class SigninPage {
                 if (this.UserDetails != null) {
                     this.router.navigate(["/find-friends"]);
                 }
+                console.log(UserLoggedIn);
             });
         });
     }
@@ -206,12 +218,39 @@ let SigninPage = class SigninPage {
             yield correct.present();
         });
     }
+    username() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const correct = yield this.alertController.create({
+                message: "Your username or password is incorrect",
+                buttons: ["OK"],
+            });
+            yield correct.present();
+        });
+    }
+    notActivated() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const correct = yield this.alertController.create({
+                message: "The username  has not been activated or is blocked",
+                buttons: ["OK"],
+            });
+            yield correct.present();
+        });
+    }
+    something() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const correct = yield this.alertController.create({
+                message: "Something bad happened; please try again later.",
+                buttons: ["OK"],
+            });
+            yield correct.present();
+        });
+    }
 };
 SigninPage.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"] },
-    { type: _auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"] }
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClient"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AlertController"] },
+    { type: _auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"] }
 ];
 SigninPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -220,9 +259,9 @@ SigninPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./signin.page.scss */ "./src/app/signin/signin.page.scss")).default]
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"],
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"],
-        _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["AlertController"],
-        _auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"]])
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClient"],
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["AlertController"],
+        _auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]])
 ], SigninPage);
 
 
