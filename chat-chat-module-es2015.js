@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <app-navigationbar></app-navigationbar>\r\n</ion-header>\r\n\r\n\r\n\r\n<ion-tabs class=\"background-card\">\r\n  <ion-tab-bar slot=\"bottom\"  class=\"background-card\">\r\n    <ion-tab-button tab=\"tabs2\"  class=\"background-card\">\r\n      <ion-icon name=\"chatbubbles\"></ion-icon>\r\n      <ion-label>Chat</ion-label>\r\n    </ion-tab-button>\r\n\r\n    <ion-tab-button  tab=\"tabs3\"  class=\"background-card\">\r\n      <ion-icon name=\"star\"></ion-icon>\r\n      <ion-label>Favorite</ion-label>\r\n    </ion-tab-button>\r\n    <ion-tab-button tab=\"searchTab\" class=\"background-card\">\r\n      <ion-icon name=\"search-sharp\"></ion-icon>\r\n      <ion-label>Search</ion-label>\r\n    </ion-tab-button>\r\n  </ion-tab-bar>\r\n\r\n  \r\n\r\n</ion-tabs>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <app-navigationbar></app-navigationbar>\r\n</ion-header>\r\n\r\n\r\n\r\n<ion-tabs class=\"background-card\">\r\n  <ion-tab-bar slot=\"bottom\"  class=\"background-card\">\r\n    <ion-tab-button tab=\"ChatsThreadListing\"  class=\"background-card\">\r\n      <ion-icon name=\"chatbubbles\"></ion-icon>\r\n      <ion-label>Chat</ion-label>\r\n    </ion-tab-button>\r\n\r\n    <ion-tab-button  tab=\"FavoriteUsers\"  class=\"background-card\">\r\n      <ion-icon name=\"star\"></ion-icon>\r\n      <ion-label>Favorite</ion-label>\r\n    </ion-tab-button>\r\n    <ion-tab-button tab=\"searchUser\" class=\"background-card\">\r\n      <ion-icon name=\"search-sharp\"></ion-icon>\r\n      <ion-label>Search</ion-label>\r\n    </ion-tab-button>\r\n  </ion-tab-bar>\r\n\r\n  \r\n\r\n</ion-tabs>");
 
 /***/ }),
 
@@ -38,19 +38,19 @@ const routes = [
         path: '',
         component: _chat_page__WEBPACK_IMPORTED_MODULE_4__["ChatPage"],
         children: [
-            { path: 'searchTab',
-                loadChildren: () => Promise.all(/*! import() | searchTab-searchTab-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null, /*! ../searchTab/searchTab.module */ "./src/app/searchTab/searchTab.module.ts")).then(m => m.SearchTabPageModule) },
+            { path: 'searchUser',
+                loadChildren: () => __webpack_require__.e(/*! import() | searchUser-searchUser-module */ "default~chat-searchUser-searchUser-module~searchUser-searchUser-module").then(__webpack_require__.bind(null, /*! ./searchUser/searchUser.module */ "./src/app/chat/searchUser/searchUser.module.ts")).then(m => m.searchUserPageModule) },
             {
-                path: 'tabs2',
-                loadChildren: () => Promise.all(/*! import() | tabs2-tabs2-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null, /*! ../tabs2/tabs2.module */ "./src/app/tabs2/tabs2.module.ts")).then(m => m.Tabs2PageModule)
+                path: 'ChatsThreadListing',
+                loadChildren: () => __webpack_require__.e(/*! import() | ChatsThreadListing-ChatsThreadListing-module */ "default~ChatsThreadListing-ChatsThreadListing-module~chat-ChatsThreadListing-ChatsThreadListing-module").then(__webpack_require__.bind(null, /*! ./ChatsThreadListing/ChatsThreadListing.module */ "./src/app/chat/ChatsThreadListing/ChatsThreadListing.module.ts")).then(m => m.ChatsThreadListingPageModule)
             },
-            { path: 'tabs3',
-                loadChildren: () => Promise.all(/*! import() | tabs3-tabs3-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("tabs3-tabs3-module")]).then(__webpack_require__.bind(null, /*! ../tabs3/tabs3.module */ "./src/app/tabs3/tabs3.module.ts")).then(m => m.Tabs3PageModule) }
+            { path: 'FavoriteUsers',
+                loadChildren: () => __webpack_require__.e(/*! import() | FavoriteUsers-FavoriteUsers-module */ "common").then(__webpack_require__.bind(null, /*! ./FavoriteUsers/FavoriteUsers.module */ "./src/app/chat/FavoriteUsers/FavoriteUsers.module.ts")).then(m => m.FavoriteUsersPageModule) }
         ]
     },
     {
         path: '',
-        redirectTo: '/searchTab',
+        redirectTo: '/searchUser',
         pathMatch: 'full'
     },
     {
@@ -87,7 +87,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 /* harmony import */ var _chat_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./chat-routing.module */ "./src/app/chat/chat-routing.module.ts");
-/* harmony import */ var _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../navigationbar/navigationbar.module */ "./src/app/navigationbar/navigationbar.module.ts");
+/* harmony import */ var _Navigation_NavigationBar_navigationbar_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../Navigation/NavigationBar/navigationbar.module */ "./src/app/Navigation/NavigationBar/navigationbar.module.ts");
 /* harmony import */ var _chat_page__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./chat.page */ "./src/app/chat/chat.page.ts");
 
 
@@ -106,7 +106,7 @@ ChatPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
             _chat_routing_module__WEBPACK_IMPORTED_MODULE_5__["ChatPageRoutingModule"],
-            _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_6__["NavigationbarModule"]
+            _Navigation_NavigationBar_navigationbar_module__WEBPACK_IMPORTED_MODULE_6__["NavigationbarModule"]
         ],
         declarations: [_chat_page__WEBPACK_IMPORTED_MODULE_7__["ChatPage"]]
     })

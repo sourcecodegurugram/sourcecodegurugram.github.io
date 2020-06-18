@@ -429,6 +429,19 @@ module.exports = webpackAsyncContext;
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/Navigation/NavigationBar/alert-profile/alert-profile-dialog.component.html":
+/*!**********************************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/Navigation/NavigationBar/alert-profile/alert-profile-dialog.component.html ***!
+  \**********************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div  *ngIf=\"isLoading\" class=\"loading-container\">\r\n  <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\r\n</div>\r\n\r\n\r\n\r\n\r\n<div class=\"modal-body\" >\r\n    <div class=\"continue-button\" routerLink=\"/edit-profile\" (click)=\"onConfirmClick()\">\r\n      View/Edit Profile\r\n    </div>\r\n    <div class=\"continue-button\" routerLink=\"/account-setting\" (click)=\"onConfirmClick()\">\r\n      Account Settings\r\n    </div>\r\n    <div class=\"logout-text-container\" (click)=\"logOut()\" >\r\n      <span class=\"log-out-text\">Log Out</span>\r\n    </div>\r\n\r\n  </div>");
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html":
 /*!**************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html ***!
@@ -439,19 +452,6 @@ module.exports = webpackAsyncContext;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<ion-router-outlet></ion-router-outlet>");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/navigationbar/alert-profile/alert-profile-dialog.component.html":
-/*!***********************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/navigationbar/alert-profile/alert-profile-dialog.component.html ***!
-  \***********************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div  *ngIf=\"isLoading\" class=\"loading-container\">\r\n  <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\r\n</div>\r\n\r\n\r\n\r\n\r\n<div class=\"modal-body\" >\r\n    <div class=\"continue-button\" routerLink=\"/edit-profile\" (click)=\"onConfirmClick()\">\r\n      View/Edit Profile\r\n    </div>\r\n    <div class=\"continue-button\" routerLink=\"/account-setting\" (click)=\"onConfirmClick()\">\r\n      Account Settings\r\n    </div>\r\n    <div class=\"logout-text-container\" (click)=\"logOut()\" >\r\n      <span class=\"log-out-text\">Log Out</span>\r\n    </div>\r\n\r\n  </div>");
 
 /***/ }),
 
@@ -703,6 +703,106 @@ function __classPrivateFieldSet(receiver, privateMap, value) {
 
 /***/ }),
 
+/***/ "./src/app/Navigation/NavigationBar/alert-profile/alert-profile-dialog.component.scss":
+/*!********************************************************************************************!*\
+  !*** ./src/app/Navigation/NavigationBar/alert-profile/alert-profile-dialog.component.scss ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".login-form {\n  background-color: white;\n  z-index: 1;\n  position: relative;\n  height: 100vh;\n}\n\n.continue-button {\n  background-color: #54B151;\n  height: 3em;\n  color: white;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 12px;\n  margin: 2em;\n  font-size: 18px;\n  padding: 2em 1em;\n}\n\n.logout-text-container {\n  text-align: center;\n  font-size: 21px;\n  margin: 1em;\n  text-transform: uppercase;\n}\n\n.modal-grid {\n  display: grid;\n  grid-template-columns: 2fr 3fr;\n  grid-gap: 11px;\n}\n\n.profile-name-modal {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  font-size: 18px;\n}\n\n.loading-container {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 9;\n  background: black;\n  opacity: 0.5;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvTmF2aWdhdGlvbi9OYXZpZ2F0aW9uQmFyL2FsZXJ0LXByb2ZpbGUvSzpcXEFuZ3VsYXIgUHJvamVjdFxcbm90NERhdGluZy9zcmNcXGFwcFxcTmF2aWdhdGlvblxcTmF2aWdhdGlvbkJhclxcYWxlcnQtcHJvZmlsZVxcYWxlcnQtcHJvZmlsZS1kaWFsb2cuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL05hdmlnYXRpb24vTmF2aWdhdGlvbkJhci9hbGVydC1wcm9maWxlL2FsZXJ0LXByb2ZpbGUtZGlhbG9nLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksdUJBQUE7RUFDQSxVQUFBO0VBQ0Esa0JBQUE7RUFDQSxhQUFBO0FDQ0o7O0FEQ0E7RUFDSSx5QkFBQTtFQUNBLFdBQUE7RUFDQSxZQUFBO0VBQ0EsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSxtQkFBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0VBQ0EsZ0JBQUE7QUNFSjs7QURBQTtFQUNJLGtCQUFBO0VBQ0EsZUFBQTtFQUNBLFdBQUE7RUFDQSx5QkFBQTtBQ0dKOztBRERBO0VBQ0ksYUFBQTtFQUNBLDhCQUFBO0VBQ0EsY0FBQTtBQ0lKOztBREZBO0VBQ0ksYUFBQTtFQUNBLHNCQUFBO0VBQ0EsdUJBQUE7RUFDQSxlQUFBO0FDS0o7O0FESEE7RUFDSSxZQUFBO0VBQ0EsYUFBQTtFQUNBLGVBQUE7RUFDQSxRQUFBO0VBQ0EsU0FBQTtFQUVBLGFBQUE7RUFFQSx1QkFBQTtFQUVBLG1CQUFBO0VBQ0EsVUFBQTtFQUNBLGlCQUFBO0VBQ0EsWUFBQTtBQ01KIiwiZmlsZSI6InNyYy9hcHAvTmF2aWdhdGlvbi9OYXZpZ2F0aW9uQmFyL2FsZXJ0LXByb2ZpbGUvYWxlcnQtcHJvZmlsZS1kaWFsb2cuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9naW4tZm9ybSB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcclxuICAgIHotaW5kZXg6IDE7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBoZWlnaHQ6IDEwMHZoO1xyXG59XHJcbi5jb250aW51ZS1idXR0b257XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNTRCMTUxO1xyXG4gICAgaGVpZ2h0OiAzZW07IFxyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEycHg7XHJcbiAgICBtYXJnaW46IDJlbTtcclxuICAgIGZvbnQtc2l6ZTogMThweDtcclxuICAgIHBhZGRpbmc6IDJlbSAxZW07XHJcbn1cclxuLmxvZ291dC10ZXh0LWNvbnRhaW5lciB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXNpemU6IDIxcHg7XHJcbiAgICBtYXJnaW46IDFlbTtcclxuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbn1cclxuLm1vZGFsLWdyaWQge1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMmZyIDNmcjtcclxuICAgIGdyaWQtZ2FwOiAxMXB4O1xyXG59XHJcbi5wcm9maWxlLW5hbWUtbW9kYWwge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogMThweDtcclxufVxyXG4ubG9hZGluZy1jb250YWluZXIge1xyXG4gICAgd2lkdGg6IDEwMHZ3O1xyXG4gICAgaGVpZ2h0OiAxMDB2aDtcclxuICAgIHBvc2l0aW9uOiBmaXhlZDtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgLXdlYmtpdC1ib3gtcGFjazogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICAtd2Via2l0LWJveC1hbGlnbjogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIHotaW5kZXg6IDk7XHJcbiAgICBiYWNrZ3JvdW5kOiBibGFjaztcclxuICAgIG9wYWNpdHk6IDAuNTtcclxuICB9IiwiLmxvZ2luLWZvcm0ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgei1pbmRleDogMTtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDEwMHZoO1xufVxuXG4uY29udGludWUtYnV0dG9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzU0QjE1MTtcbiAgaGVpZ2h0OiAzZW07XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGJvcmRlci1yYWRpdXM6IDEycHg7XG4gIG1hcmdpbjogMmVtO1xuICBmb250LXNpemU6IDE4cHg7XG4gIHBhZGRpbmc6IDJlbSAxZW07XG59XG5cbi5sb2dvdXQtdGV4dC1jb250YWluZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogMjFweDtcbiAgbWFyZ2luOiAxZW07XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi5tb2RhbC1ncmlkIHtcbiAgZGlzcGxheTogZ3JpZDtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAyZnIgM2ZyO1xuICBncmlkLWdhcDogMTFweDtcbn1cblxuLnByb2ZpbGUtbmFtZS1tb2RhbCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBmb250LXNpemU6IDE4cHg7XG59XG5cbi5sb2FkaW5nLWNvbnRhaW5lciB7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB0b3A6IDBweDtcbiAgbGVmdDogMHB4O1xuICBkaXNwbGF5OiAtd2Via2l0LWJveDtcbiAgZGlzcGxheTogZmxleDtcbiAgLXdlYmtpdC1ib3gtcGFjazogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgLXdlYmtpdC1ib3gtYWxpZ246IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgei1pbmRleDogOTtcbiAgYmFja2dyb3VuZDogYmxhY2s7XG4gIG9wYWNpdHk6IDAuNTtcbn0iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/Navigation/NavigationBar/alert-profile/alert-profile-dialog.component.ts":
+/*!******************************************************************************************!*\
+  !*** ./src/app/Navigation/NavigationBar/alert-profile/alert-profile-dialog.component.ts ***!
+  \******************************************************************************************/
+/*! exports provided: AlertProfileDialogComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AlertProfileDialogComponent", function() { return AlertProfileDialogComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../auth.service */ "./src/app/auth.service.ts");
+
+
+
+
+
+
+let AlertProfileDialogComponent = class AlertProfileDialogComponent {
+    constructor(data, dialogRef, http, router, AuthService) {
+        this.data = data;
+        this.dialogRef = dialogRef;
+        this.http = http;
+        this.router = router;
+        this.AuthService = AuthService;
+        this.message = "";
+        this.cancelButtonText = "Cancel";
+        this.logoutUrl = "https://gowebtutorial.com/api/json/user/logout";
+        this.isLoading = false;
+        if (data) {
+            this.message = data.message || this.message;
+            if (data.buttonText) {
+                this.cancelButtonText = data.buttonText.cancel || this.cancelButtonText;
+            }
+        }
+        this.dialogRef.updateSize('300vw', '300vw');
+    }
+    ngOnInit() {
+        this.itrs = JSON.parse(localStorage.getItem("currentUser"));
+    }
+    logOut() {
+        this.isLoading = true;
+        this.itrs = JSON.parse(localStorage.getItem("currentUser"));
+        const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]()
+            .set("X-CSRF-Token", this.itrs.token)
+            .set("Content-Type", "application/json")
+            .set("X-Cookie", this.itrs.session_name + "=" + this.itrs.sessid);
+        const requestOptions = {
+            headers: headers,
+            withCredentials: true,
+        };
+        this.http.post(this.logoutUrl, {}, requestOptions).subscribe((head) => {
+            this.isLoading = false;
+            this.onConfirmClick();
+            localStorage.clear();
+            this.router.navigate(["/"]);
+        });
+    }
+    onConfirmClick() {
+        this.dialogRef.close(true);
+    }
+};
+AlertProfileDialogComponent.ctorParameters = () => [
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+    { type: _auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"] }
+];
+AlertProfileDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-alert-profile-dialog',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./alert-profile-dialog.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/Navigation/NavigationBar/alert-profile/alert-profile-dialog.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./alert-profile-dialog.component.scss */ "./src/app/Navigation/NavigationBar/alert-profile/alert-profile-dialog.component.scss")).default]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object, _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"]])
+], AlertProfileDialogComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/app-routing.module.ts":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -722,92 +822,68 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     { path: "", redirectTo: "welcome", pathMatch: "full" },
     {
-        path: "home/upload.php",
-        loadChildren: () => __webpack_require__.e(/*! import() | home-home-module */ "home-home-module").then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then((m) => m.HomePageModule),
-    },
-    {
-        path: "location-targetting",
-        loadChildren: () => __webpack_require__.e(/*! import() | location-targetting-location-targetting-module */ "location-targetting-location-targetting-module").then(__webpack_require__.bind(null, /*! ./location-targetting/location-targetting.module */ "./src/app/location-targetting/location-targetting.module.ts")).then((m) => m.LocationTargettingPageModule),
-    },
-    {
-        path: "register",
-        loadChildren: () => __webpack_require__.e(/*! import() | register-register-module */ "register-register-module").then(__webpack_require__.bind(null, /*! ./register/register.module */ "./src/app/register/register.module.ts")).then((m) => m.RegisterPageModule),
-    },
-    {
         path: "chat",
-        loadChildren: () => Promise.all(/*! import() | chat-chat-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("chat-chat-module")]).then(__webpack_require__.bind(null, /*! ./chat/chat.module */ "./src/app/chat/chat.module.ts")).then((m) => m.ChatPageModule),
+        loadChildren: () => Promise.all(/*! import() | chat-chat-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("chat-chat-module")]).then(__webpack_require__.bind(null, /*! ./chat/chat.module */ "./src/app/chat/chat.module.ts")).then((m) => m.ChatPageModule),
     },
     {
-        path: "searchTab",
-        loadChildren: () => Promise.all(/*! import() | searchTab-searchTab-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null, /*! ./searchTab/searchTab.module */ "./src/app/searchTab/searchTab.module.ts")).then((m) => m.SearchTabPageModule),
+        path: "searchUser",
+        loadChildren: () => Promise.all(/*! import() | chat-searchUser-searchUser-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("default~chat-searchUser-searchUser-module~searchUser-searchUser-module")]).then(__webpack_require__.bind(null, /*! ./chat/searchUser/searchUser.module */ "./src/app/chat/searchUser/searchUser.module.ts")).then((m) => m.searchUserPageModule),
     },
     {
-        path: "tabs2",
-        loadChildren: () => Promise.all(/*! import() | tabs2-tabs2-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null, /*! ./tabs2/tabs2.module */ "./src/app/tabs2/tabs2.module.ts")).then((m) => m.Tabs2PageModule),
+        path: "ChatsThreadListing",
+        loadChildren: () => Promise.all(/*! import() | chat-ChatsThreadListing-ChatsThreadListing-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("default~ChatsThreadListing-ChatsThreadListing-module~chat-ChatsThreadListing-ChatsThreadListing-module")]).then(__webpack_require__.bind(null, /*! ./chat/ChatsThreadListing/ChatsThreadListing.module */ "./src/app/chat/ChatsThreadListing/ChatsThreadListing.module.ts")).then((m) => m.ChatsThreadListingPageModule),
     },
     {
-        path: "tabs3",
-        loadChildren: () => Promise.all(/*! import() | tabs3-tabs3-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("tabs3-tabs3-module")]).then(__webpack_require__.bind(null, /*! ./tabs3/tabs3.module */ "./src/app/tabs3/tabs3.module.ts")).then((m) => m.Tabs3PageModule),
-    },
-    {
-        path: "personal-chat",
-        loadChildren: () => __webpack_require__.e(/*! import() | personal-chat-personal-chat-module */ "personal-chat-personal-chat-module").then(__webpack_require__.bind(null, /*! ./personal-chat/personal-chat.module */ "./src/app/personal-chat/personal-chat.module.ts")).then((m) => m.PersonalChatPageModule),
+        path: "FavoriteUsers",
+        loadChildren: () => Promise.all(/*! import() | chat-FavoriteUsers-FavoriteUsers-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("common")]).then(__webpack_require__.bind(null, /*! ./chat/FavoriteUsers/FavoriteUsers.module */ "./src/app/chat/FavoriteUsers/FavoriteUsers.module.ts")).then((m) => m.FavoriteUsersPageModule),
     },
     {
         path: "notificationchat/:thread_id/:image_path/:name",
-        loadChildren: () => Promise.all(/*! import() | notificationchat-notificationchat-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("notificationchat-notificationchat-module")]).then(__webpack_require__.bind(null, /*! ./notificationchat/notificationchat.module */ "./src/app/notificationchat/notificationchat.module.ts")).then((m) => m.NotificationchatPageModule),
-    },
-    {
-        path: "search-result/:post",
-        loadChildren: () => Promise.all(/*! import() | search-result-search-result-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("search-result-search-result-module")]).then(__webpack_require__.bind(null, /*! ./search-result/search-result.module */ "./src/app/search-result/search-result.module.ts")).then((m) => m.SearchResultPageModule),
+        loadChildren: () => Promise.all(/*! import() | chat-ChatsThreadListing-notificationchat-notificationchat-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("chat-ChatsThreadListing-notificationchat-notificationchat-module")]).then(__webpack_require__.bind(null, /*! ./chat/ChatsThreadListing/notificationchat/notificationchat.module */ "./src/app/chat/ChatsThreadListing/notificationchat/notificationchat.module.ts")).then((m) => m.NotificationchatPageModule),
     },
     {
         path: "detail/:name/:mail/:uid",
-        loadChildren: () => Promise.all(/*! import() | detail-detail-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("detail-detail-module")]).then(__webpack_require__.bind(null, /*! ./detail/detail.module */ "./src/app/detail/detail.module.ts")).then((m) => m.DetailPageModule),
-    },
-    {
-        path: "elipsispipe",
-        loadChildren: () => __webpack_require__.e(/*! import() | elipsispipe-elipsispipe-module */ "elipsispipe-elipsispipe-module").then(__webpack_require__.bind(null, /*! ./elipsispipe/elipsispipe.module */ "./src/app/elipsispipe/elipsispipe.module.ts")).then((m) => m.ElipsispipePageModule),
+        loadChildren: () => Promise.all(/*! import() | welcome-detail-detail-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("welcome-detail-detail-module")]).then(__webpack_require__.bind(null, /*! ./welcome/detail/detail.module */ "./src/app/welcome/detail/detail.module.ts")).then((m) => m.DetailPageModule),
     },
     {
         path: "welcome",
-        loadChildren: () => Promise.all(/*! import() | welcome-welcome-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null, /*! ./welcome/welcome.module */ "./src/app/welcome/welcome.module.ts")).then((m) => m.WelcomePageModule),
+        loadChildren: () => Promise.all(/*! import() | welcome-welcome-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null, /*! ./welcome/welcome.module */ "./src/app/welcome/welcome.module.ts")).then((m) => m.WelcomePageModule),
     },
     {
         path: "signup",
-        loadChildren: () => Promise.all(/*! import() | signup-signup-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("signup-signup-module")]).then(__webpack_require__.bind(null, /*! ./signup/signup.module */ "./src/app/signup/signup.module.ts")).then((m) => m.SignupPageModule),
+        loadChildren: () => Promise.all(/*! import() | Register-Signup-signup-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("Register-Signup-signup-module")]).then(__webpack_require__.bind(null, /*! ./Register/Signup/signup.module */ "./src/app/Register/Signup/signup.module.ts")).then((m) => m.SignupPageModule),
     },
     {
         path: "signin",
-        loadChildren: () => Promise.all(/*! import() | signin-signin-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("signin-signin-module")]).then(__webpack_require__.bind(null, /*! ./signin/signin.module */ "./src/app/signin/signin.module.ts")).then((m) => m.SigninPageModule),
+        loadChildren: () => Promise.all(/*! import() | Signin-signin-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("Signin-signin-module")]).then(__webpack_require__.bind(null, /*! ./Signin/signin.module */ "./src/app/Signin/signin.module.ts")).then((m) => m.SigninPageModule),
     },
     {
         path: "optional-detail",
-        loadChildren: () => Promise.all(/*! import() | optional-detail-optional-detail-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null, /*! ./optional-detail/optional-detail.module */ "./src/app/optional-detail/optional-detail.module.ts")).then((m) => m.OptionalDetailPageModule),
+        loadChildren: () => Promise.all(/*! import() | Signin-optional-detail-optional-detail-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("Signin-optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null, /*! ./Signin/optional-detail/optional-detail.module */ "./src/app/Signin/optional-detail/optional-detail.module.ts")).then((m) => m.OptionalDetailPageModule),
     },
     {
         path: "popup/:uid",
-        loadChildren: () => Promise.all(/*! import() | popup-popup-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("popup-popup-module")]).then(__webpack_require__.bind(null, /*! ./popup/popup.module */ "./src/app/popup/popup.module.ts")).then((m) => m.PopupPageModule),
+        loadChildren: () => Promise.all(/*! import() | chat-searchUser-popup-popup-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("chat-searchUser-popup-popup-module")]).then(__webpack_require__.bind(null, /*! ./chat/searchUser/popup/popup.module */ "./src/app/chat/searchUser/popup/popup.module.ts")).then((m) => m.PopupPageModule),
     },
     {
         path: 'new-message/:uid/:name',
-        loadChildren: () => Promise.all(/*! import() | new-message-new-message-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("new-message-new-message-module")]).then(__webpack_require__.bind(null, /*! ./new-message/new-message.module */ "./src/app/new-message/new-message.module.ts")).then(m => m.NewMessagePageModule)
+        loadChildren: () => Promise.all(/*! import() | chat-searchUser-new-message-new-message-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("chat-searchUser-new-message-new-message-module")]).then(__webpack_require__.bind(null, /*! ./chat/searchUser/new-message/new-message.module */ "./src/app/chat/searchUser/new-message/new-message.module.ts")).then(m => m.NewMessagePageModule)
     },
     {
         path: 'find-friends',
-        loadChildren: () => Promise.all(/*! import() | find-friends-find-friends-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("find-friends-find-friends-module")]).then(__webpack_require__.bind(null, /*! ./find-friends/find-friends.module */ "./src/app/find-friends/find-friends.module.ts")).then(m => m.FindFriendsPageModule)
+        loadChildren: () => Promise.all(/*! import() | Signin-find-friends-find-friends-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("Signin-find-friends-find-friends-module")]).then(__webpack_require__.bind(null, /*! ./Signin/find-friends/find-friends.module */ "./src/app/Signin/find-friends/find-friends.module.ts")).then(m => m.FindFriendsPageModule)
     },
     {
         path: 'favorate-popup/:uid',
-        loadChildren: () => Promise.all(/*! import() | favorate-popup-favorate-popup-module */[__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("favorate-popup-favorate-popup-module")]).then(__webpack_require__.bind(null, /*! ./favorate-popup/favorate-popup.module */ "./src/app/favorate-popup/favorate-popup.module.ts")).then(m => m.FavoratePopupPageModule)
+        loadChildren: () => Promise.all(/*! import() | chat-FavoriteUsers-favorate-popup-favorate-popup-module */[__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("chat-FavoriteUsers-favorate-popup-favorate-popup-module")]).then(__webpack_require__.bind(null, /*! ./chat/FavoriteUsers/favorate-popup/favorate-popup.module */ "./src/app/chat/FavoriteUsers/favorate-popup/favorate-popup.module.ts")).then(m => m.FavoratePopupPageModule)
     },
     {
         path: 'edit-profile',
-        loadChildren: () => __webpack_require__.e(/*! import() | navigationbar-edit-profile-edit-profile-module */ "navigationbar-edit-profile-edit-profile-module").then(__webpack_require__.bind(null, /*! ./navigationbar/edit-profile/edit-profile.module */ "./src/app/navigationbar/edit-profile/edit-profile.module.ts")).then(m => m.EditProfilePageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | Navigation-MyProfile-MyProfile-module */ "Navigation-MyProfile-MyProfile-module").then(__webpack_require__.bind(null, /*! ./Navigation/MyProfile/MyProfile.module */ "./src/app/Navigation/MyProfile/MyProfile.module.ts")).then(m => m.MyProfilePageModule)
     },
     {
         path: 'account-setting',
-        loadChildren: () => __webpack_require__.e(/*! import() | navigationbar-account-setting-account-setting-module */ "navigationbar-account-setting-account-setting-module").then(__webpack_require__.bind(null, /*! ./navigationbar/account-setting/account-setting.module */ "./src/app/navigationbar/account-setting/account-setting.module.ts")).then(m => m.AccountSettingPageModule)
+        loadChildren: () => __webpack_require__.e(/*! import() | Navigation-AccountSettings-account-setting-module */ "Navigation-AccountSettings-account-setting-module").then(__webpack_require__.bind(null, /*! ./Navigation/AccountSettings/account-setting.module */ "./src/app/Navigation/AccountSettings/account-setting.module.ts")).then(m => m.AccountSettingPageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -918,7 +994,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ellipsis_pipe__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../ellipsis.pipe */ "./src/ellipsis.pipe.ts");
 /* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./material.module */ "./src/app/material.module.ts");
 /* harmony import */ var _ionic_native_native_geocoder_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ionic-native/native-geocoder/ngx */ "./node_modules/@ionic-native/native-geocoder/ngx/index.js");
-/* harmony import */ var _navigationbar_alert_profile_alert_profile_dialog_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./navigationbar/alert-profile/alert-profile-dialog.component */ "./src/app/navigationbar/alert-profile/alert-profile-dialog.component.ts");
+/* harmony import */ var _Navigation_NavigationBar_alert_profile_alert_profile_dialog_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Navigation/NavigationBar/alert-profile/alert-profile-dialog.component */ "./src/app/Navigation/NavigationBar/alert-profile/alert-profile-dialog.component.ts");
 
 
 
@@ -940,8 +1016,8 @@ let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _ellipsis_pipe__WEBPACK_IMPORTED_MODULE_13__["EllipsisPipe"], _navigationbar_alert_profile_alert_profile_dialog_component__WEBPACK_IMPORTED_MODULE_16__["AlertProfileDialogComponent"]],
-        entryComponents: [_navigationbar_alert_profile_alert_profile_dialog_component__WEBPACK_IMPORTED_MODULE_16__["AlertProfileDialogComponent"]],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"], _ellipsis_pipe__WEBPACK_IMPORTED_MODULE_13__["EllipsisPipe"], _Navigation_NavigationBar_alert_profile_alert_profile_dialog_component__WEBPACK_IMPORTED_MODULE_16__["AlertProfileDialogComponent"]],
+        entryComponents: [_Navigation_NavigationBar_alert_profile_alert_profile_dialog_component__WEBPACK_IMPORTED_MODULE_16__["AlertProfileDialogComponent"]],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClientModule"],
@@ -1184,106 +1260,6 @@ MaterialModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         ]
     })
 ], MaterialModule);
-
-
-
-/***/ }),
-
-/***/ "./src/app/navigationbar/alert-profile/alert-profile-dialog.component.scss":
-/*!*********************************************************************************!*\
-  !*** ./src/app/navigationbar/alert-profile/alert-profile-dialog.component.scss ***!
-  \*********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".login-form {\n  background-color: white;\n  z-index: 1;\n  position: relative;\n  height: 100vh;\n}\n\n.continue-button {\n  background-color: #54B151;\n  height: 3em;\n  color: white;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 12px;\n  margin: 2em;\n  font-size: 18px;\n  padding: 2em 1em;\n}\n\n.logout-text-container {\n  text-align: center;\n  font-size: 21px;\n  margin: 1em;\n  text-transform: uppercase;\n}\n\n.modal-grid {\n  display: grid;\n  grid-template-columns: 2fr 3fr;\n  grid-gap: 11px;\n}\n\n.profile-name-modal {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  font-size: 18px;\n}\n\n.loading-container {\n  width: 100vw;\n  height: 100vh;\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  z-index: 9;\n  background: black;\n  opacity: 0.5;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbmF2aWdhdGlvbmJhci9hbGVydC1wcm9maWxlL0s6XFxBbmd1bGFyIFByb2plY3RcXG5vdDREYXRpbmcvc3JjXFxhcHBcXG5hdmlnYXRpb25iYXJcXGFsZXJ0LXByb2ZpbGVcXGFsZXJ0LXByb2ZpbGUtZGlhbG9nLmNvbXBvbmVudC5zY3NzIiwic3JjL2FwcC9uYXZpZ2F0aW9uYmFyL2FsZXJ0LXByb2ZpbGUvYWxlcnQtcHJvZmlsZS1kaWFsb2cuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx1QkFBQTtFQUNBLFVBQUE7RUFDQSxrQkFBQTtFQUNBLGFBQUE7QUNDSjs7QURDQTtFQUNJLHlCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQUNBLG1CQUFBO0VBQ0EsV0FBQTtFQUNBLGVBQUE7RUFDQSxnQkFBQTtBQ0VKOztBREFBO0VBQ0ksa0JBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtFQUNBLHlCQUFBO0FDR0o7O0FEREE7RUFDSSxhQUFBO0VBQ0EsOEJBQUE7RUFDQSxjQUFBO0FDSUo7O0FERkE7RUFDSSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSx1QkFBQTtFQUNBLGVBQUE7QUNLSjs7QURIQTtFQUNJLFlBQUE7RUFDQSxhQUFBO0VBQ0EsZUFBQTtFQUNBLFFBQUE7RUFDQSxTQUFBO0VBRUEsYUFBQTtFQUVBLHVCQUFBO0VBRUEsbUJBQUE7RUFDQSxVQUFBO0VBQ0EsaUJBQUE7RUFDQSxZQUFBO0FDTUoiLCJmaWxlIjoic3JjL2FwcC9uYXZpZ2F0aW9uYmFyL2FsZXJ0LXByb2ZpbGUvYWxlcnQtcHJvZmlsZS1kaWFsb2cuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubG9naW4tZm9ybSB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcclxuICAgIHotaW5kZXg6IDE7XHJcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICBoZWlnaHQ6IDEwMHZoO1xyXG59XHJcbi5jb250aW51ZS1idXR0b257XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNTRCMTUxO1xyXG4gICAgaGVpZ2h0OiAzZW07IFxyXG4gICAgY29sb3I6IHdoaXRlO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIGJvcmRlci1yYWRpdXM6IDEycHg7XHJcbiAgICBtYXJnaW46IDJlbTtcclxuICAgIGZvbnQtc2l6ZTogMThweDtcclxuICAgIHBhZGRpbmc6IDJlbSAxZW07XHJcbn1cclxuLmxvZ291dC10ZXh0LWNvbnRhaW5lciB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXNpemU6IDIxcHg7XHJcbiAgICBtYXJnaW46IDFlbTtcclxuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbn1cclxuLm1vZGFsLWdyaWQge1xyXG4gICAgZGlzcGxheTogZ3JpZDtcclxuICAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogMmZyIDNmcjtcclxuICAgIGdyaWQtZ2FwOiAxMXB4O1xyXG59XHJcbi5wcm9maWxlLW5hbWUtbW9kYWwge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICAgIGZvbnQtc2l6ZTogMThweDtcclxufVxyXG4ubG9hZGluZy1jb250YWluZXIge1xyXG4gICAgd2lkdGg6IDEwMHZ3O1xyXG4gICAgaGVpZ2h0OiAxMDB2aDtcclxuICAgIHBvc2l0aW9uOiBmaXhlZDtcclxuICAgIHRvcDogMHB4O1xyXG4gICAgbGVmdDogMHB4O1xyXG4gICAgZGlzcGxheTogLXdlYmtpdC1ib3g7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgLXdlYmtpdC1ib3gtcGFjazogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgICAtd2Via2l0LWJveC1hbGlnbjogY2VudGVyO1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIHotaW5kZXg6IDk7XHJcbiAgICBiYWNrZ3JvdW5kOiBibGFjaztcclxuICAgIG9wYWNpdHk6IDAuNTtcclxuICB9IiwiLmxvZ2luLWZvcm0ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgei1pbmRleDogMTtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICBoZWlnaHQ6IDEwMHZoO1xufVxuXG4uY29udGludWUtYnV0dG9uIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzU0QjE1MTtcbiAgaGVpZ2h0OiAzZW07XG4gIGNvbG9yOiB3aGl0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGJvcmRlci1yYWRpdXM6IDEycHg7XG4gIG1hcmdpbjogMmVtO1xuICBmb250LXNpemU6IDE4cHg7XG4gIHBhZGRpbmc6IDJlbSAxZW07XG59XG5cbi5sb2dvdXQtdGV4dC1jb250YWluZXIge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGZvbnQtc2l6ZTogMjFweDtcbiAgbWFyZ2luOiAxZW07XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG59XG5cbi5tb2RhbC1ncmlkIHtcbiAgZGlzcGxheTogZ3JpZDtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAyZnIgM2ZyO1xuICBncmlkLWdhcDogMTFweDtcbn1cblxuLnByb2ZpbGUtbmFtZS1tb2RhbCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBmb250LXNpemU6IDE4cHg7XG59XG5cbi5sb2FkaW5nLWNvbnRhaW5lciB7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB0b3A6IDBweDtcbiAgbGVmdDogMHB4O1xuICBkaXNwbGF5OiAtd2Via2l0LWJveDtcbiAgZGlzcGxheTogZmxleDtcbiAgLXdlYmtpdC1ib3gtcGFjazogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgLXdlYmtpdC1ib3gtYWxpZ246IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgei1pbmRleDogOTtcbiAgYmFja2dyb3VuZDogYmxhY2s7XG4gIG9wYWNpdHk6IDAuNTtcbn0iXX0= */");
-
-/***/ }),
-
-/***/ "./src/app/navigationbar/alert-profile/alert-profile-dialog.component.ts":
-/*!*******************************************************************************!*\
-  !*** ./src/app/navigationbar/alert-profile/alert-profile-dialog.component.ts ***!
-  \*******************************************************************************/
-/*! exports provided: AlertProfileDialogComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AlertProfileDialogComponent", function() { return AlertProfileDialogComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../auth.service */ "./src/app/auth.service.ts");
-
-
-
-
-
-
-let AlertProfileDialogComponent = class AlertProfileDialogComponent {
-    constructor(data, dialogRef, http, router, AuthService) {
-        this.data = data;
-        this.dialogRef = dialogRef;
-        this.http = http;
-        this.router = router;
-        this.AuthService = AuthService;
-        this.message = "";
-        this.cancelButtonText = "Cancel";
-        this.logoutUrl = "https://gowebtutorial.com/api/json/user/logout";
-        this.isLoading = false;
-        if (data) {
-            this.message = data.message || this.message;
-            if (data.buttonText) {
-                this.cancelButtonText = data.buttonText.cancel || this.cancelButtonText;
-            }
-        }
-        this.dialogRef.updateSize('300vw', '300vw');
-    }
-    ngOnInit() {
-        this.itrs = JSON.parse(localStorage.getItem("currentUser"));
-    }
-    logOut() {
-        this.isLoading = true;
-        this.itrs = JSON.parse(localStorage.getItem("currentUser"));
-        const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpHeaders"]()
-            .set("X-CSRF-Token", this.itrs.token)
-            .set("Content-Type", "application/json")
-            .set("X-Cookie", this.itrs.session_name + "=" + this.itrs.sessid);
-        const requestOptions = {
-            headers: headers,
-            withCredentials: true,
-        };
-        this.http.post(this.logoutUrl, {}, requestOptions).subscribe((head) => {
-            this.isLoading = false;
-            this.onConfirmClick();
-            localStorage.clear();
-            this.router.navigate(["/"]);
-        });
-    }
-    onConfirmClick() {
-        this.dialogRef.close(true);
-    }
-};
-AlertProfileDialogComponent.ctorParameters = () => [
-    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] },
-    { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
-    { type: _auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"] }
-];
-AlertProfileDialogComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-alert-profile-dialog',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./alert-profile-dialog.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/navigationbar/alert-profile/alert-profile-dialog.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./alert-profile-dialog.component.scss */ "./src/app/navigationbar/alert-profile/alert-profile-dialog.component.scss")).default]
-    }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"])),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object, _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"]])
-], AlertProfileDialogComponent);
 
 
 

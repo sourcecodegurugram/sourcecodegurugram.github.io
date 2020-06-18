@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\r\n  <app-navigationbar></app-navigationbar>\r\n</ion-header>\r\n\r\n\r\n\r\n<ion-tabs class=\"background-card\">\r\n  <ion-tab-bar slot=\"bottom\"  class=\"background-card\">\r\n    <ion-tab-button tab=\"tabs2\"  class=\"background-card\">\r\n      <ion-icon name=\"chatbubbles\"></ion-icon>\r\n      <ion-label>Chat</ion-label>\r\n    </ion-tab-button>\r\n\r\n    <ion-tab-button  tab=\"tabs3\"  class=\"background-card\">\r\n      <ion-icon name=\"star\"></ion-icon>\r\n      <ion-label>Favorite</ion-label>\r\n    </ion-tab-button>\r\n    <ion-tab-button tab=\"searchTab\" class=\"background-card\">\r\n      <ion-icon name=\"search-sharp\"></ion-icon>\r\n      <ion-label>Search</ion-label>\r\n    </ion-tab-button>\r\n  </ion-tab-bar>\r\n\r\n  \r\n\r\n</ion-tabs>";
+    __webpack_exports__["default"] = "<ion-header>\r\n  <app-navigationbar></app-navigationbar>\r\n</ion-header>\r\n\r\n\r\n\r\n<ion-tabs class=\"background-card\">\r\n  <ion-tab-bar slot=\"bottom\"  class=\"background-card\">\r\n    <ion-tab-button tab=\"ChatsThreadListing\"  class=\"background-card\">\r\n      <ion-icon name=\"chatbubbles\"></ion-icon>\r\n      <ion-label>Chat</ion-label>\r\n    </ion-tab-button>\r\n\r\n    <ion-tab-button  tab=\"FavoriteUsers\"  class=\"background-card\">\r\n      <ion-icon name=\"star\"></ion-icon>\r\n      <ion-label>Favorite</ion-label>\r\n    </ion-tab-button>\r\n    <ion-tab-button tab=\"searchUser\" class=\"background-card\">\r\n      <ion-icon name=\"search-sharp\"></ion-icon>\r\n      <ion-label>Search</ion-label>\r\n    </ion-tab-button>\r\n  </ion-tab-bar>\r\n\r\n  \r\n\r\n</ion-tabs>";
     /***/
   },
 
@@ -79,42 +79,42 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: '',
       component: _chat_page__WEBPACK_IMPORTED_MODULE_4__["ChatPage"],
       children: [{
-        path: 'searchTab',
+        path: 'searchUser',
         loadChildren: function loadChildren() {
-          return Promise.all(
-          /*! import() | searchTab-searchTab-module */
-          [__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("searchTab-searchTab-module")]).then(__webpack_require__.bind(null,
-          /*! ../searchTab/searchTab.module */
-          "./src/app/searchTab/searchTab.module.ts")).then(function (m) {
-            return m.SearchTabPageModule;
+          return __webpack_require__.e(
+          /*! import() | searchUser-searchUser-module */
+          "default~chat-searchUser-searchUser-module~searchUser-searchUser-module").then(__webpack_require__.bind(null,
+          /*! ./searchUser/searchUser.module */
+          "./src/app/chat/searchUser/searchUser.module.ts")).then(function (m) {
+            return m.searchUserPageModule;
           });
         }
       }, {
-        path: 'tabs2',
+        path: 'ChatsThreadListing',
         loadChildren: function loadChildren() {
-          return Promise.all(
-          /*! import() | tabs2-tabs2-module */
-          [__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("tabs2-tabs2-module")]).then(__webpack_require__.bind(null,
-          /*! ../tabs2/tabs2.module */
-          "./src/app/tabs2/tabs2.module.ts")).then(function (m) {
-            return m.Tabs2PageModule;
+          return __webpack_require__.e(
+          /*! import() | ChatsThreadListing-ChatsThreadListing-module */
+          "default~ChatsThreadListing-ChatsThreadListing-module~chat-ChatsThreadListing-ChatsThreadListing-module").then(__webpack_require__.bind(null,
+          /*! ./ChatsThreadListing/ChatsThreadListing.module */
+          "./src/app/chat/ChatsThreadListing/ChatsThreadListing.module.ts")).then(function (m) {
+            return m.ChatsThreadListingPageModule;
           });
         }
       }, {
-        path: 'tabs3',
+        path: 'FavoriteUsers',
         loadChildren: function loadChildren() {
-          return Promise.all(
-          /*! import() | tabs3-tabs3-module */
-          [__webpack_require__.e("default~chat-chat-module~detail-detail-module~favorate-popup-favorate-popup-module~find-friends-find~c7e765fd"), __webpack_require__.e("tabs3-tabs3-module")]).then(__webpack_require__.bind(null,
-          /*! ../tabs3/tabs3.module */
-          "./src/app/tabs3/tabs3.module.ts")).then(function (m) {
-            return m.Tabs3PageModule;
+          return __webpack_require__.e(
+          /*! import() | FavoriteUsers-FavoriteUsers-module */
+          "common").then(__webpack_require__.bind(null,
+          /*! ./FavoriteUsers/FavoriteUsers.module */
+          "./src/app/chat/FavoriteUsers/FavoriteUsers.module.ts")).then(function (m) {
+            return m.FavoriteUsersPageModule;
           });
         }
       }]
     }, {
       path: '',
-      redirectTo: '/searchTab',
+      redirectTo: '/searchUser',
       pathMatch: 'full'
     }, {
       path: 'chat',
@@ -190,9 +190,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ../navigationbar/navigationbar.module */
-    "./src/app/navigationbar/navigationbar.module.ts");
+    var _Navigation_NavigationBar_navigationbar_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../Navigation/NavigationBar/navigationbar.module */
+    "./src/app/Navigation/NavigationBar/navigationbar.module.ts");
     /* harmony import */
 
 
@@ -205,7 +205,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     ChatPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _chat_routing_module__WEBPACK_IMPORTED_MODULE_5__["ChatPageRoutingModule"], _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_6__["NavigationbarModule"]],
+      imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _chat_routing_module__WEBPACK_IMPORTED_MODULE_5__["ChatPageRoutingModule"], _Navigation_NavigationBar_navigationbar_module__WEBPACK_IMPORTED_MODULE_6__["NavigationbarModule"]],
       declarations: [_chat_page__WEBPACK_IMPORTED_MODULE_7__["ChatPage"]]
     })], ChatPageModule);
     /***/
