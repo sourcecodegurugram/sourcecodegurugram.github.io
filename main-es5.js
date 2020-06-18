@@ -998,7 +998,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | chat-chat-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("chat-chat-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("chat-chat-module")]).then(__webpack_require__.bind(null,
         /*! ./chat/chat.module */
         "./src/app/chat/chat.module.ts")).then(function (m) {
           return m.ChatPageModule;
@@ -1009,7 +1009,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | chat-searchUser-searchUser-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("default~chat-searchUser-searchUser-module~searchUser-searchUser-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("default~chat-searchUser-searchUser-module~searchUser-searchUser-module")]).then(__webpack_require__.bind(null,
         /*! ./chat/searchUser/searchUser.module */
         "./src/app/chat/searchUser/searchUser.module.ts")).then(function (m) {
           return m.searchUserPageModule;
@@ -1020,7 +1020,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | chat-ChatsThreadListing-ChatsThreadListing-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("default~ChatsThreadListing-ChatsThreadListing-module~chat-ChatsThreadListing-ChatsThreadListing-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("default~ChatsThreadListing-ChatsThreadListing-module~chat-ChatsThreadListing-ChatsThreadListing-module")]).then(__webpack_require__.bind(null,
         /*! ./chat/ChatsThreadListing/ChatsThreadListing.module */
         "./src/app/chat/ChatsThreadListing/ChatsThreadListing.module.ts")).then(function (m) {
           return m.ChatsThreadListingPageModule;
@@ -1031,7 +1031,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | chat-FavoriteUsers-FavoriteUsers-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("common")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("common")]).then(__webpack_require__.bind(null,
         /*! ./chat/FavoriteUsers/FavoriteUsers.module */
         "./src/app/chat/FavoriteUsers/FavoriteUsers.module.ts")).then(function (m) {
           return m.FavoriteUsersPageModule;
@@ -1042,7 +1042,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | chat-ChatsThreadListing-notificationchat-notificationchat-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("chat-ChatsThreadListing-notificationchat-notificationchat-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("chat-ChatsThreadListing-notificationchat-notificationchat-module")]).then(__webpack_require__.bind(null,
         /*! ./chat/ChatsThreadListing/notificationchat/notificationchat.module */
         "./src/app/chat/ChatsThreadListing/notificationchat/notificationchat.module.ts")).then(function (m) {
           return m.NotificationchatPageModule;
@@ -1053,7 +1053,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | welcome-detail-detail-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("welcome-detail-detail-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("welcome-detail-detail-module")]).then(__webpack_require__.bind(null,
         /*! ./welcome/detail/detail.module */
         "./src/app/welcome/detail/detail.module.ts")).then(function (m) {
           return m.DetailPageModule;
@@ -1064,7 +1064,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | welcome-welcome-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null,
         /*! ./welcome/welcome.module */
         "./src/app/welcome/welcome.module.ts")).then(function (m) {
           return m.WelcomePageModule;
@@ -1075,7 +1075,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | Register-Signup-signup-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("Register-Signup-signup-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("Register-Signup-signup-module")]).then(__webpack_require__.bind(null,
         /*! ./Register/Signup/signup.module */
         "./src/app/Register/Signup/signup.module.ts")).then(function (m) {
           return m.SignupPageModule;
@@ -1085,10 +1085,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       path: "signin",
       loadChildren: function loadChildren() {
         return Promise.all(
-        /*! import() | Signin-signin-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("Signin-signin-module")]).then(__webpack_require__.bind(null,
-        /*! ./Signin/signin.module */
-        "./src/app/Signin/signin.module.ts")).then(function (m) {
+        /*! import() | Signin-signin-signin-module */
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("Signin-signin-signin-module")]).then(__webpack_require__.bind(null,
+        /*! ./Signin/signin/signin.module */
+        "./src/app/Signin/signin/signin.module.ts")).then(function (m) {
           return m.SigninPageModule;
         });
       }
@@ -1097,7 +1097,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | Signin-optional-detail-optional-detail-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("Signin-optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("Signin-optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null,
         /*! ./Signin/optional-detail/optional-detail.module */
         "./src/app/Signin/optional-detail/optional-detail.module.ts")).then(function (m) {
           return m.OptionalDetailPageModule;
@@ -1108,7 +1108,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | chat-searchUser-popup-popup-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("chat-searchUser-popup-popup-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("chat-searchUser-popup-popup-module")]).then(__webpack_require__.bind(null,
         /*! ./chat/searchUser/popup/popup.module */
         "./src/app/chat/searchUser/popup/popup.module.ts")).then(function (m) {
           return m.PopupPageModule;
@@ -1119,7 +1119,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | chat-searchUser-new-message-new-message-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("chat-searchUser-new-message-new-message-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("chat-searchUser-new-message-new-message-module")]).then(__webpack_require__.bind(null,
         /*! ./chat/searchUser/new-message/new-message.module */
         "./src/app/chat/searchUser/new-message/new-message.module.ts")).then(function (m) {
           return m.NewMessagePageModule;
@@ -1130,7 +1130,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | Signin-find-friends-find-friends-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("Signin-find-friends-find-friends-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("Signin-find-friends-find-friends-module")]).then(__webpack_require__.bind(null,
         /*! ./Signin/find-friends/find-friends.module */
         "./src/app/Signin/find-friends/find-friends.module.ts")).then(function (m) {
           return m.FindFriendsPageModule;
@@ -1141,7 +1141,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | chat-FavoriteUsers-favorate-popup-favorate-popup-module */
-        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~c9e0f19d"), __webpack_require__.e("chat-FavoriteUsers-favorate-popup-favorate-popup-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~Register-Signup-signup-module~Signin-find-friends-find-friends-module~Signin-optional-detail~f0a40230"), __webpack_require__.e("chat-FavoriteUsers-favorate-popup-favorate-popup-module")]).then(__webpack_require__.bind(null,
         /*! ./chat/FavoriteUsers/favorate-popup/favorate-popup.module */
         "./src/app/chat/FavoriteUsers/favorate-popup/favorate-popup.module.ts")).then(function (m) {
           return m.FavoratePopupPageModule;
