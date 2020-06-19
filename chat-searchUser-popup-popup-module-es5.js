@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div  *ngIf=\"isLoading\" class=\"loading-container\">\r\n  <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\r\n</div>\r\n<ion-header>\r\n  <app-navigationbar></app-navigationbar>\r\n</ion-header>\r\n<div class=\"main-pop-background\">\r\n\r\n\r\n  <div class=\"main-pop\">\r\n\r\n    \r\n    <div class=\"pop-grids\">\r\n\r\n      <div class=\"modal-grid\">\r\n        \r\n        <div class=\"profile-picture-modal\">\r\n          <img src={{picture}} class=\"image-profile\">\r\n        </div>\r\n\r\n        <div class=\"profile-name-modal\">\r\n          <span class=\"name\">{{name}}</span>\r\n          <span class=\"not-verified\">Verified</span>\r\n\r\n        </div>\r\n        <div class=\"close-button\">\r\n          <img src=\"../../assets/Images/sign.png\" class=\"close-chat-bubble\" (click)=\"backClicked()\">\r\n\r\n\r\n        </div>\r\n       \r\n      </div>\r\n\r\n      <div class=\"siderbar-icon-data\">\r\n        <div class=\"side-bar-icon\">\r\n          <div class=\"group-text-image\">\r\n            <img src=\"../../assets/Images/popchat.png\" class=\"chat-bubble\" routerLink=\"/new-message/{{uid}}/{{name}}\">\r\n            <span class=\"name-icon\">Chat</span>\r\n          </div>\r\n          <div class=\"group-text-image\" (click)=\"getFavorite()\">\r\n            <img src=\"../../assets/Images/star.png\" class=\"chat-bubble\">\r\n            <span class=\"name-icon\">Favorite</span>\r\n          </div>\r\n          <div class=\"group-text-image\">\r\n            <img src=\"../../assets/Images/sign.png\" class=\"chat-bubble\" (click)=\"backClicked()\">\r\n          </div>\r\n          <div class=\"group-text-image mt-3\">\r\n            <span class=\"name-icon\">Never See again</span>\r\n            <img src=\"../../assets/Images/feeling.png\" class=\"chat-bubble mb-3\">\r\n          </div>\r\n\r\n          <div class=\"group-text-image\">\r\n            <span class=\"name-icon\">Report to admin</span>\r\n          </div>\r\n        </div>\r\n        <div class=\"sidebar-content\">\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\">FullName</div>\r\n            <div class=\"output-text\">{{name}}</div>\r\n          </div>\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\">Gender:</div>\r\n            <div class=\"output-text\" *ngFor=\"let genders of genders\">{{genders.value}}</div>\r\n          </div>\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\">Actvities:</div>\r\n            <div class=\"output-text\" *ngFor=\"let activity of activity\">{{activity.value}}</div>\r\n          </div>\r\n\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"contact\">I Want To Be Contacted By:</div>\r\n            <div class=\"output-text\" *ngFor=\"let contact of contact\">{{contact.value}}</div>\r\n          </div>\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"musics\">Favorite Music:</div>\r\n            <div class=\"output-text\" *ngFor=\"let Music of musics\">{{Music.value}}</div>\r\n          </div>\r\n\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"book\">Favorate Books:</div>\r\n            <div class=\"output-text\" *ngFor=\"let books of book\">{{books.value}}</div>\r\n          </div>\r\n\r\n\r\n\r\n\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"movie\">Favorate Movies:</div>\r\n            <div class=\"output-text\" *ngFor=\"let movies of movie\">{{movies.value}}</div>\r\n          </div>\r\n\r\n\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"day\">How you spend your days?:</div>\r\n            <div class=\"output-text\"  *ngFor=\"let days of day\">{{days.value}}</div>\r\n          </div>\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"cancels\">If plan get cancels?:</div>\r\n            <div class=\"output-text\"  *ngFor=\"let cancel of cancels\">{{cancel.value}}</div>\r\n          </div>\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"tends\">Firends tends to be?:</div>\r\n            <div class=\"output-text\"  *ngFor=\"let tend of tends\">{{tend.value}}</div>\r\n          </div>\r\n      \r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"edue\">Education Level:</div>\r\n            <div class=\"output-text\"  *ngFor=\"let edue of edue\">{{edue.value}}</div>\r\n          </div>\r\n      \r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"smokes\">Do you smokes:</div>\r\n            <div class=\"output-text\"  *ngFor=\"let smokes of smokes\">{{smokes.value}}</div>\r\n          </div>\r\n\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"statu\">Relationship status:</div>\r\n            <div class=\"output-text\"  *ngFor=\"let statu of statu\">{{statu.value}}</div>\r\n          </div>\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"long\">How long you live:</div>\r\n            <div class=\"output-text\"  *ngFor=\"let long of long\">{{long.value}}</div>\r\n          </div>\r\n        \r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"alcohol\">Do you drink:</div>\r\n            <div class=\"output-text\"  *ngFor=\"let alcohol of alcohol\">{{alcohol.value}}</div>\r\n          </div>\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"language\">Language:</div>\r\n            <div class=\"output-text\"  *ngFor=\"let language of language\">{{language.value}}</div>\r\n          </div>\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"talk\">Friends talk About:</div>\r\n            <div class=\"output-text\"  *ngFor=\"let talk of talk\">{{talk.value}}</div>\r\n          </div>\r\n\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"tv\">TV Shows:</div>\r\n            <div class=\"output-text\"  *ngFor=\"let tv of tv\">{{tv.value}}</div>\r\n          </div>\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"good\">Good Friends:</div>\r\n            <div class=\"output-text\"  *ngFor=\"let good of good\">{{good.value}}</div>\r\n          </div>\r\n\r\n\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"pets\">Pets:</div>\r\n            <div class=\"output-text\"  *ngFor=\"let pets of pets\">{{pets.value}}</div>\r\n          </div>\r\n         \r\n\r\n\r\n\r\n\r\n\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>";
+    __webpack_exports__["default"] = "<div *ngIf=\"isLoading\" class=\"loading-container\">\r\n  <mat-progress-spinner mode=\"indeterminate\"></mat-progress-spinner>\r\n</div>\r\n<ion-header>\r\n  <app-navigationbar></app-navigationbar>\r\n</ion-header>\r\n<div class=\"main-pop-background\">\r\n  <div class=\"main-pop\">\r\n    <div class=\"pop-grids\">\r\n      <div class=\"modal-grid\">\r\n        <div class=\"profile-picture-modal\">\r\n          <img src={{picture}} class=\"image-profile\">\r\n        </div>\r\n        <div class=\"profile-name-modal\">\r\n          <span class=\"name\">{{name}}</span>\r\n          <span class=\"not-verified\">Verified</span>\r\n        </div>\r\n        <div class=\"close-button\">\r\n          <img src=\"../../assets/Images/sign.png\" class=\"close-chat-bubble\" (click)=\"backClicked()\">\r\n        </div>\r\n      </div>\r\n      <div class=\"siderbar-icon-data\">\r\n        <div class=\"side-bar-icon\">\r\n          <div class=\"group-text-image\">\r\n            <img src=\"../../assets/Images/popchat.png\" class=\"chat-bubble\" routerLink=\"/new-message/{{uid}}/{{name}}\">\r\n            <span class=\"name-icon\">Chat</span>\r\n          </div>\r\n          <div *ngIf=\"favorites_status == 1\" class=\"group-text-image\" style=\"opacity: .4;\">\r\n            <img src=\"../../assets/Images/star.png\" disable class=\"chat-bubble disable_favorite\">\r\n            <span class=\"name-icon\">Favorite</span>\r\n          </div>\r\n          <div *ngIf=\"favorites_status == 2\" class=\"group-text-image\" (click)=\"getFavorite()\">\r\n            <img src=\"../../assets/Images/star.png\" class=\"chat-bubble get_favorite\">\r\n            <span class=\"name-icon\">ADD Favorite</span>\r\n          </div>\r\n          <div *ngIf=\"favorites_status == 3\" class=\"group-text-image\" (click)=\"removeFavorite()\">\r\n            <img src=\"../../assets/Images/star.png\" class=\"chat-bubble remove_favorite\">\r\n            <span class=\"name-icon\">Remove Favorite</span>\r\n          </div>\r\n          <div class=\"group-text-image\">\r\n            <img src=\"../../assets/Images/sign.png\" class=\"chat-bubble\" (click)=\"backClicked()\">\r\n          </div>\r\n          <div class=\"group-text-image mt-3\">\r\n            <span class=\"name-icon\">Never See again</span>\r\n            <img src=\"../../assets/Images/feeling.png\" class=\"chat-bubble mb-3\">\r\n          </div>\r\n          <div class=\"group-text-image\">\r\n            <span class=\"name-icon\">Report to admin</span>\r\n          </div>\r\n        </div>\r\n        <div class=\"sidebar-content\">\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\">FullName</div>\r\n            <div class=\"output-text\">{{name}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\">Gender:</div>\r\n            <div class=\"output-text\" *ngFor=\"let genders of genders\">{{genders.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\">Actvities:</div>\r\n            <div class=\"output-text\" *ngFor=\"let activity of activity\">{{activity.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"contact\">I Want To Be Contacted By:</div>\r\n            <div class=\"output-text\" *ngFor=\"let contact of contact\">{{contact.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"musics\">Favorite Music:</div>\r\n            <div class=\"output-text\" *ngFor=\"let Music of musics\">{{Music.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"book\">Favorate Books:</div>\r\n            <div class=\"output-text\" *ngFor=\"let books of book\">{{books.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"movie\">Favorate Movies:</div>\r\n            <div class=\"output-text\" *ngFor=\"let movies of movie\">{{movies.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"day\">How you spend your days?:</div>\r\n            <div class=\"output-text\" *ngFor=\"let days of day\">{{days.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"cancels\">If plan get cancels?:</div>\r\n            <div class=\"output-text\" *ngFor=\"let cancel of cancels\">{{cancel.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"tends\">Firends tends to be?:</div>\r\n            <div class=\"output-text\" *ngFor=\"let tend of tends\">{{tend.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"edue\">Education Level:</div>\r\n            <div class=\"output-text\" *ngFor=\"let edue of edue\">{{edue.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"smokes\">Do you smokes:</div>\r\n            <div class=\"output-text\" *ngFor=\"let smokes of smokes\">{{smokes.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"statu\">Relationship status:</div>\r\n            <div class=\"output-text\" *ngFor=\"let statu of statu\">{{statu.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"long\">How long you live:</div>\r\n            <div class=\"output-text\" *ngFor=\"let long of long\">{{long.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"alcohol\">Do you drink:</div>\r\n            <div class=\"output-text\" *ngFor=\"let alcohol of alcohol\">{{alcohol.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"language\">Language:</div>\r\n            <div class=\"output-text\" *ngFor=\"let language of language\">{{language.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"talk\">Friends talk About:</div>\r\n            <div class=\"output-text\" *ngFor=\"let talk of talk\">{{talk.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"tv\">TV Shows:</div>\r\n            <div class=\"output-text\" *ngFor=\"let tv of tv\">{{tv.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"good\">Good Friends:</div>\r\n            <div class=\"output-text\" *ngFor=\"let good of good\">{{good.value}}</div>\r\n          </div>\r\n          <div class=\"fields-data\">\r\n            <div class=\"field-name\" *ngIf=\"pets\">Pets:</div>\r\n            <div class=\"output-text\" *ngFor=\"let pets of pets\">{{pets.value}}</div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>";
     /***/
   },
 
@@ -264,6 +264,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.postman = {};
         this.scope = [];
         this.isLoading = false;
+        this.favorites_status = 1;
       }
 
       _createClass(PopupPage, [{
@@ -271,54 +272,97 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {
           var _this = this;
 
-          this.itrs = JSON.parse(localStorage.getItem("currentUser"));
+          // Get uid for logged in user
+          this.itrs = JSON.parse(localStorage.getItem("currentUser")); // Get uid of user
+
           this.sub = this._Activatedroute.paramMap.subscribe(function (params) {
             _this.uid = params.get("uid");
           });
+          this.getUser();
+        }
+      }, {
+        key: "getUser",
+        value: function getUser() {
+          var _this2 = this;
+
+          // Get fields for user
           this.http.get("https://gowebtutorial.com/api/json/user/" + this.uid).subscribe(function (data) {
-            _this.post = data;
-            _this.name = _this.post.name; //
-            // this.picture = this.post.picture.url; //
+            _this2.post = data;
+            _this2.name = _this2.post.name; //
 
-            _this["long"] = _this.post.field_long_in_city.length;
-            _this.genders = _this.post.field_gender.und; //
+            _this2.picture = _this2.post.picture.url; //
 
-            _this.statu = _this.post.field_relationship_status.und; //
+            _this2["long"] = _this2.post.field_long_in_city.length;
+            _this2.genders = _this2.post.field_gender.und; //
 
-            _this.smokes = _this.post.field_smoke.und; //
+            _this2.statu = _this2.post.field_relationship_status.und; //
 
-            _this.activity = _this.post.field_activities_interests.und; //
+            _this2.smokes = _this2.post.field_smoke.und; //
 
-            _this.edue = _this.post.field_education_level.und; //
+            _this2.activity = _this2.post.field_activities_interests.und; //
 
-            _this.tends = _this.post.field_friends_tend_to_be.und; //
+            _this2.edue = _this2.post.field_education_level.und; //
 
-            _this.cancels = _this.post.field_plans_get_cancelled.und; //
+            _this2.tends = _this2.post.field_friends_tend_to_be.und; //
 
-            _this.day = _this.post.field_spend_your_days.und; //
+            _this2.cancels = _this2.post.field_plans_get_cancelled.und; //
 
-            _this.movie = _this.post.field_favorite_movies.und; //
+            _this2.day = _this2.post.field_spend_your_days.und; //
 
-            _this.musics = _this.post.field_favorite_music.und; //
+            _this2.movie = _this2.post.field_favorite_movies.und; //
 
-            _this.book = _this.post.field_favorite_books.und; //
+            _this2.musics = _this2.post.field_favorite_music.und; //
 
-            _this.friend = _this.post.field_talk_about.und;
-            _this.contact = _this.post.field_gender.und; //
+            _this2.book = _this2.post.field_favorite_books.und; //
 
-            _this.alcohol = _this.post.field_alcohol.und;
-            _this.language = _this.post.field_languages.und;
-            _this.talk = _this.post.field_talk_about.und;
-            _this.tv = _this.post.field_favorite_tv_shows.und;
-            _this.good = _this.post.field_good_friend.und;
-            _this.pets = _this.post.field_any_pets.und;
-            _this.favInfo = [{
-              name: _this.post.name,
-              // picture: this.post.picture.url,
-              activities: _this.post.field_activities_interests.und,
-              uid: _this.uid
+            _this2.friend = _this2.post.field_talk_about.und;
+            _this2.contact = _this2.post.field_gender.und; //
+
+            _this2.alcohol = _this2.post.field_alcohol.und;
+            _this2.language = _this2.post.field_languages.und;
+            _this2.talk = _this2.post.field_talk_about.und;
+            _this2.tv = _this2.post.field_favorite_tv_shows.und;
+            _this2.good = _this2.post.field_good_friend.und;
+            _this2.pets = _this2.post.field_any_pets.und;
+            _this2.favInfo = [{
+              name: _this2.post.name,
+              picture: _this2.post.picture.url,
+              activities: _this2.post.field_activities_interests.und,
+              uid: _this2.uid
             }];
+
+            _this2.getLoggedInUser();
           });
+        }
+      }, {
+        key: "getLoggedInUser",
+        value: function getLoggedInUser() {
+          var _this3 = this;
+
+          // Get favorite fields for logged in user
+          this.ConfigService.getUser(this.itrs.user.uid).subscribe(function (data) {
+            _this3.loggedUser = data;
+            _this3.favorites_status = _this3.checUserFavorites();
+          });
+        }
+      }, {
+        key: "checUserFavorites",
+        value: function checUserFavorites() {
+          var _this4 = this;
+
+          if (this.loggedUser.field_favorite_users.und) {
+            this.parsedFavorites = JSON.parse(this.loggedUser.field_favorite_users.und[0].value); // Check if user is already a favorite
+
+            if (this.parsedFavorites.some(function (person) {
+              return person[0].uid === _this4.uid;
+            })) {
+              console.log("This person is already a favorite");
+              return 3;
+            } else {
+              console.log("This person is not yet a favorite");
+              return 2;
+            }
+          }
         }
       }, {
         key: "backClicked",
@@ -328,38 +372,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getFavorite",
         value: function getFavorite() {
-          var _this2 = this;
+          var _this5 = this;
 
           this.isLoading = true;
           this.scope = [];
           this.http.get("https://gowebtutorial.com/api/json/user/" + this.itrs.user.uid).subscribe(function (users) {
-            _this2.respnoseJSON = users;
+            _this5.respnoseJSON = users;
 
-            if (_this2.respnoseJSON.field_favorite_users.und) {
+            if (_this5.respnoseJSON.field_favorite_users.und) {
               console.log("value exists");
-              _this2.scope = JSON.parse(_this2.respnoseJSON.field_favorite_users["und"][0]["value"]);
+              _this5.scope = JSON.parse(_this5.respnoseJSON.field_favorite_users["und"][0]["value"]);
 
-              _this2.scope.push(_this2.favInfo);
+              _this5.scope.push(_this5.favInfo);
             } else {
               console.log("value doesnt exist");
 
-              _this2.scope.push(_this2.favInfo);
+              _this5.scope.push(_this5.favInfo);
             } //Make scope unique
 
 
-            _this2.uniqueScope = _this2.removeDuplicatesBy(function (x) {
+            _this5.uniqueScope = _this5.removeDuplicatesBy(function (x) {
               return x[0].name;
-            }, _this2.scope);
+            }, _this5.scope);
 
-            _this2.addFavorite();
+            _this5.addFavorite();
           });
         }
       }, {
         key: "addFavorite",
         value: function addFavorite() {
-          var _this3 = this;
+          var _this6 = this;
 
-          // Add
           var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]().set("X-CSRF-Token", this.itrs.token).set("Content-Type", "application/json").set("X-Cookie", this.itrs.session_name + "=" + this.itrs.sessid);
           var requestOptions = {
             headers: headers,
@@ -375,9 +418,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }]
             }
           }, requestOptions).subscribe(function (favorate) {
-            _this3.isLoading = false;
+            _this6.isLoading = false;
 
-            _this3.addedFavorate();
+            _this6.addedFavorate();
+
+            _this6.getLoggedInUser();
           });
         }
       }, {
@@ -409,6 +454,34 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }));
         }
       }, {
+        key: "removedFavorate",
+        value: function removedFavorate() {
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+            var correct;
+            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+              while (1) {
+                switch (_context2.prev = _context2.next) {
+                  case 0:
+                    _context2.next = 2;
+                    return this.alertController.create({
+                      message: "Removed from favorites",
+                      buttons: ["OK"]
+                    });
+
+                  case 2:
+                    correct = _context2.sent;
+                    _context2.next = 5;
+                    return correct.present();
+
+                  case 5:
+                  case "end":
+                    return _context2.stop();
+                }
+              }
+            }, _callee2, this);
+          }));
+        }
+      }, {
         key: "removeDuplicatesBy",
         value: function removeDuplicatesBy(keyFn, array) {
           var mySet = new Set();
@@ -417,6 +490,35 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 isNew = !mySet.has(key);
             if (isNew) mySet.add(key);
             return isNew;
+          });
+        }
+      }, {
+        key: "removeFavorite",
+        value: function removeFavorite() {
+          var _this7 = this;
+
+          this.parsedFavorites = this.parsedFavorites.filter(function (obj) {
+            return obj[0].uid !== _this7.uid;
+          });
+          var headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpHeaders"]().set("X-CSRF-Token", this.itrs.token).set("Content-Type", "application/json").set("X-Cookie", this.itrs.session_name + "=" + this.itrs.sessid);
+          var requestOptions = {
+            headers: headers,
+            withCredentials: true
+          }; // Add entry into favorites
+
+          this.responseString = JSON.stringify(this.parsedFavorites);
+          this.http.put("https://gowebtutorial.com/api/json/user/" + this.itrs.user.uid, {
+            field_favorite_users: {
+              und: [{
+                value: this.responseString
+              }]
+            }
+          }, requestOptions).subscribe(function (favorate) {
+            _this7.isLoading = false;
+
+            _this7.removedFavorate();
+
+            _this7.getLoggedInUser();
           });
         }
       }]);
