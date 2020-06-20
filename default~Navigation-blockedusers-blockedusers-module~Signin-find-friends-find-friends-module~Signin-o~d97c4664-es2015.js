@@ -303,10 +303,10 @@ let ConfigService = class ConfigService {
         else {
             this.Postalcode = "";
         }
-        if (gender) {
+        if (gender != 0) {
             this.gender = "&gender=" + gender;
         }
-        else {
+        else if (gender == 0) {
             this.gender = "";
         }
         if (meet != 0) {

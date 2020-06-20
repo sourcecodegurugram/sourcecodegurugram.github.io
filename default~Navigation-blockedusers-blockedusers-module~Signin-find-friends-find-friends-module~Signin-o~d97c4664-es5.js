@@ -485,9 +485,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             this.Postalcode = "";
           }
 
-          if (gender) {
+          if (gender != 0) {
             this.gender = "&gender=" + gender;
-          } else {
+          } else if (gender == 0) {
             this.gender = "";
           }
 
