@@ -70,7 +70,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../material.module */ "./src/app/material.module.ts");
 /* harmony import */ var _signup_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./signup-routing.module */ "./src/app/signup/signup-routing.module.ts");
 /* harmony import */ var _signup_page__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./signup.page */ "./src/app/signup/signup.page.ts");
-/* harmony import */ var _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../navigationbar/navigationbar.module */ "./src/app/navigationbar/navigationbar.module.ts");
+/* harmony import */ var _Navigation_NavigationBar_navigationbar_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Navigation/NavigationBar/navigationbar.module */ "./src/app/Navigation/NavigationBar/navigationbar.module.ts");
 
 
 
@@ -94,7 +94,7 @@ SignupPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _material_module__WEBPACK_IMPORTED_MODULE_7__["MaterialModule"],
             _angular_material_table__WEBPACK_IMPORTED_MODULE_4__["MatTableModule"],
             _angular_material_tabs__WEBPACK_IMPORTED_MODULE_5__["MatTabsModule"],
-            _navigationbar_navigationbar_module__WEBPACK_IMPORTED_MODULE_10__["NavigationbarModule"],
+            _Navigation_NavigationBar_navigationbar_module__WEBPACK_IMPORTED_MODULE_10__["NavigationbarModule"],
         ],
         declarations: [_signup_page__WEBPACK_IMPORTED_MODULE_9__["SignupPage"]],
     })

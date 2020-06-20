@@ -823,59 +823,55 @@ const routes = [
     { path: "", redirectTo: "welcome", pathMatch: "full" },
     {
         path: "chat",
-        loadChildren: () => Promise.all(/*! import() | chat-chat-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("chat-chat-module")]).then(__webpack_require__.bind(null, /*! ./chat/chat.module */ "./src/app/chat/chat.module.ts")).then((m) => m.ChatPageModule),
+        loadChildren: () => Promise.all(/*! import() | chat-chat-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("chat-chat-module")]).then(__webpack_require__.bind(null, /*! ./chat/chat.module */ "./src/app/chat/chat.module.ts")).then((m) => m.ChatPageModule),
     },
     {
-        path: "searchUser",
-        loadChildren: () => Promise.all(/*! import() | chat-searchUser-searchUser-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("default~chat-searchUser-searchUser-module~searchUser-searchUser-module")]).then(__webpack_require__.bind(null, /*! ./chat/searchUser/searchUser.module */ "./src/app/chat/searchUser/searchUser.module.ts")).then((m) => m.searchUserPageModule),
+        path: "searchTab",
+        loadChildren: () => Promise.all(/*! import() | chat-searchUser-searchUser-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("default~chat-searchUser-searchUser-module~searchUser-searchUser-module")]).then(__webpack_require__.bind(null, /*! ./chat/searchUser/searchUser.module */ "./src/app/chat/searchUser/searchUser.module.ts")).then((m) => m.searchUserPageModule),
     },
     {
-        path: "ChatsThreadListing",
-        loadChildren: () => Promise.all(/*! import() | chat-ChatsThreadListing-ChatsThreadListing-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("default~ChatsThreadListing-ChatsThreadListing-module~chat-ChatsThreadListing-ChatsThreadListing-module")]).then(__webpack_require__.bind(null, /*! ./chat/ChatsThreadListing/ChatsThreadListing.module */ "./src/app/chat/ChatsThreadListing/ChatsThreadListing.module.ts")).then((m) => m.ChatsThreadListingPageModule),
+        path: 'ChatsThreadListing',
+        loadChildren: () => Promise.all(/*! import() | chat-ChatsThreadListing-ChatsThreadListing-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("default~ChatsThreadListing-ChatsThreadListing-module~chat-ChatsThreadListing-ChatsThreadListing-module")]).then(__webpack_require__.bind(null, /*! ./chat/ChatsThreadListing/ChatsThreadListing.module */ "./src/app/chat/ChatsThreadListing/ChatsThreadListing.module.ts")).then(m => m.ChatsThreadListingPageModule)
     },
     {
-        path: "FavoriteUsers",
-        loadChildren: () => Promise.all(/*! import() | chat-FavoriteUsers-FavoriteUsers-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("common")]).then(__webpack_require__.bind(null, /*! ./chat/FavoriteUsers/FavoriteUsers.module */ "./src/app/chat/FavoriteUsers/FavoriteUsers.module.ts")).then((m) => m.FavoriteUsersPageModule),
+        path: "tabs3",
+        loadChildren: () => Promise.all(/*! import() | chat-FavoriteUsers-FavoriteUsers-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("common")]).then(__webpack_require__.bind(null, /*! ./chat/FavoriteUsers/FavoriteUsers.module */ "./src/app/chat/FavoriteUsers/FavoriteUsers.module.ts")).then((m) => m.FavoriteUsersPageModule),
     },
     {
         path: "notificationchat/:thread_id/:image_path/:name",
-        loadChildren: () => Promise.all(/*! import() | chat-ChatsThreadListing-notificationchat-notificationchat-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("chat-ChatsThreadListing-notificationchat-notificationchat-module")]).then(__webpack_require__.bind(null, /*! ./chat/ChatsThreadListing/notificationchat/notificationchat.module */ "./src/app/chat/ChatsThreadListing/notificationchat/notificationchat.module.ts")).then((m) => m.NotificationchatPageModule),
+        loadChildren: () => Promise.all(/*! import() | chat-ChatsThreadListing-notificationchat-notificationchat-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("chat-ChatsThreadListing-notificationchat-notificationchat-module")]).then(__webpack_require__.bind(null, /*! ./chat/ChatsThreadListing/notificationchat/notificationchat.module */ "./src/app/chat/ChatsThreadListing/notificationchat/notificationchat.module.ts")).then((m) => m.NotificationchatPageModule),
     },
     {
         path: "detail/:name/:mail/:uid",
-        loadChildren: () => Promise.all(/*! import() | welcome-detail-detail-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("welcome-detail-detail-module")]).then(__webpack_require__.bind(null, /*! ./welcome/detail/detail.module */ "./src/app/welcome/detail/detail.module.ts")).then((m) => m.DetailPageModule),
+        loadChildren: () => Promise.all(/*! import() | welcome-detail-detail-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("welcome-detail-detail-module")]).then(__webpack_require__.bind(null, /*! ./welcome/detail/detail.module */ "./src/app/welcome/detail/detail.module.ts")).then((m) => m.DetailPageModule),
     },
     {
         path: "welcome",
-        loadChildren: () => Promise.all(/*! import() | welcome-welcome-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null, /*! ./welcome/welcome.module */ "./src/app/welcome/welcome.module.ts")).then((m) => m.WelcomePageModule),
+        loadChildren: () => Promise.all(/*! import() | welcome-welcome-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("welcome-welcome-module")]).then(__webpack_require__.bind(null, /*! ./welcome/welcome.module */ "./src/app/welcome/welcome.module.ts")).then((m) => m.WelcomePageModule),
     },
     {
         path: "signup",
-        loadChildren: () => Promise.all(/*! import() | Register-Signup-signup-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("Register-Signup-signup-module")]).then(__webpack_require__.bind(null, /*! ./Register/Signup/signup.module */ "./src/app/Register/Signup/signup.module.ts")).then((m) => m.SignupPageModule),
+        loadChildren: () => Promise.all(/*! import() | signup-signup-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("signup-signup-module")]).then(__webpack_require__.bind(null, /*! ./signup/signup.module */ "./src/app/signup/signup.module.ts")).then((m) => m.SignupPageModule),
     },
     {
         path: "signin",
-        loadChildren: () => Promise.all(/*! import() | Signin-signin-signin-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("Signin-signin-signin-module")]).then(__webpack_require__.bind(null, /*! ./Signin/signin/signin.module */ "./src/app/Signin/signin/signin.module.ts")).then((m) => m.SigninPageModule),
+        loadChildren: () => Promise.all(/*! import() | signin-signin-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("signin-signin-module")]).then(__webpack_require__.bind(null, /*! ./signin/signin.module */ "./src/app/signin/signin.module.ts")).then((m) => m.SigninPageModule),
     },
     {
         path: "optional-detail",
-        loadChildren: () => Promise.all(/*! import() | Signin-optional-detail-optional-detail-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("Signin-optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null, /*! ./Signin/optional-detail/optional-detail.module */ "./src/app/Signin/optional-detail/optional-detail.module.ts")).then((m) => m.OptionalDetailPageModule),
+        loadChildren: () => Promise.all(/*! import() | Signin-optional-detail-optional-detail-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("Signin-optional-detail-optional-detail-module")]).then(__webpack_require__.bind(null, /*! ./Signin/optional-detail/optional-detail.module */ "./src/app/Signin/optional-detail/optional-detail.module.ts")).then((m) => m.OptionalDetailPageModule),
     },
     {
         path: "popup/:uid",
-        loadChildren: () => Promise.all(/*! import() | chat-userDetail-userDetail-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("chat-userDetail-userDetail-module")]).then(__webpack_require__.bind(null, /*! ./chat/userDetail/userDetail.module */ "./src/app/chat/userDetail/userDetail.module.ts")).then((m) => m.userDetailPageModule),
+        loadChildren: () => Promise.all(/*! import() | chat-userDetail-userDetail-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("chat-userDetail-userDetail-module")]).then(__webpack_require__.bind(null, /*! ./chat/userDetail/userDetail.module */ "./src/app/chat/userDetail/userDetail.module.ts")).then((m) => m.userDetailPageModule),
     },
     {
         path: 'new-message/:uid/:name',
-        loadChildren: () => Promise.all(/*! import() | chat-searchUser-new-message-new-message-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("chat-searchUser-new-message-new-message-module")]).then(__webpack_require__.bind(null, /*! ./chat/searchUser/new-message/new-message.module */ "./src/app/chat/searchUser/new-message/new-message.module.ts")).then(m => m.NewMessagePageModule)
+        loadChildren: () => Promise.all(/*! import() | chat-searchUser-new-message-new-message-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("chat-searchUser-new-message-new-message-module")]).then(__webpack_require__.bind(null, /*! ./chat/searchUser/new-message/new-message.module */ "./src/app/chat/searchUser/new-message/new-message.module.ts")).then(m => m.NewMessagePageModule)
     },
     {
         path: 'find-friends',
-        loadChildren: () => Promise.all(/*! import() | Signin-find-friends-find-friends-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("Signin-find-friends-find-friends-module")]).then(__webpack_require__.bind(null, /*! ./Signin/find-friends/find-friends.module */ "./src/app/Signin/find-friends/find-friends.module.ts")).then(m => m.FindFriendsPageModule)
-    },
-    {
-        path: 'favorate-popup/:uid',
-        loadChildren: () => Promise.all(/*! import() | chat-FavoriteUsers-favorate-popup-favorate-popup-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("chat-FavoriteUsers-favorate-popup-favorate-popup-module")]).then(__webpack_require__.bind(null, /*! ./chat/FavoriteUsers/favorate-popup/favorate-popup.module */ "./src/app/chat/FavoriteUsers/favorate-popup/favorate-popup.module.ts")).then(m => m.FavoratePopupPageModule)
+        loadChildren: () => Promise.all(/*! import() | Signin-find-friends-find-friends-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("Signin-find-friends-find-friends-module")]).then(__webpack_require__.bind(null, /*! ./Signin/find-friends/find-friends.module */ "./src/app/Signin/find-friends/find-friends.module.ts")).then(m => m.FindFriendsPageModule)
     },
     {
         path: 'edit-profile',
@@ -887,11 +883,11 @@ const routes = [
     },
     {
         path: 'searchuserresult/:gender/:meet/:activity/:Postcode',
-        loadChildren: () => Promise.all(/*! import() | chat-searchUser-searchUserResult-search-user-result-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("chat-searchUser-searchUserResult-search-user-result-module")]).then(__webpack_require__.bind(null, /*! ./chat/searchUser/searchUserResult/search-user-result.module */ "./src/app/chat/searchUser/searchUserResult/search-user-result.module.ts")).then(m => m.SearchUserResultPageModule)
+        loadChildren: () => Promise.all(/*! import() | chat-searchUser-searchUserResult-search-user-result-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("chat-searchUser-searchUserResult-search-user-result-module")]).then(__webpack_require__.bind(null, /*! ./chat/searchUser/searchUserResult/search-user-result.module */ "./src/app/chat/searchUser/searchUserResult/search-user-result.module.ts")).then(m => m.SearchUserResultPageModule)
     },
     {
         path: 'blockedusers',
-        loadChildren: () => Promise.all(/*! import() | Navigation-blockedusers-blockedusers-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Register-Signup-signup-module~Signin-find-friend~a0f097ea"), __webpack_require__.e("Navigation-blockedusers-blockedusers-module")]).then(__webpack_require__.bind(null, /*! ./Navigation/blockedusers/blockedusers.module */ "./src/app/Navigation/blockedusers/blockedusers.module.ts")).then(m => m.BlockedusersPageModule)
+        loadChildren: () => Promise.all(/*! import() | Navigation-blockedusers-blockedusers-module */[__webpack_require__.e("default~Navigation-blockedusers-blockedusers-module~Signin-find-friends-find-friends-module~Signin-o~d97c4664"), __webpack_require__.e("Navigation-blockedusers-blockedusers-module")]).then(__webpack_require__.bind(null, /*! ./Navigation/blockedusers/blockedusers.module */ "./src/app/Navigation/blockedusers/blockedusers.module.ts")).then(m => m.BlockedusersPageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
