@@ -56,6 +56,10 @@ const routes = [
     {
         path: 'chat',
         component: _chat_page__WEBPACK_IMPORTED_MODULE_4__["ChatPage"]
+    },
+    {
+        path: 'search-user-result',
+        loadChildren: () => __webpack_require__.e(/*! import() | searchUser-searchUser-module */ "default~chat-searchUser-searchUser-module~searchUser-searchUser-module").then(__webpack_require__.bind(null, /*! ./searchUser/searchUser.module */ "./src/app/chat/searchUser/searchUser.module.ts")).then(m => m.searchUserPageModule)
     }
 ];
 let ChatPageRoutingModule = class ChatPageRoutingModule {

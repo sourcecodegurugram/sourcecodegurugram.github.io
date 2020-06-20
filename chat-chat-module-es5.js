@@ -119,6 +119,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: 'chat',
       component: _chat_page__WEBPACK_IMPORTED_MODULE_4__["ChatPage"]
+    }, {
+      path: 'search-user-result',
+      loadChildren: function loadChildren() {
+        return __webpack_require__.e(
+        /*! import() | searchUser-searchUser-module */
+        "default~chat-searchUser-searchUser-module~searchUser-searchUser-module").then(__webpack_require__.bind(null,
+        /*! ./searchUser/searchUser.module */
+        "./src/app/chat/searchUser/searchUser.module.ts")).then(function (m) {
+          return m.searchUserPageModule;
+        });
+      }
     }];
 
     var ChatPageRoutingModule = function ChatPageRoutingModule() {
