@@ -39,7 +39,7 @@ const routes = [
         component: _chat_page__WEBPACK_IMPORTED_MODULE_4__["ChatPage"],
         children: [
             { path: 'searchUser',
-                loadChildren: () => __webpack_require__.e(/*! import() | searchUser-searchUser-module */ "default~chat-searchUser-searchUser-module~searchUser-searchUser-module").then(__webpack_require__.bind(null, /*! ./searchUser/searchUser.module */ "./src/app/chat/searchUser/searchUser.module.ts")).then(m => m.searchUserPageModule) },
+                loadChildren: () => Promise.all(/*! import() | searchUser-searchUser-module */[__webpack_require__.e("default~chat-searchUser-searchUser-module~chat-searchUser-searchUserResult-search-user-result-module~c9c6c161"), __webpack_require__.e("default~chat-searchUser-searchUser-module~searchUser-searchUser-module")]).then(__webpack_require__.bind(null, /*! ./searchUser/searchUser.module */ "./src/app/chat/searchUser/searchUser.module.ts")).then(m => m.searchUserPageModule) },
             {
                 path: 'ChatsThreadListing',
                 loadChildren: () => __webpack_require__.e(/*! import() | ChatsThreadListing-ChatsThreadListing-module */ "default~ChatsThreadListing-ChatsThreadListing-module~chat-ChatsThreadListing-ChatsThreadListing-module").then(__webpack_require__.bind(null, /*! ./ChatsThreadListing/ChatsThreadListing.module */ "./src/app/chat/ChatsThreadListing/ChatsThreadListing.module.ts")).then(m => m.ChatsThreadListingPageModule)
@@ -125,7 +125,7 @@ ChatPageModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".background-card {\n  background-color: white !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9nb2QvRG9jdW1lbnRzL1NvdXJjZWNvZGUgV29yay9Bbmd1bGFyIE9mZmljZSBQcm9qZWN0L25vdDREYXRpbmcvc3JjL2FwcC9jaGF0L2NoYXQucGFnZS5zY3NzIiwic3JjL2FwcC9jaGF0L2NoYXQucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRUksa0NBQUE7QUNBSiIsImZpbGUiOiJzcmMvYXBwL2NoYXQvY2hhdC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYmFja2dyb3VuZC1jYXJkXHJcbntcclxuICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlICFpbXBvcnRhbnQ7XHJcbn0iLCIuYmFja2dyb3VuZC1jYXJkIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGUgIWltcG9ydGFudDtcbn0iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".background-card {\n  background-color: white !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9nb2QvRG93bmxvYWRzL25vdDRkYXRpbmcgY29weSAzL3NyYy9hcHAvY2hhdC9jaGF0LnBhZ2Uuc2NzcyIsInNyYy9hcHAvY2hhdC9jaGF0LnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVJLGtDQUFBO0FDQUoiLCJmaWxlIjoic3JjL2FwcC9jaGF0L2NoYXQucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJhY2tncm91bmQtY2FyZFxyXG57XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZSAhaW1wb3J0YW50O1xyXG59IiwiLmJhY2tncm91bmQtY2FyZCB7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlICFpbXBvcnRhbnQ7XG59Il19 */");
 
 /***/ }),
 
