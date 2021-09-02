@@ -1,0 +1,76 @@
+// font-family
+$poppins-regular: 'Poppins',
+sans-serif;
+
+// font-weight
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+// colors
+$white: #ffffff;
+$black: #000000;
+$cyan: #037A92;
+$light-cyan: #D6F0F5;
+$yellow: #FECB3E;
+$text-clr: #333333;
+$orange: #F29441;
+$text-clr-gray: #848593;
+$bdr-clr: #B8CED2;
+$admin-bg: #F9FBFE;
+$adm-text-clr: #1C1D29;
+$otp-color:#f4f4f4;
+$gray-bg:#f9f9f9;
+$green:#CAEFD3;
+// utils
+$curvy-bdr: 35%;
+$default-radius: 0.5rem;
+
+// mixins
+@mixin create-square($size, $radius:null) {
+    width: $size;
+    height: $size;
+
+    @if($radius) {
+        border-radius: $radius;
+    }
+}
+
+@mixin btn-style($color, $bgColor) {
+    color: $color;
+    background-color: $bgColor;
+
+    &:hover {
+        color: $color;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 0.25rem transparentize($bgColor, 0.75);
+    }
+}
+
+@mixin add-droparrow($bgColor, $arrowColor) {
+    @include create-square(1rem, 50%);
+    background-color: $bgColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    z-index: 1;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        @include create-square(0.35rem);
+        border-style: solid;
+        border-color: $arrowColor;
+        border-width: 0 0 1px 1px;
+        transform-origin: center;
+        transform: translate(1px, -1px);
+    }
+}

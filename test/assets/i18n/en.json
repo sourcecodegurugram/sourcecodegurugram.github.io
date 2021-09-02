@@ -1,0 +1,57 @@
+{
+    "language":{
+    "SelectLanguage":"Please select your language",
+    "English":"English",
+    "Hindi":"Hindi",
+    "Language2":"Language 2",
+    "Language3":"Language 3",
+    "Language4":"Language 4",
+    "Language5":"Language 5",
+    "SelectLangage" :"Select Langage"
+    },
+
+
+    "location":{
+        "LocationAccess":"Location access required!",
+        "LocationDeatil":"In order to continue with this survey, you must allow this webpage access to your location.",
+        "ok":"ok"
+    },
+
+    "Splash":{
+        "title":"Let us start filling the survey, following questions are single or multiple choices",
+        "button":"Start Survey"
+    },
+    "login":{
+        "Verify":"Verify your number",
+        "Otp":"We have sent the One-Time Password (OTP) to your mobile number.",
+        "VerifyOTP":"Verify OTP",
+        "DontHaveOtp":"I didn't recieve a OTP!",
+        "Sendagain":"Send again"
+    },
+    "question":{
+        "Mainheading":"What is the main Source of drinking water functional in the School.",
+        "SelectMultiple":"You can select multiple options",
+        "option1":"Hand Pump or Bore well within the School premises",
+        "option2":"Protected Well",
+        "option3":"Unprotected Well",
+        "option4":"Tap Water",
+        "GOBACK":"GO BACK",
+        "Continue":"Continue",
+        "secondheading":"Were the School premises clean, free of water logging, etc., at the time of inspection? Please give your rating.",
+        "Selectone":"You can select one option only",
+        "select1option1":"Very Good",
+        "select1option2":"Good",
+        "select1option3":"Average"
+
+    },
+    "progressbar":{
+        "Questions":"Questions"
+    },
+    "congrats":{
+        "Congratulations":"Congratulations",
+        "Success":"Survey submitted Successfully"
+    }
+
+
+
+}
